@@ -1,0 +1,1 @@
+{:linters {:conflicting-alias {:level :off}}}
