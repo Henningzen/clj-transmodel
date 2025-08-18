@@ -1,1 +1,1 @@
-{:linters {:conflicting-alias {:level :off}}}
+{:linters {:syntax {:level :off} :conflicting-alias {:level :off}}}

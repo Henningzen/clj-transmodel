@@ -3,13 +3,10 @@
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
 ;; Copyright: (c) 2025
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
-;;
 ;;-----------------------------------------------------------------------------
 
 (ns no.jansenh.transmodel.parser.process
   (:require [no.jansenh.transmodel.parser.core :as parser]
-            [clojure.tools.logging :as log]
-            [clojure.data.xml :as xml]
             [clojure.zip :as zip]
             [clojure.data.zip.xml :as zip-xml]))
 ;;
