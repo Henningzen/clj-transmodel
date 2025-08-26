@@ -7,7 +7,9 @@
 
 (ns no.jansenh.transmodel.siri.service-delivery
   (:require [no.jansenh.transmodel.siri.situation-exchange-delivery :as sx]
-    [no.jansenh.transmodel.parser.core :as parser]))
+            [no.jansenh.transmodel.parser.utilities :as utils]
+            [no.jansenh.transmodel.parser.core :as parser]))
+
 ;;
 ;;   SIRI Service Delivery
 ;;   ---------------------
@@ -26,43 +28,17 @@
 (def siri:EstimatedTimetableDelivery (keyword siri-kw-ns "EstimatedTimetableDelivery"))
 (def siri:SituationExchangeDelivery (keyword siri-kw-ns "SituationExchangeDelivery"))
 
+
 (defn parse-service-delivery [xml-data]
   (when (= (:tag xml-data) siri:Siri)
     (let [version (->> (:attrs xml-data) :version)
-
           content (:content xml-data)
-
-          service-delivery (->> content
-                                (filter #(= (:tag %) siri:ServiceDelivery))
-                                first)
-
-          response-timestamp (->> (:content service-delivery)
-                                     (filter #(= (:tag %) siri:ResponseTimestamp))
-                                     first
-                                     :content
-                                     (apply str))
-
-          producer-ref (->> (:content service-delivery)
-                           (filter #(= (:tag %) siri:ProducerRef))
-                           first
-                           :content
-                           (apply str))
-
-          situation-exchange-delivery  (sx/parse-situation-exchange-delivery (->> (:content service-delivery)
-                                                                                  (filter #(= (:tag %) siri:SituationExchangeDelivery))
-                                                                                  first))
-
-          estimated-timetable-delivery  (->> (:content service-delivery)
-                                             (filter #(= (:tag %) siri:EstimatedTimetableDelivery))
-                                             first
-                                             :content
-                                             (apply str))]
-
+          service-delivery (utils/get-xml-tag content siri:ServiceDelivery)]
       {:version version
-       :response-timestamp response-timestamp
-       :producer-ref producer-ref
-       :situation-exchange-delivery situation-exchange-delivery
-       :estimated-timetable-delivery estimated-timetable-delivery})))
+       :response-timestamp (utils/get-xml-tag service-delivery siri:ResponseTimestamp)
+       :producer-ref (utils/get-xml-tag service-delivery siri:ProducerRef)
+       :situation-exchange-delivery (utils/get-xml-tag service-delivery siri:SituationExchangeDelivery)
+       :estimated-timetable-delivery (utils/get-xml-tag service-delivery siri:EstimatedTimetableDelivery)})))
 
 
 (comment

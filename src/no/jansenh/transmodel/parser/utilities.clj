@@ -18,4 +18,9 @@
 ;;
 
 
-
+(defn get-xml-tag
+  "tba"
+  [content tag]
+  (->> content
+       (filter #(= (:tag %) tag))
+       first))
