@@ -1,0 +1,3432 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri version="2.1" xmlns="http://www.siri.org.uk/siri" xmlns:ns5="http://www.opengis.net/gml/3.2" xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt">
+    <ServiceDelivery>
+        <ResponseTimestamp>2025-06-30T11:37:13.574161615+02:00</ResponseTimestamp>
+        <ProducerRef>GCO</ProducerRef>
+        <SituationExchangeDelivery>
+            <ResponseTimestamp>2025-06-30T11:37:13.574161615+02:00</ResponseTimestamp>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.743777678+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_65ffd53b-0409-4893-84f3-ba4fff6f4658_normal_93</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-03T22:16:00+02:00</StartTime>
+                        <EndTime>2025-04-04T10:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Kanselleringer pga. mannskapsmangel</Summary>
+                    <Description>Mannheller-Fodnes:  Følgende turer innstilt grunnet mannskapsmangel fre. 04.04:  Fra Fodnes kl. 06:00, 06:40, 07:20, 08:00, 08:40, 09:20 Fra Mannheller kl: 05:40, 06:20, 07:00, 07:40, 08:20, 09:00  Normal drift på sambandet fra kl. 09:40.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4981_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.550254126+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_ea83f80d-c06b-4e1c-9374-f7584e4f3619_normal_41</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-10T17:17:00+01:00</StartTime>
+                        <EndTime>2025-02-11T01:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>B-rute innstilt ut dagen</Summary>
+                    <Description>Lavik-Oppedal: B- ruten innstilt fra 18:40 og ut dagen på grunn av hviletid.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.946271176+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_9d80b2e7-2de2-417d-ba5f-e06c6d56c587_normal_136</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-16T12:46:00+02:00</StartTime>
+                        <EndTime>2025-05-28T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Vik – Ortnevik – Måren – Nordeide (1190):   Reiser du med bil? Frå 28. mai kan du betale automatisk med skiltgjenkjenning. Ver merksam på at du no må ha AutoPASS-avtale for å få rabatt. Meir info finn du på skyss.no.         Norled - På vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:7823_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848635225+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_aca32f3f-c85d-4867-97d0-9dd422166eec_normal_65</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-06T19:05:00+01:00</StartTime>
+                        <EndTime>2025-03-07T07:10:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Vik – Ortnevik – Måren – Nordeide: Grunnet tekniske problemer så kanselleres avgang Ortnevik kl.06:30. Avgang Nordeide kl.07:00 vil går som normalt, men betjenes av reservefartøy MS Frey.  Norled - På vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:7823_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.643878759+02:00</CreationTime>
+                    <ParticipantRef>SKY</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_81c762f4-bd1c-46be-8f9f-130b47aa99c1_normal_150</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-30T16:46:00+02:00</StartTime>
+                        <EndTime>2025-05-30T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Hjellestad – Klokkarvik – Bjelkarøy- Lerøy: MS Samba vil i løpet av kvelden løfte kjørelem på plass, vi håper att siste rundtur fra Klokkarvik kl 2020  i kveld går som normalt.   Norled - på vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SKY:Line:1035</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.975882201+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_31cd54ed-da4d-45f0-a571-231e4b9b33c6_normal_69</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-10T15:48:00+01:00</StartTime>
+                        <EndTime>2025-03-10T17:10:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ladebehov - Forsinkelse</Summary>
+                    <Description>Lavik-Oppedal: Nødvendig lading M/F Ampere. Avg fra Lavik 1610 og fra Oppedal kl 1640- utgår</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.644047798+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2d93ddcb-a00e-41b9-af31-72b4d9b278e2_normal_17</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-17T13:38:00+01:00</StartTime>
+                        <EndTime>2025-01-17T15:18:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Sambandet innstilles</Summary>
+                    <Description>�?rvika-Koparneset Sambandet innstilles grunnet dårlig vær, ny vurdering i ettermiddag.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1067</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.5427473+02:00</CreationTime>
+                    <ParticipantRef>SKY</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_b571ee6f-c55d-43a0-b50c-78ff909b4932_normal_169</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-18T12:58:00+02:00</StartTime>
+                        <EndTime>2025-06-18T13:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy - Avgang innstilles</Summary>
+                    <Description>Hjellestad – Klokkarvik – Bjelkarøy- Lerøy:  Grunnet tekniske utfordringer med fartøy, blir avgang 12:50 innstilt inntil videre. Norled - på vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SKY:Line:1035</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.550711915+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_836e4a5c-5ff8-4295-97e4-4a8f5e730a74_normal_153</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-02T13:06:00+02:00</StartTime>
+                        <EndTime>2025-06-03T05:32:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Farlig last</Summary>
+                    <Description>Lavik-Oppedal: Grunnet transport av farlig last 03.06 på avgang Lavik kl.05:30 så vil det bli begrensning på 12 passasjerer.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.846628946+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_3fdbe4a2-ca0f-4a84-96fd-d9d5c58ecaca_normal_152</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-01T13:42:00+02:00</StartTime>
+                        <EndTime>2025-06-01T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Endring av fartøy i ruten</Summary>
+                    <Description>Breivikeidet - Svensby: M/F Lauvstad inn i rute på sambandet fra kl 1820</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_191</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.838531281+02:00</CreationTime>
+                    <ParticipantRef>NOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1e9ec573-ec93-4b82-873b-c67e350f7b4c_normal_16</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-16T20:18:00+01:00</StartTime>
+                        <EndTime>2025-01-17T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforbehold i rute 18-171</Summary>
+                    <Description>Søvik-Austbø-Herøy-Brasøy: Det tas værforbehold på avganger i A og B rute fredag 17.01.25 grunnet værprognoser. Kansellering kan derfor komme på kort varsel.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>NOR:Line:12_8171</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.974932272+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_db9a3deb-73ed-4cac-ab1b-c3650213621b_normal_142</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-22T11:46:00+02:00</StartTime>
+                        <EndTime>2025-05-22T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Rute 800: Trondheim – Brekstad – Kristiansund: Normal drift i ruten og alle båter går i henhold til rutetabell</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.54227593+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_af9822f5-9027-43ea-9d22-cc6b603b6624_normal_141</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-21T15:18:00+02:00</StartTime>
+                        <EndTime>2025-05-21T21:00:38+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund: Rute 800: Kristiansund – Trondheim, avgang kl. 16:30 – Innstilt
+grunnet teknisk 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+       16:30 – Kristiansund til Trondheim:  
+
+Reisende henvises til oppsatt taxi/buss fra
+Kristiansund hurtigbåtterminal til Trondheim hurtigbåtterminal med avgang kl.
+16:30.  
+
+  
+
+16:30 – Kristiansund til Edøy:  
+
+Reisende henvises til oppsatt taxi fra Kristiansund
+hurtigbåtterminal til Sandvika ferjekai, deretter
+videre korrespondanse med ferje (Fjord1) fra Sandvika til Edøy.  
+
+  
+
+       16:30 – Kristiansund til Kjørsvikbugen:  
+
+Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.  
+
+  
+
+        16:30 – Kristiansund til Hitra:  
+
+Reisende henvises til oppsatt taxi/buss fra Kristiansund
+hurtigbåtterminal til Hitra hurtigbåtterminal på Sandstad med avgang kl. 16:30.  
+
+  
+
+       16:30 – Kristiansund til Brekstad:  
+
+Reisende henvises til oppsatt taxi/buss fra
+Kristiansund hurtigbåtterminal til Trondheim hurtigbåtterminal med avgang kl.
+16:30. Avstigning på Orkanger skysstasjon og videre korrespondanse med oppsatt
+taxi til Valset ferjekai. Reisende henvises deretter til videre korrespondanse
+med ferje (Fjord1) fra Valset til Brekstad.  
+
+  
+
+       16:30 – Kristiansund til Hasselvika:  
+
+Reisende henvises til oppsatt taxi/buss fra
+Kristiansund hurtigbåtterminal til Trondheim hurtigbåtterminal med avgang kl.
+16:30. Avstigning på Orkanger skysstasjon og videre korrespondanse med oppsatt
+taxi til Valset ferjekai. Reisende henvises deretter til videre korrespondanse
+med ferje (Fjord1) fra Valset til Brekstad. Ta kontakt med Norled på telefon
++47 402 93 102 for bestilling av videre transport.  
+
+  
+
+      
+17:10 – Edøy til Trondheim:  
+
+Reisende henvises til ferje (Fjord1) fra Edøy til
+Sandvika med avgang kl. 17:15. Ta kontakt med Norled på telefon +47 402 93 102
+for bestilling av videre transport.  
+
+  
+
+      
+17:10 – Edøy til øvrige destinasjoner:  
+
+Reisende henvises til ferje (Fjord1) fra Edøy til
+Sandvika med avgang kl. 17:15. Ta kontakt med Norled på telefon +47 402 93 102
+for bestilling av videre transport.  
+
+  
+
+       17:50 – Kjørsvikbugen til Trondheim:  
+
+Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.  
+
+  
+
+       17:50 – Kjørsvikbugen til øvrige
+destinasjoner:  
+
+Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.  
+
+  
+
+       18:20 – Hitra til Trondheim:  
+
+Reisende henvises til oppsatt buss fra Hitra
+hurtigbåtterminal på Sandstad til Trondheim hurtigbåtterminal med avgang kl.
+18:20.  
+
+  
+
+       18:20 – Hitra til øvrige destinasjoner:  
+
+Reisende henvises til oppsatt buss fra Hitra
+hurtigbåtterminal på Sandstad til Trondheim hurtigbåtterminal med avgang kl.
+18:20. Avstigning på Orkanger skysstasjon. Ta kontakt med Norled på telefon
++47 402 93 102 for bestilling av videre transport.  
+
+  
+
+       19:00 – Brekstad til Trondheim:  
+
+Reisende henvises til ferje (Fjord1) fra Brekstad til
+Valset med avgang kl. 19:30, deretter videre korrespondanse med oppsatt buss
+fra Valset ferjekai til Trondheim hurtigbåtterminal.  
+
+  
+
+       19:00 – Brekstad til Hasselvika:  
+
+Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.  
+
+  
+
+       19:10 – Hasselvika til Trondheim:  
+
+Reisende henvises til oppsatt taxi fra Hasselvika
+hurtigbåtkai til Vanvikan, deretter videre korrespondanse med hurtigbåt rute
+810 (Norled) til Trondheim.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.545532548+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_734eed3c-4b1d-4790-a810-a85618b1da79_normal_62</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-03T05:28:00+01:00</StartTime>
+                        <EndTime>2025-03-03T12:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Mannheller-Fodnes:  Det er normal drift i B-ruten fra kl 05.40</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4981_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.83977635+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_d3ca8d6b-5703-4952-b4df-01f41b4dc0ff_normal_60</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-01T17:38:00+01:00</StartTime>
+                        <EndTime>2025-03-01T18:47:15+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil kai</Summary>
+                    <Description>Lavik-Oppedal:  Rute B innstilt inntil videre grunnet lastebil som står fast på ferje bro.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.249291358+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_95f688dd-8a8c-4e33-b7a1-6ee9b7c45637_normal_94</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-04T11:00:00+02:00</StartTime>
+                        <EndTime>2025-04-04T18:30:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Reservefartøy</Summary>
+                    <Description>Rute 805: Trondheim til Brekstad - Midlertidig redusert kapasitet.  Vi ønsker å informere våre reisende om at MS Trondheimsfjord 1 er satt inn i ruten i dag, som følge av at MS Teisten fortsatt trafikkerer rute 800 mellom Trondheim - Kristiansund. Dette medfører mindre kapasitet på ruten ut dagen. Vi gjør oppmerksom på at MS Fjordjarl har avgang fra Brekstad til Trondheim kl. 14:30 og vi anbefaler at denne avgangen benyttes av kapasitetshensyn.  Vi beklager eventuelle ulemper dette vil medføre for våre reisende.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_805</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.450086206+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1214207e-8322-49f0-a2ac-991eed1ea0e4_normal_85</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-26T20:46:00+01:00</StartTime>
+                        <EndTime>2025-03-27T11:51:34+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Lavik-Oppedal: C-ruten er innstilt inntil videre grunnet tekniske problem.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.148197429+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_f5e605fa-7e1a-476f-b813-114dcc638177_normal_27</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-27T12:37:00+01:00</StartTime>
+                        <EndTime>2025-01-27T13:57:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil fartøy</Summary>
+                    <Description>Fogn-Judaberg-Helgøy: Rettelse: På grunn av nødvendig lading, kan enkelt avganger i Rute 2 kanselleres utover dagen.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5986</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.847760046+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_76a1655a-47f2-4097-86f6-89a008da70a1_normal_68</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-09T13:12:00+01:00</StartTime>
+                        <EndTime>2025-03-09T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Lyngseidet - Olderdalen: Bilførere bes om å koste snø av skilt før ombordkjøring.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_190</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.941609218+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_41832ede-8966-4fb4-80c5-8633da22dccf_normal_21</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-21T17:57:00+01:00</StartTime>
+                        <EndTime>2025-01-21T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Hovedfartøy tilbake </Summary>
+                    <Description>Folkestad-Volda  MF Finnøy er tilbake i rute fra klokken 18:00 fra Volda.  2-3 minutt forsinkelse må påregnes i forbindelse med Fartøysbytte</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1071</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.140935043+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_d7fa1bd0-23a9-455c-99a2-5c5e5f544f66_normal_86</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-27T11:34:00+01:00</StartTime>
+                        <EndTime>2025-03-27T15:30:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund: Rute 800: Kristiansund – Trondheim, avgang kl. 12:00  Forsinket
+avgang grunnet værforholdene      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+ Som følge av værforholdene i dag er Ladejarl noe forsinket i ruten fra Kristiansund til Trondheim. Alle anløp på tur nordover
+mot Trondheim forventes å gå som planlagt med forbehold om forsinkelse i ruten.
+Reisende oppfordres til å møte opp til oppsatt rutetid.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.54060925+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2c664a4c-a872-4cae-9e11-f78791ac1044_normal_110</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-20T16:08:00+02:00</StartTime>
+                        <EndTime>2025-04-20T18:24:47+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ladebehov - Innstillte avganger</Summary>
+                    <Description>Lavik-Oppedal: Grunnet behov for ekstra lading blir avgang Oppedal kl 16:30 og fra Lavik kl. 17:00 innstilt</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.540685371+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_fdfc3d08-fd0e-4e00-938e-68a83fa07ef8_normal_77</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-18T09:12:00+01:00</StartTime>
+                        <EndTime>2025-03-18T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Akutt sykdom innstilt rute</Summary>
+                    <Description>Lavik-Oppedal: Rute C innstilles fra kl. 09:50 grunnet akutt sykdom blant mannskap. Dette inntil videre.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.973756782+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1532ec1f-8b3d-4f5d-ad57-505213e3c709_normal_76</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-17T20:30:00+01:00</StartTime>
+                        <EndTime>2025-03-18T08:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Hviletid</Summary>
+                    <Description>Rute 800: Edøy – Kristiansund, avgang kl. 07:10 – Innstilt grunnet hviletidsbestemmelser  Reisende henvises til ferje (Fjord1) fra Edøy til Sandvika med avgang kl. 06:45, deretter videre korrespondanse med rutebuss 821 (FRAM) fra Sandvika Ferjekai til Kristiansund Trafikkterminal.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.974744522+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_20b8729f-6c03-4ee1-982d-f981bd8a9016_normal_67</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-08T01:24:00+01:00</StartTime>
+                        <EndTime>2025-03-08T10:40:54+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Innstillinger rute B</Summary>
+                    <Description>Lavik-Oppedal:  Rute B blir innstilt inntil videre fra avg. Oppedal lør. kl. 07:00. Pga. tekniske problemer.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:26.946692031+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_09d8bdac-7145-4f56-bab4-9b560ac4dec1_normal_142</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-22T19:18:00+02:00</StartTime>
+                        <EndTime>2025-05-22T20:30:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ladebehov - Innstillt</Summary>
+                    <Description>Lavik-Oppedal:  Grunnet behov for lading blir tur kl: 19.40 fra Oppedal og tur kl: 20.10 innstilt</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848088026+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_ed09e360-06d8-4de3-a5d3-8c4464cf15ee_normal_88</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-29T16:54:00+01:00</StartTime>
+                        <EndTime>2025-03-29T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund: Rute 800 Forsinkelse i ruten   Som følge av værforholdene i dag er Ladejarl noe forsinket i ruten fra Trondheim til Kristiansund. Alle anløp på tur sørover mot Kristiansund forventes å gå som planlagt med forbehold om forsinkelse i ruten. Reisende oppfordres til å møte opp til oppsatt rutetid.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.449750627+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_e3bf9c91-32db-4dda-8b6a-b1cf84c4ca06_normal_163</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-12T20:45:00+02:00</StartTime>
+                        <EndTime>2025-06-13T06:20:59+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Mannskapsmangel</Summary>
+                    <Description>Rute 810: Trondheim til Vanvikan 13.06.25 – Innstilt grunnet mannskapsmangel i morgen kl 05:50 fra Vanvikan til Trondheim      Reisende henvises til oppsatt taxi fra Vanvikan til Trondheim hurtigbåtterminal via ferjesambandet Flakk-Rørvik med avgang 05:15  Alle avganger etter dette mellom Trondheim og Vanvikan vil gå som normalt    Ved spørsmål om alternativ transport kan Norled kontaktes på telefon +47 402 93 102.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.751532394+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_e0f7021f-5e8f-423b-93cc-c46701fc4210_normal_17</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-17T09:10:00+01:00</StartTime>
+                        <EndTime>2025-01-17T14:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift i sambandet</Summary>
+                    <Description>Mannheller-Fodnes  Normal drift i sambandet fra kl. 1000.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4981_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.041041454+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_97062d18-4314-437e-b6e7-f4dc3c88ddbe_normal_30</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-30T16:16:00+01:00</StartTime>
+                        <EndTime>2025-02-03T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Buss for båt</Summary>
+                    <Description>Ryfylkerutene:  510: Det blir buss for båt mellom Ropeid og Sauda inn til videre på grunn av is forholdene.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5961</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.742565089+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_799b3c1a-c0a4-4a47-8860-928e6b791013_normal_49</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-18T14:34:00+01:00</StartTime>
+                        <EndTime>2025-02-19T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Lyngseidet - Olderdalen: Vennligst påse at bilskilt er snøfri og lesbar ved om bord kjøring.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_190</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.83899209+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_012f849d-6a1f-4cb6-a452-f87e179e0a60_normal_40</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-09T17:18:00+01:00</StartTime>
+                        <EndTime>2025-02-09T19:30:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Ryfylkerutene: På grunn av venting på buss på Ropeid, er Saudaruten ca.20 minutt forsinket på vei mot Stavanger. Det medfører og at avgang til Kvitsøy kl.19:00 vil bli forsinket med 15 til 20 minutt.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5961</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.939951659+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_0feffc78-58f5-4d7a-967c-691ebac92add_normal_116</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-26T18:10:00+02:00</StartTime>
+                        <EndTime>2025-04-27T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Feil i reiseplanlegger</Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund: Feilen i reiseplanlegger vil også gjelde i morgen søndag. Det er normal drift i ruten selv om turene ikke kommer opp i reiseplanleggeren</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.449631217+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_dfa621a7-ee45-4be2-8d11-a2c46239a1e7_normal_29</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-29T20:51:00+01:00</StartTime>
+                        <EndTime>2025-01-29T21:45:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Farlig last</Summary>
+                    <Description>Lavik-Oppedal:   På grunn av transport av farlig last, blir det redusert kapasitet på avgang kl 21:40 fra Oppedal. Maks 12 passasjerer.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.847631966+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_3d955d46-3bcb-45cc-95e6-e0705631b09d_normal_227</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2024-08-14T02:00:00+02:00</StartTime>
+                        <EndTime>2024-08-15T01:59:59+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>test 2 14.08 </Summary>
+                    <Description>tet</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:26_5958</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.974884932+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_252b0dd8-a0d6-442b-8cd2-078d849ebac2_normal_119</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-29T20:20:00+02:00</StartTime>
+                        <EndTime>2025-04-29T21:15:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ladebehov - Innstillt</Summary>
+                    <Description>Lavik-Oppedal:  Avgang fra Lavik kl 20:40 og avgang fra Oppdal kl 21:10 er innstilt pga ladebehov</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848865785+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_5b88e4af-1f47-4182-8a3a-d164c6a4641d_normal_76</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-17T11:30:00+01:00</StartTime>
+                        <EndTime>2025-03-17T15:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Rute 810: Trondheim til Vanvikan – Innstilt inntil videre grunnet værforholdene.    12:30 - Trondheim til Vanvikan:   Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Flakk ferjekai, og videre korrespondanse med ferje (Torghatten) fra Flakk til Rørvik. Reisende henvises deretter til oppsatt buss fra Rørvik ferjekai til Vanvikan.      13:00 – Vanvikan til Trondheim:   Reisende henvises til oppsatt buss fra Vanvikan til Rørvik ferjekai, og videre korrespondanse med ferje (Torghatten) fra Rørvik til Flakk. Reisende henvises deretter til oppsatt buss fra Flakk ferjekai til Trondheim hurtigbåtterminal.      15:00 - Trondheim til Vanvikan:   Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Flakk ferjekai, og videre korrespondanse med ferje (Torghatten) fra Flakk til Rørvik. Reisende henvises deretter til oppsatt buss fra Rørvik ferjekai til Vanvikan.      15:30 – Vanvikan til Trondheim:   Reisende henvises til oppsatt buss fra Vanvikan til Rørvik ferjekai, og videre korrespondanse med ferje (Torghatten) fra Rørvik til Flakk. Reisende henvises deretter til oppsatt buss fra Flakk ferjekai til Trondheim hurtigbåtterminal.      Vi oppfordrer alle reisende om å holde seg oppdatert via trafikkmeldinger og det vil komme en ny oppdatering i løpet av dagen.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.546205288+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_3df12dfe-581c-4704-aae9-b2a3067c8c63_normal_29</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-29T09:41:00+01:00</StartTime>
+                        <EndTime>2025-01-29T11:44:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Kansellert rute</Summary>
+                    <Description>Fogn-Judaberg-Helgøy: Avgang Rute 2 fra Judaberg kl 10:20 (Rundtur) er kansellert pga tekniske utfordringer. Normal drift fra kl 11:50</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5986</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.751213114+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_dca71f26-6697-4359-889f-1a5a8a037adc_normal_160</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-09T16:21:00+02:00</StartTime>
+                        <EndTime>2025-06-09T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Breivikeidet - Svensby: Grunnet stor trafikk, vil det bli noe forsinkelser i ruten utover ettermiddag/kveld.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_191</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.751620474+02:00</CreationTime>
+                    <ParticipantRef>SKY</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_f0e87463-bff1-4203-bf5a-96f5358d15a3_normal_163</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-12T07:55:00+02:00</StartTime>
+                        <EndTime>2025-06-12T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Hjellestad – Klokkarvik – Bjelkarøy- Lerøy: Avgang 10:15 fra Klokkarvik og avgang 11:00 fra Hjellestad blir innstilt i dag, dette skyldes nødvendig vedlikehold.  Norled - på vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SKY:Line:1035</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.741288999+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_0da52ab1-7cf0-46dc-9b6d-12e9226926dc_normal_125</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-05T07:45:00+02:00</StartTime>
+                        <EndTime>2025-05-05T09:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Rute 800: Kristansund - Trondheim kl 08:00.  Anløp Edøy 08:40 innstilt grunnet værforholdene.   08:00 – Kristiansund til Edøy:    Reisende henvises til oppsatt taxi fra Kristiansund hurtigbåtterminal til Sandvika ferjekai, deretter videre korrespondanse med ferje (Fjord1) fra Sandvika til Edøy.     08:40 – Edøy til øvrige destinasjoner:  Reisende henvises til ferje (Fjord1) fra Edøy til Sandvika med avgang kl. 08:45. Ta kontakt med Norled på telefon +47 402 93 102 for bestilling av videre transport.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.750448025+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_40-norled-ATB:ServiceJourney:800_241021121643028_9-1749722400000_normal_163</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-12T12:00:00+02:00</StartTime>
+                        <EndTime>2025-06-12T15:40:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinkelse eller forskjøvet avgangstid</Summary>
+                    <Description>Bruk av reservefartøy</Description>
+                    <Affects>
+                        <VehicleJourneys>
+                            <AffectedVehicleJourney>
+                                <FramedVehicleJourneyRef>
+                                    <DataFrameRef>2025-06-12</DataFrameRef>
+                                    <DatedVehicleJourneyRef>ATB:ServiceJourney:800_241021121643028_9</DatedVehicleJourneyRef>
+                                </FramedVehicleJourneyRef>
+                                <LineRef>ATB:Line:2_800</LineRef>
+                            </AffectedVehicleJourney>
+                        </VehicleJourneys>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.942156148+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_0c95fb78-ff2c-4dae-8b4a-09fe871f6d02_normal_70</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-11T21:37:00+01:00</StartTime>
+                        <EndTime>2025-03-11T22:01:33+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Fogn-Judaberg-Helgøy: Det er ca 40 minutter forsinkelse i sambandet</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5986</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.151820207+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_37d38711-23b0-48dc-8ac2-db86c1396b3c_normal_32</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-01T08:11:00+01:00</StartTime>
+                        <EndTime>2025-02-01T08:35:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Kansellert avgang</Summary>
+                    <Description>Lavik-Oppedal: Avgang kl 08:00 fra Oppedal og avgang kl 08:30 er kansellert pga ladeutfordringer.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.747235346+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_41-norled-ATB:ServiceJourney:800_241021121643007_6-1749103800000_normal_156</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-05T08:10:00+02:00</StartTime>
+                        <EndTime>2025-06-05T11:40:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet på tur</Summary>
+                    <Description>Spesialtransport</Description>
+                    <Affects>
+                        <VehicleJourneys>
+                            <AffectedVehicleJourney>
+                                <FramedVehicleJourneyRef>
+                                    <DataFrameRef>2025-06-05</DataFrameRef>
+                                    <DatedVehicleJourneyRef>ATB:ServiceJourney:800_241021121643007_6</DatedVehicleJourneyRef>
+                                </FramedVehicleJourneyRef>
+                                <LineRef>ATB:Line:2_800</LineRef>
+                            </AffectedVehicleJourney>
+                        </VehicleJourneys>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.844949707+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_20854ade-0cf3-40cb-a1b3-1f157cc07479_normal_116</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-26T18:07:00+02:00</StartTime>
+                        <EndTime>2025-04-27T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Feil i reiseplanlegger</Summary>
+                    <Description>Trondheim – Brekstad: Feilen i reiseplanlegger vil også gjelde i morgen. Det er normal drift i ruten selv om turene ikke kommer opp i reiseplanleggeren.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_805</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.546827697+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_c23aaf47-a315-410f-9a34-8ffe9c90aece_normal_149</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-29T12:16:00+02:00</StartTime>
+                        <EndTime>2025-05-29T14:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Farlig last</Summary>
+                    <Description>Lavik-Oppedal: Rute B fra Lavik kl 1410 , maks 12 pax farlig last</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.24552812+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_3fe9e2c5-bad8-44b9-a9f8-16d639e605bc_normal_98</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-08T17:22:00+02:00</StartTime>
+                        <EndTime>2025-04-11T13:37:03+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Endring av fartøy i ruten</Summary>
+                    <Description>Vik – Ortnevik – Måren – Nordeide (1190): Fra Onsdag klokken 06:30 fra Ortnevik og inntil videre, vil rute utføres av MS Frey  Norled - På vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:7823_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.445510159+02:00</CreationTime>
+                    <ParticipantRef>NOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_ce09c885-d33e-4b62-b703-4bf2d4f0a4fe_normal_128</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-08T13:02:00+02:00</StartTime>
+                        <EndTime>2025-05-17T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forskjøvet rutetid</Summary>
+                    <Description>Sandnessjøen-Dønna-Løkta:  Tidligere annonserte søndags rute på 17. mai erstattes med vanlig lørdags rute hele dagen.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>NOR:Line:12_8181</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.941187769+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_d97175ab-3db8-4a7b-92aa-8a447fe20b2e_normal_35</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-04T17:22:00+01:00</StartTime>
+                        <EndTime>2025-02-04T21:50:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Innstilt rundtur i rute C</Summary>
+                    <Description>Lavik-Oppedal: Avgang kl 20:50 fra Lavik og 21:20 fra Oppedal blir innstilt i kveld grunnet hviletidsbestemmelser</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:26.94932422+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1f5a57a4-9662-4802-8ecf-6838aca8d942_normal_66</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-07T16:09:00+01:00</StartTime>
+                        <EndTime>2025-03-07T18:08:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Rute
+800: Kristiansund – Trondheim, avgang kl. 16:30 – Innstilt grunnet værforholdene.  ·      
+16:30 Kristiansund – Trondheim  Reisende henvises til rutebuss 901 (FRAM) fra
+Kristiansund trafikkterminal plattform 8 til Trondheim med avgang kl. 16:35.   ·      
+16:30 – Kristiansund til Edøy: Reisende henvises
+til oppsatt taxi fra Kristiansund hurtigbåtterminal til Sandvika ferjekai, deretter videre korrespondanse med
+ferje (Fjord1) fra Sandvika til Edøy.   ·      
+16:30 – Kristiansund til
+Kjørsvikbugen: Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.   ·      
+16:30 – Kristiansund til Hitra: Reisende henvises til rutebuss 901 (FRAM) fra
+Kristiansund trafikkterminal plattform 8 til Orkanger skysstasjon. Ta kontakt
+med Norled på telefon +47 402 93 102 for bestilling av videre transport.   ·      
+16:30 – Kristiansund til
+Brekstad: Reisende henvises til rutebuss 901 (FRAM) fra
+Kristiansund trafikkterminal plattform 8 til Orkanger skysstasjon. Ta kontakt
+med Norled på telefon +47 402 93 102 for bestilling av videre transport.   ·      
+16:30 – Kristiansund til
+Hasselvika: Reisende henvises til rutebuss 901 (FRAM) fra
+Kristiansund trafikkterminal plattform 8 til Trondheim med avgang kl. 16:35. Ta
+kontakt med Norled på telefon +47 402 93 102 for bestilling av videre
+transport.   ·      
+17:10 – Edøy til Trondheim: Reisende henvises til ferje (Fjord1) fra Edøy til
+Sandvika med avgang kl. 17:15. Ta kontakt med Norled på telefon +47 402 93 102
+for bestilling av videre transport.   ·      
+17:10 – Edøy til øvrige
+destinasjoner: Reisende henvises til ferje (Fjord1) fra Edøy til
+Sandvika med avgang kl. 17:15. Ta kontakt med Norled på telefon +47 402 93 102
+for bestilling av videre transport.   ·      
+17:50 – Kjørsvikbugen til
+Trondheim: Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.   ·      
+17:50 – Kjørsvikbugen til øvrige
+destinasjoner: Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.   ·      
+18:20 – Hitra til Trondheim: Reisende henvises til oppsatt buss fra Hitra hurtigbåtterminal
+på Sandstad til Trondheim hurtigbåtterminal med avgang kl. 18:20.   ·      
+18:20 – Hitra til øvrige
+destinasjoner: Reisende henvises til oppsatt buss fra Hitra
+hurtigbåtterminal på Sandstad til Trondheim hurtigbåtterminal med avgang kl. 18:20.
+Avstigning på Orkanger skysstasjon. Ta kontakt med Norled på telefon +47 402 93
+102 for bestilling av videre transport.   ·      
+19:00 – Brekstad til Trondheim: Reisende henvises til ferje (Fjord1) fra Brekstad til
+Valset med avgang kl. 19:30, deretter videre korrespondanse med oppsatt buss
+fra Valset ferjekai til Trondheim hurtigbåtterminal.   ·      
+19:00 – Brekstad til Hasselvika: Reisende henvises til å ta kontakt med Norled på
+telefon +47 402 93 102 for bestilling av alternativ transport.   ·      
+19:10 – Hasselvika til Trondheim: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Reisende
+henvises til oppsatt taxi fra Hasselvika hurtigbåtkai til Vanvikan, deretter
+videre korrespondanse med hurtigbåt rute 810 (Norled) til Trondheim.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.54175476+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_02a32e0c-93d4-4ca6-a2fb-e0848596c407_normal_68</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-09T18:05:00+01:00</StartTime>
+                        <EndTime>2025-03-09T19:20:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Ryfylkerutene: Kvitsøyruten blir ca 15 min forsinket på avgang Stavanger kl.19:00 grunnet tett tåke.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5961</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.041588934+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_510d4906-4c19-4de7-92e5-ff03a80af673_normal_81</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-22T17:36:00+01:00</StartTime>
+                        <EndTime>2025-03-22T19:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Rute 810: Trondheim – Vanvikan kl 18:00 innstilles grunnet værforholdene.   18:00 - Trondheim til Vanvikan:  Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Flakk ferjekai, og videre korrespondanse med ferje (Torghatten) fra Flakk til Rørvik. Reisende henvises deretter til oppsatt buss fra Rørvik ferjekai til Vanvikan. Det må medregnes noe venting grunnet korrespondanse med ferge.     18:30 – Vanvikan til Trondheim:   Reisende henvises til oppsatt buss fra Vanvikan til Rørvik ferjekai, og videre korrespondanse med ferje (Torghatten) fra Rørvik til Flakk. Reisende henvises deretter til oppsatt buss fra Flakk ferjekai til Trondheim hurtigbåtterminal.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.449528817+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_0c00bc2b-3f7f-44f1-ac73-b85525ceceec_normal_69</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-10T16:21:00+01:00</StartTime>
+                        <EndTime>2025-03-10T16:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinket i rute </Summary>
+                    <Description>Ryfylkerutene: Rute 510 ca 10 min forsinket i retning Judaberg, Stavanger</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5961</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.943911867+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_e9c91e06-61ed-4426-8220-c316d93d76a3_normal_75</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-16T10:33:00+01:00</StartTime>
+                        <EndTime>2025-03-16T11:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Lavik-Oppedal: Rute C fra Lavik kl 1050 innstilles,  innstillingen vil gjelde inntil videre.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.64105314+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_67834a81-8234-4471-adb3-e795a91409e9_normal_62</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-03T10:10:00+01:00</StartTime>
+                        <EndTime>2025-03-03T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Lyngseidet - Olderdalen: Melding til bilførere om å påse at skilt er fri for snø før om bord kjøring.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_190</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:26.973838568+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_713dd0ab-1ac1-4e4b-9095-6c9136db9cc3_normal_69</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-10T07:53:00+01:00</StartTime>
+                        <EndTime>2025-03-10T12:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Fogn-Judaberg-Helgøy: 20 min forsinkelse i rute 2 grunnet tett tåke.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5986</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.751468654+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_5ff45686-428c-4fb3-be5e-e4369e9b8e94_normal_124</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-04T06:49:00+02:00</StartTime>
+                        <EndTime>2025-05-04T08:21:05+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Larsnes -�?ram-Voksa-Kvamsøya:  Sambandet er innstilt inn til videre på grunn av teknisk feil.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1066</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.545706798+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_8c911dd9-3226-4dc9-a424-876f9df09510_normal_125</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-05T09:54:00+02:00</StartTime>
+                        <EndTime>2025-05-05T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Rute 800: Trondheim – Brekstad – Kristiansund: Avgang Edøy - Kristiansund kl 11:00 innstilt grunnet værforholdene.  11:00 – Edøy til Kristiansund: 
+Reisende henvises til ferje (Fjord1) fra Edøy til Sandvika med avgang kl. 11:15, deretter 
+videre korrespondanse med rutebuss 821 (FRAM) fra Sandvika Ferjekai til Kristiansund 
+Trafikkterminal.  Grunnet værforholdene i ruten vil det forekomme noe forsinkelser i ruten. Vi henstiller våre reisende til å møte opp til fastsatt rutetid.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.440331192+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_9746cc46-9ecc-4778-bdf4-4d422d14111c_normal_99</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-09T11:48:00+02:00</StartTime>
+                        <EndTime>2025-04-22T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Trondheim – Vanvikan: «Påskeruter for hurtigbåt, ferge, regionbuss (blå buss) og
+bestillingstransport fra onsdag 16. april. Se atb.no/helligdagsruter»</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.543649999+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1db3f3f5-b60e-4162-b5dc-8323691a9c73_normal_155</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-04T16:46:00+02:00</StartTime>
+                        <EndTime>2025-06-04T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Vik – Ortnevik – Måren – Nordeide (1190): Hovedfartøy tilbake i rute fra avgang Nordeide kl.17:15.  Norled - På vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:7823_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.643932688+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_6999e1f6-0aae-4399-8690-144e09ab99a2_normal_124</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-04T08:17:00+02:00</StartTime>
+                        <EndTime>2025-05-04T09:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Larsnes -�?ram-Voksa-Kvamsøya:  Det blir normal drift i sambandet fra Kvamsøya kl 08:30</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1066</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.550821725+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_df54adcc-80f6-421e-bfde-5c77a2da6614_normal_120</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-30T07:52:00+02:00</StartTime>
+                        <EndTime>2025-04-30T18:25:57+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Reservefartøy</Summary>
+                    <Description>�?rvika-Koparneset :  På grunn av nødvendig vedlikehold, vil det fra kl 08:15 bli redusert kapasitet inn til videre.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1067</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.54139415+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2054d347-efbe-4c48-b70b-93f6bccf85b0_normal_163</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-12T09:24:00+02:00</StartTime>
+                        <EndTime>2025-06-12T12:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Farlig last</Summary>
+                    <Description>Solavågen – Festøya: Avg. fra Festøya kl. 12:20 får begrenset kapasitet pga. transport av farlig last.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1069</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.543328369+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2871b566-8402-4adb-9f31-8592971c2251_normal_21</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-21T09:36:00+01:00</StartTime>
+                        <EndTime>2025-01-21T18:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Reservefartøy</Summary>
+                    <Description>Folkestad-Volda  MF Ullensvang går inn for MF Finnøy fra klokken 08:40 og inntil videre. Noen minutter forsinkelse må påregnes ved skifte av fartøy</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1071</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.051130539+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1fa8613d-245e-404c-8cdd-0d9829ed8a90_normal_100</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-10T16:47:00+02:00</StartTime>
+                        <EndTime>2025-04-10T17:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Lavik-Oppedal: Avgang 14:40 fra Oppedal og 17:10 fra Lavik, blir innstilt grunnet tekniske problemer</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848758095+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_5396eeb2-e9d1-4c05-8331-b3651fef12a1_normal_86</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-27T09:40:00+01:00</StartTime>
+                        <EndTime>2025-03-27T11:51:26+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Lavik-Oppedal: Grunnet tekniske problem i C-ruten vil det bli avganger 10 over hel og 10 over halv i sambandet inntil videre.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.944687957+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_fe798438-1cca-4f77-b48f-4c72efb9c24a_normal_105</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-15T15:52:00+02:00</StartTime>
+                        <EndTime>2025-04-15T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Mannskapsmangel, innstilte turer i rute B tirsdag kveld</Summary>
+                    <Description>Lavik-Oppedal: Grunnet mannskapsmangel vil siste avgang i rute B være kl 19:10 fra Lavik, deretter innstilt. Rute A og C går som normalt.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.775043083+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_87712282-5572-4a31-82dd-ff4016d3bd32_normal_99</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-09T08:42:00+02:00</StartTime>
+                        <EndTime>2025-04-09T12:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Lyngseidet - Olderdalen: Grunnet værforhold blir samband innstilt til avgang klokken 12:35</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_190</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.943330177+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_83c025fb-7374-47d4-815a-56dfe36662c5_normal_161</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-10T08:38:00+02:00</StartTime>
+                        <EndTime>2025-06-10T11:47:29+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Lavik-Oppedal: Rute C starter opp igjen fra og med avgang 0900, det vil være halvtimes avganger fra Lavik/ Oppedal frem til problemet er løst.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.83984042+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_b998cdcc-230b-4b49-9b0c-324f278ce032_normal_55</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-24T11:27:00+01:00</StartTime>
+                        <EndTime>2025-02-24T14:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil på fartøy</Summary>
+                    <Description>Trondheim – Vanvikan: Gjenopptar ruten.   Fjordglimt gjenopptar ordinær ruteproduksjon med avgang fra Trondheim klokken 12:30.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848356525+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_7eb066aa-7946-49eb-9d34-c1bb11e126dd_normal_89</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-30T19:02:00+02:00</StartTime>
+                        <EndTime>2025-03-30T20:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ladebehov - Innstillt</Summary>
+                    <Description>Lavik-Oppedal: Avgang kl.19:10 fra Lavik og kl.19.40 fra Oppedal utgår grunnet nødvendig lading.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.974896322+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1e5df044-ed44-456e-ae38-3c718722dbb2_normal_141</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-21T07:56:00+02:00</StartTime>
+                        <EndTime>2025-05-21T10:18:33+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinket i rute </Summary>
+                    <Description>Rute 800: Kristiansund - Trondheim, avgang kl. 08:00 – Forsinket i rute 30 min grunnet trafikale problemer Her er det buss for båt. Bussen vil ha avgang klokken 08:30.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.339673732+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_6e39066d-cdb7-40f9-a806-a421e7559b87_normal_116</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-26T09:38:00+02:00</StartTime>
+                        <EndTime>2025-04-26T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift i sambandet</Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund:  Det er normal drift i sambandet selv om det ikke kommer noe opp i reiseplanlegger.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.046670421+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_c671eb88-eec4-4a52-a71f-d5b792ce53f1_normal_148</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-28T08:38:00+02:00</StartTime>
+                        <EndTime>2025-05-28T15:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Redusert kapasitet – Farlig last</Summary>
+                    <Description>Mannheller-Fodnes: Kl 1420 fra Fodnes maks 12 pax- grunnet farlig last- M/F Manheller.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4981_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.844278988+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_b571a9ad-726a-4137-a56a-b1b8b8c97b15_normal_101</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-11T13:33:00+02:00</StartTime>
+                        <EndTime>2025-04-11T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Hovedfartøy tilbake, Normal drift</Summary>
+                    <Description>Vik – Ortnevik – Måren – Nordeide (1190): MS Lysefjord er tilbake i rute, fra klokken 14:00 fra Vik  Norled - På vegne av Skyss</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:7823_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.444553249+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_1031428d-3101-4f26-a161-393ea0288cd8_normal_45</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-14T11:16:00+01:00</StartTime>
+                        <EndTime>2025-02-14T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Buss for båt, rute 522</Summary>
+                    <Description>Ryfylkerutene:  Det vil bli buss for båt, mellom Vikedal og Sandeid på grunn av is i fjorden Gjelder avgang l 13:20 og 20:30</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5961</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.946438566+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_ac77b765-8a12-413f-883d-0a8437fca371_normal_93</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2024-04-02T03:00:00+02:00</StartTime>
+                        <EndTime>2024-04-02T22:00:59+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Test Solv dev redigert</Summary>
+                    <Description>Test solv dev edit</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.247851539+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_0815347c-f4c9-4b15-a7ce-8b2265b44505_normal_171</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-20T11:14:00+02:00</StartTime>
+                        <EndTime>2025-06-20T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Vangsnes – Hella – Dragsvik:  Da har mannskapskabalen løst seg på sambandet, så det blir vanlige sommerruter i dag og i morgen.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4995_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848554776+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_f7c6680b-68d4-48e8-97ea-9a3aba6aa49b_normal_117</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-27T20:15:00+02:00</StartTime>
+                        <EndTime>2025-04-27T20:55:13+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Uønsket hendelse</Summary>
+                    <Description>Hjelmeland-Nesvik-Skipavik:  Rute 1 innstilles inntil videre, kommer tilbake når det blir normal drift</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:26_5958</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.974646672+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_GCO:SituationNumber:4-0-800-32888-1_4_NSR:Quay:753615_119_normal_119</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-29T16:30:00+02:00</StartTime>
+                        <EndTime>2025-04-29T20:00:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>normal</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>incident</ReportType>
+                    <Summary>Nødetater Test3</Summary>
+                    <Description>EHo test(med Line) : anløp utgår pga ambulanseoppdrag.  Andre reisende fra stedet kan benytte helikopter!</Description>
+                    <InfoLinks>
+                        <InfoLink>
+                            <Uri>https://www.atb.no/driftsmeldinger/</Uri>
+                        </InfoLink>
+                    </InfoLinks>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.140812283+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_f3ec2228-0085-4b6e-984a-11f4421a3ea5_normal_105</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-15T15:49:00+02:00</StartTime>
+                        <EndTime>2025-04-15T15:54:43+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Mannskapsmangel, innstilte turer i rute B tirsdag kveld</Summary>
+                    <Description>Lavik-Oppedal: Grunnet mannskapsmangel vil siste avgang i rute B være kl 19:10 fra Lavik, deretter innstilt. Rute A og C går som normalt.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:26.945514872+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_325f3ad6-a031-41b7-a35b-fe533eeecaaf_normal_120</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-30T18:21:00+02:00</StartTime>
+                        <EndTime>2025-04-30T18:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>�?rvika-Koparneset :  Det er normal drift i sambandet.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1067</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.774141813+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_28a311db-db48-45c5-81a9-81c9e409517b_normal_37</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-06T06:20:00+01:00</StartTime>
+                        <EndTime>2025-02-06T07:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinket avgang</Summary>
+                    <Description>Rute 810 Trondheim – Vanvikan: Avgang klokken 06:20 fra Trondheim blir noe forsinket grunnet bytte av fartøy. Vi beklager ulempen dette medfører for våre reisende.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.044869642+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2982a2ed-8719-4d66-af19-ba6e65befe2d_normal_33</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-02T21:14:00+01:00</StartTime>
+                        <EndTime>2025-02-03T06:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Tilbake til normal drift</Summary>
+                    <Description>Rute 810: Trondheim – Vanvikan: MS Fjordglimt gjenopptar ordinær ruteproduksjon med avgang fra Vanvikan klokken 05:50.  Det legges til forbehold om at innstilling kan forekomme om værforholdene ikke skulle bedre seg over natten.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.149991658+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2fed6daa-2a70-4df6-a6a4-51e80062e620_normal_66</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-07T23:39:00+01:00</StartTime>
+                        <EndTime>2025-03-08T01:22:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Innstillinger rute A</Summary>
+                    <Description>Lavik-Oppedal:  Rute A blir innstilt inntil videre fra avg. Oppedal lør. kl. 07:00. Pga. tekniske problemer.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.350847517+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_5f9a7db7-fec7-4bc5-81e8-61582b111151_normal_41</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-10T08:19:00+01:00</StartTime>
+                        <EndTime>2025-02-10T10:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ladebehov - Innstillt</Summary>
+                    <Description>På grunn av ladebehov vil avgang 08:30 fra Oppedal og avgang 09:00 fra Lavik utgå</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.843841858+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_8fe8c3dd-884b-4945-97c6-545b7ea8ae74_normal_345</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2024-12-10T09:26:00+01:00</StartTime>
+                        <EndTime>2024-12-11T00:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>sdrgedrgsdfsd</Summary>
+                    <Description>ertyertyhrsdfsdf</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1069</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.243643951+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_29de152b-03d5-42d0-aaad-5ced9c9dbe81_normal_68</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-09T13:11:00+01:00</StartTime>
+                        <EndTime>2025-03-09T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Breivikeidet - Svensby: Bilførere bes om å koste snø av skilt før ombordkjøring.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_191</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.841462729+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_9692f698-9b2e-4780-97c0-d549d9c870d3_normal_113</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-23T22:10:00+02:00</StartTime>
+                        <EndTime>2025-04-23T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Rute 810: Trondheim til Vanvikan - MS Fjordglimt gjenopptar ordinær ruteproduksjon med avgang fra Trondheim kl. 22:30.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.940332679+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_c0dab5d9-ccac-4cca-8b14-7e9f93179f2d_normal_42</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-11T15:07:00+01:00</StartTime>
+                        <EndTime>2025-02-11T15:09:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsegling MF Stord</Summary>
+                    <Description>Forsegling av MF Stord- antatt ETA Kaupanger kl 16:00</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.975093262+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_d6837f1a-e183-4884-9987-52066b0bd873_normal_65</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-06T18:16:00+01:00</StartTime>
+                        <EndTime>2025-03-06T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift i rute 805</Summary>
+                    <Description>Rute 805: Trondheim til Brekstad - MS Teisten gjenopptar ordinær ruteproduksjon med avgang fra Trondheim klokken 18:45.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_805</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.975328822+02:00</CreationTime>
+                    <ParticipantRef>SKY</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_28cdc82a-b9b2-435c-9013-bb25d7234777_normal_54</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-23T09:40:00+01:00</StartTime>
+                        <EndTime>2025-02-23T11:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Fjelbergruta: Normal drift fra avgang 1020 fra Sydnes.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SKY:Line:1034</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.940139989+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_067ab129-9191-4a85-9275-aed600064296_normal_134</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-14T14:18:00+02:00</StartTime>
+                        <EndTime>2025-05-14T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Mannskapsmangel</Summary>
+                    <Description>Vangsnes – Hella – Dragsvik: Avgang 30:30 fra Dragsvik og avgang 20:50 fra Hella utgår på grunn av mannskapsmangel.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4995_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.239856803+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_14715139-5589-4c0a-a464-86e60cd60967_normal_17</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-17T06:32:00+01:00</StartTime>
+                        <EndTime>2025-01-17T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Teknisk feil kai</Summary>
+                    <Description>Mannheller-Fodnes: Sambandet er innstilt inntil videre på grunn av problem med kjørebro.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:4981_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.451724505+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_f4f90182-9174-43e0-bf33-c4764ff8056e_normal_25</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-25T17:46:00+01:00</StartTime>
+                        <EndTime>2025-01-25T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund
+Rute 800 Edøy til Kristiansund innstiller grunnet værforholdene
+
+17:30 – Edøy til Kristiansund: 
+Reisende henvises til ferje (Fjord1) fra Edøy til Sandvika med avgang kl. 17:45. Ta kontakt med Norled på telefon +47 402 93 102 for bestilling av videre transport.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.843402668+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_4dcf4254-dcc2-4e6b-9041-9b94d1af372f_normal_47</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-16T09:51:00+01:00</StartTime>
+                        <EndTime>2025-02-16T11:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinkelser i rute 50</Summary>
+                    <Description>Ryfylkerutene:  Rute 50 avgang 07:45 fra Sauda vil bli ca 1 time forsinket ved ankomst Stavanger, antatt ca kl 11:30</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5961</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.750517355+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_91eccd8b-fa10-405d-a629-45dc4164f2f6_normal_65</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-06T10:58:00+01:00</StartTime>
+                        <EndTime>2025-03-06T15:28:52+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Innstilling grunnet værforholdene</Summary>
+                    <Description>Rute 800: Trondheim – Kristiansund, avgang kl. 12:15 – Innstilles grunnet værforholdene.     12:15 – Trondheim til Kristiansund:    Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Kristiansund trafikkterminal med avgang kl. 12:15.     12:15 – Trondheim til Brekstad:    Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Valset ferjekai, deretter videre korrespondanse med ferje (Fjord1) fra Valset til Brekstad. Vi gjør oppmerksom på at alternativ transport går som planlagt med forbehold om at ferjesambandet Brekstad-Valset er tilbake i normal drift.    12:15 – Trondheim til Hitra:    Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Hitra hurtigbåtterminal på Sandstad med avgang kl. 12:15.      12:15 – Trondheim til Kjørsvikbugen:    Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Kristiansund trafikkterminal med avgang kl. 12:15. Avstigning på Stormyra Bussholdeplass og deretter videre korrespondanse med oppsatt taxi til Kjørsvikbugen.     12:15 – Trondheim til Edøy:    Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Kristiansund trafikkterminal med avgang kl. 12:15. Avstigning på Stormyra Bussholdeplass og videre korrespondanse med oppsatt taxi til Sandvika ferjekai. Reisende henvises deretter til videre korrespondanse med ferje (Fjord1) fra Sandvika til Edøy. Vi gjør oppmerksom på at alternativ transport går som planlagt med forbehold om at ferjesambandet Edøya-Sandvika er tilbake i normal drift.    13:10 – Brekstad til Kristiansund:    Reisende henvises til ferje (Fjord1) fra Brekstad til Valset med avgang kl. 13:30, deretter videre korrespondanse med oppsatt taxi/buss fra Valset ferjekai til Kristiansund Trafikkterminal. Vi gjør oppmerksom på at alternativ transport går som planlagt med forbehold om at ferjesambandet Brekstad-Valset er tilbake i normal drift.    13:10 – Brekstad til øvrige destinasjoner:      Reisende henvises til ferje (Fjord1) fra Brekstad til Valset med avgang kl. 13:30, Ta kontakt med Norled på telefon +47 402 93 102 for bestilling av videre transport.     13:50 – Hitra til Kristiansund:    Reisende henvises til oppsatt buss fra Hitra hurtigbåtterminal på Sandstad til Kristiansund Trafikkterminal med avgang kl. 13:50.     13:50 – Hitra til øvrige destinasjoner:    Reisende henvises til oppsatt buss fra Hitra hurtigbåtterminal på Sandstad til Kristiansund Trafikkterminal med avgang kl. 13:50. Ta kontakt med bussjåfør ved påstigning for bestilling av videre transport.     14:20 – Kjørsvikbugen til Edøy og Kristiansund:    Reisende henvises til å ta kontakt med Norled på telefon +47 402 93 102 for bestilling av alternativ transport.    15:00 – Edøy til Kristiansund:    Reisende henvises til ferje (Fjord1) fra Edøy til Sandvika med avgang kl. 15:15, deretter videre korrespondanse med rutebuss 821 (FRAM) fra Sandvika Ferjekai til Kristiansund Trafikkterminal.  Vi oppfordrer alle reisende om å holde seg oppdatert via våre trafikkmeldinger og det vil komme en ny oppdatering i løpet av dagen. Ved spørsmål om alternativ transport bes reisende om å ta kontakt med Norled på telefon +47 402 93 102.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.550511526+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_0d198078-adcb-4b34-af6d-a98c75f89a00_normal_28</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-01-28T13:51:00+01:00</StartTime>
+                        <EndTime>2025-01-28T14:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Fogn-Judaberg-Helgøy: Det er normal drift i sambandet.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5986</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.647207186+02:00</CreationTime>
+                    <ParticipantRef>TRO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_bdb2e049-afee-4c40-ae2a-20532f211084_normal_164</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-13T15:24:00+02:00</StartTime>
+                        <EndTime>2025-06-13T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinkelse</Summary>
+                    <Description>Breivikeidet - Svensby: Pga. stor trafikk er det ca. 10 min. forsinkelse i sambandet, som vil vedvare ut dagen.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>TRO:Line:1_191</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.946465106+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_c0db3ad5-e6ca-4970-9129-b40d686b4528_normal_161</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-10T11:46:00+02:00</StartTime>
+                        <EndTime>2025-06-10T19:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Normal drift</Summary>
+                    <Description>Lavik-Oppedal: Fra og med avgang kl. 12:40 vil det være normal drift i sambandet.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.847410786+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_12385_normal_82</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2024-03-22T09:00:00+01:00</StartTime>
+                        <EndTime>2024-03-22T22:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Test</Summary>
+                    <Description>Vi tester informasjonsmeldinger</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.349500087+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_4f36f626-1aa4-458e-93c8-8ad55f373f66_normal_64</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-05T18:59:00+01:00</StartTime>
+                        <EndTime>2025-03-05T20:15:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Mannskapsmangel</Summary>
+                    <Description>Lavik-Oppedal: Avgang Oppedal kl.19:40 og avgang Lavik kl.20:10 kanselleres grunnet mannskapsmangel.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.340113572+02:00</CreationTime>
+                    <ParticipantRef>MOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_8e43c1ab-0777-4300-a9c8-228d51577915_normal_96</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-06T18:56:00+02:00</StartTime>
+                        <EndTime>2025-04-06T19:45:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Nødetater, kansellerte avganger</Summary>
+                    <Description>Lauvstad-Volda: Avgand Volda kl.19:00 og avgang Lauvstad kl.19:30 kanselleres grunnet ambulanse oppdrag.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>MOR:Line:1065</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.975663821+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_a9e62a8b-cf2c-466a-b20a-e144daeaacc7_normal_76</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-17T14:01:00+01:00</StartTime>
+                        <EndTime>2025-03-17T20:59:59+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Forsinket i rute </Summary>
+                    <Description>Fogn-Judaberg-Helgøy: Noe forsinkelse i rute 1 og 2 må påregnes i sambandet ut ettermiddagen. Dette som følge av bruk av reservefartøyer og dertil  opplæring, fartøysfamilisering / tilvenning.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:8_5986</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.843327968+02:00</CreationTime>
+                    <ParticipantRef>SOF</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_2b6f33a2-c0f1-424a-ba4c-ec2732de7516_normal_78</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-19T08:30:00+01:00</StartTime>
+                        <EndTime>2025-03-19T23:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Endring av fartøy i rute C</Summary>
+                    <Description>Lavik-Oppedal: Fra avgang 09:50 fra Lavik blir det normal drift i sambandet. Rute C betjenes av MF Stord.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>SOF:Line:3501_69</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.742341099+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_d35663f2-9eda-4ab2-9835-3c16e78c3bbc_normal_65</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-06T12:00:00+01:00</StartTime>
+                        <EndTime>2025-03-06T15:29:17+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Innstilling grunnet værforholdene</Summary>
+                    <Description>Rute 810: Trondheim til Vanvikan, avgang kl. 12:30 – Innstilles grunnet værforholdene.    Trondheim til Vanvikan.  Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Vanvikan via ferjesambandet Flakk-Rørvik med avgangstid til oppsatt rutetid.    Vi oppfordrer alle reisende om å holde seg oppdatert via våre trafikkmeldinger og det vil komme en ny oppdatering i løpet av ettermiddagen. Ved spørsmål om alternativ transport kan Norled kontaktes på telefon +47 402 93 102.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.975745721+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_808f0d23-c34a-4492-b823-f1e09561379f_normal_33</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-02-02T13:20:00+01:00</StartTime>
+                        <EndTime>2025-02-02T13:59:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Rute 810: Trondheim – Vanvikan: Innstilles inntil videre grunnet værforholdene  13:30 - Trondheim til Vanvikan:   Reisende henvises til oppsatt buss fra Trondheim hurtigbåtterminal til Flakk ferjekai, og videre korrespondanse med ferje (Torghatten) fra Flakk til Rørvik. Reisende henvises deretter til oppsatt buss fra Rørvik ferjekai til Vanvikan.     14:00 - Vanvikan til Trondheim:  Reisende henvises til oppsatt buss fra Vanvikan til Rørvik ferjekai, og videre korrespondanse med ferje (Torghatten) fra Rørvik til Flakk. Reisende henvises deretter til oppsatt buss fra Flakk ferjekai til Trondheim hurtigbåtterminal.    Vi oppfordrer alle reisende om å holde seg oppdatert via våre trafikkmeldinger.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.047014171+02:00</CreationTime>
+                    <ParticipantRef>NOR</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_11a5c03e-b119-451f-91fd-67c9fb1436d1_normal_100</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-04-10T16:53:00+02:00</StartTime>
+                        <EndTime>2025-04-10T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Fartøy bytte, Normal drift</Summary>
+                    <Description>Sandnessjøen-Dønna-Løkta: MF Sjernarøy er nå tilbake i B-ruten.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>NOR:Line:12_8181</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.646430547+02:00</CreationTime>
+                    <ParticipantRef>KOL</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_e646bdac-cb3c-48d9-b26f-4624d028c1f1_normal_68</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-03-09T19:01:00+01:00</StartTime>
+                        <EndTime>2025-03-09T22:00:00+01:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Værforhold</Summary>
+                    <Description>Hjelmeland-Nesvik-Skipavik: Noe forsinkelse må påregnes grunnet tett tåke.</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>KOL:Line:26_5958</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>

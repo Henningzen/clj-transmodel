@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri version="2.1" xmlns="http://www.siri.org.uk/siri" xmlns:ns5="http://www.opengis.net/gml/3.2" xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt">
+    <ServiceDelivery>
+        <ResponseTimestamp>2025-06-30T15:16:40.673809992+02:00</ResponseTimestamp>
+        <ProducerRef>GCO</ProducerRef>
+        <SituationExchangeDelivery>
+            <ResponseTimestamp>2025-06-30T15:16:40.673809992+02:00</ResponseTimestamp>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T15:16:40.648161745+02:00</CreationTime>
+                    <ParticipantRef>GCO</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:4-0-800-32888-1_4_NSR:Quay:689930_181</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-30T16:30:00+02:00</StartTime>
+                        <EndTime>2025-06-30T20:00:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>verySevere</Severity>
+                    <ReportType>incident</ReportType>
+                    <Summary>Avtalt</Summary>
+                    <Description>Avtalt med oppdragsgiver</Description>
+                    <InfoLinks>
+                        <InfoLink>
+                            <Uri>https://www.atb.no/driftsmeldinger</Uri>
+                        </InfoLink>
+                    </InfoLinks>
+                    <Affects>
+                        <VehicleJourneys>
+                            <AffectedVehicleJourney>
+                                <FramedVehicleJourneyRef>
+                                    <DataFrameRef>2025-06-30</DataFrameRef>
+                                    <DatedVehicleJourneyRef>ATB:ServiceJourney:800_241021121643016_15</DatedVehicleJourneyRef>
+                                </FramedVehicleJourneyRef>
+                                <LineRef>ATB:Line:2_800</LineRef>
+                                <Route>
+                                    <StopPoints>
+                                        <AffectedStopPoint>
+                                            <StopPointRef>NSR:Quay:68993</StopPointRef>
+                                        </AffectedStopPoint>
+                                    </StopPoints>
+                                </Route>
+                            </AffectedVehicleJourney>
+                        </VehicleJourneys>
+                    </Affects>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>

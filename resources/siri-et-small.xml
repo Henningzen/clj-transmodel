@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri version="2.1" xmlns="http://www.siri.org.uk/siri" xmlns:ns5="http://www.opengis.net/gml/3.2" xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt">
+    <ServiceDelivery>
+        <ResponseTimestamp>2025-06-30T23:55:15.539250511+02:00</ResponseTimestamp>
+        <ProducerRef>GCO</ProducerRef>
+        <EstimatedTimetableDelivery version="2.1">
+            <ResponseTimestamp>2025-06-30T23:55:15.539250511+02:00</ResponseTimestamp>
+            <EstimatedJourneyVersionFrame>
+                <RecordedAtTime>2025-06-30T23:55:15.539250511+02:00</RecordedAtTime>
+                <EstimatedVehicleJourney>
+                    <LineRef>MOR:Line:1067</LineRef>
+                    <DirectionRef>outbound</DirectionRef>
+                    <FramedVehicleJourneyRef>
+                        <DataFrameRef>2025-06-30</DataFrameRef>
+                        <DatedVehicleJourneyRef>MOR:ServiceJourney:1067_171_9150000024931005</DatedVehicleJourneyRef>
+                    </FramedVehicleJourneyRef>
+                    <Cancellation>false</Cancellation>
+                    <VehicleMode>ferry</VehicleMode>
+                    <OperatorRef>MOR:Operator:251</OperatorRef>
+                    <Monitored>false</Monitored>
+                    <DataSource>MOR</DataSource>
+                    <RecordedCalls>
+                        <RecordedCall>
+                            <StopPointRef>NSR:Quay:68856</StopPointRef>
+                            <Order>1</Order>
+                            <Cancellation>false</Cancellation>
+                            <PredictionInaccurate>false</PredictionInaccurate>
+                            <AimedDepartureTime>2025-06-30T23:45:00+02:00</AimedDepartureTime>
+                            <ExpectedDepartureTime>2025-06-30T23:45:00+02:00</ExpectedDepartureTime>
+                            <ActualDepartureTime>2025-06-30T23:45:51+02:00</ActualDepartureTime>
+                        </RecordedCall>
+                        <RecordedCall>
+                            <StopPointRef>NSR:Quay:67205</StopPointRef>
+                            <Order>2</Order>
+                            <Cancellation>false</Cancellation>
+                            <PredictionInaccurate>false</PredictionInaccurate>
+                            <AimedArrivalTime>2025-06-30T23:55:00+02:00</AimedArrivalTime>
+                            <ExpectedArrivalTime>2025-06-30T23:55:00+02:00</ExpectedArrivalTime>
+                            <ActualArrivalTime>2025-06-30T23:55:09+02:00</ActualArrivalTime>
+                        </RecordedCall>
+                    </RecordedCalls>
+                    <IsCompleteStopSequence>true</IsCompleteStopSequence>
+                </EstimatedVehicleJourney>
+            </EstimatedJourneyVersionFrame>
+        </EstimatedTimetableDelivery>
+    </ServiceDelivery>
+</Siri>

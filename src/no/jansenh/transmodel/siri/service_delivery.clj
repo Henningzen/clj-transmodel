@@ -6,10 +6,7 @@
 ;;-----------------------------------------------------------------------------
 
 (ns no.jansenh.transmodel.siri.service-delivery
-  (:require [no.jansenh.transmodel.siri.situation-exchange-delivery :as sx]
-            [no.jansenh.transmodel.parser.utilities :as utils]
-            [no.jansenh.transmodel.parser.core :as parser]))
-
+  (:require [no.jansenh.transmodel.parser.utilities :as u]))
 ;;
 ;;   SIRI Service Delivery
 ;;   ---------------------
@@ -20,7 +17,6 @@
 ;;
 
 (def siri-kw-ns "xmlns.http%3A%2F%2Fwww.siri.org.uk%2Fsiri") ;; http://www.siri.org.uk/siri
-
 (def siri:Siri (keyword siri-kw-ns "Siri"))
 (def siri:ServiceDelivery (keyword siri-kw-ns "ServiceDelivery"))
 (def siri:ResponseTimestamp (keyword siri-kw-ns "ResponseTimestamp"))
@@ -29,32 +25,35 @@
 (def siri:SituationExchangeDelivery (keyword siri-kw-ns "SituationExchangeDelivery"))
 
 
-(defn parse-service-delivery [xml-data]
+(defn- service-delivery-type
+  "Determines the type of service delivery present in the content.
+   
+   Returns:  the non-nil value as a string, or nil if both are nil.
+   Throws:   an exception if both tags are present.
+  "
+  [content]
+  (let [sx (u/tag-name content siri:SituationExchangeDelivery)
+        et nil]
+    (cond
+      (and sx et) (throw (ex-info "Multiple service delivery tags found" {:content content}))
+      sx sx
+      et et
+      :else nil)))
+
+
+(defn parse-service-delivery 
+  "TBA
+
+   Returns: 
+  "
+  [xml-data]
   (when (= (:tag xml-data) siri:Siri)
-    (let [version (->> (:attrs xml-data) :version)
-          content (:content xml-data)
-          service-delivery (utils/get-xml-tag content siri:ServiceDelivery)]
-      {:version version
-       :response-timestamp (utils/get-xml-tag service-delivery siri:ResponseTimestamp)
-       :producer-ref (utils/get-xml-tag service-delivery siri:ProducerRef)
-       :situation-exchange-delivery (utils/get-xml-tag service-delivery siri:SituationExchangeDelivery)
-       :estimated-timetable-delivery (utils/get-xml-tag service-delivery siri:EstimatedTimetableDelivery)})))
-
-
-(comment
-
-  (def file "resources/siri/sx/20250818T010250083687.xml")
-
-  (defn test-siri-data
-    "comment"
-    []
-    (let [file-path file
-          xml-data (parser/parse-xml-file file-path)]
-      (when xml-data
-        xml-data)))
-
-  (parse-service-delivery (parser/parse-xml-file file))
-  ;;--->
-  )
-
-
+    (let [version (:version (:attrs xml-data))
+          service-delivery-elem (->> (:content xml-data)
+                                     (filter #(= (:tag %) siri:ServiceDelivery))
+                                     first)
+          service-delivery-content (:content service-delivery-elem)]
+      {:version               version
+       :response-timestamp    (u/tag-content-datetime service-delivery-content siri:ResponseTimestamp)
+       :producer-ref          (u/tag-text service-delivery-content siri:ProducerRef)       
+       :service_delivery-type (service-delivery-type service-delivery-content)})))

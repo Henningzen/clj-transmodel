@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Siri version="2.1" xmlns="http://www.siri.org.uk/siri" xmlns:ns5="http://www.opengis.net/gml/3.2" xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns:ns4="http://datex2.eu/schema/2_0RC1/2_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt">
+    <ServiceDelivery>
+        <ResponseTimestamp>2025-06-30T14:11:10.582000832+02:00</ResponseTimestamp>
+        <ProducerRef>GCO</ProducerRef>
+        <SituationExchangeDelivery>
+            <ResponseTimestamp>2025-06-30T14:11:10.582000832+02:00</ResponseTimestamp>
+            <Situations>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.145282491+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_b5136a64-1f69-4230-b232-24f22b9e2889_normal_167</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-16T14:42:00+02:00</StartTime>
+                        <EndTime>2025-06-30T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund:  «Sommerruter fra 23. juni for hurtigbåt, ferge, regionbuss
+(blå buss) og bestillingstransport. Se oppdaterte rutetider i AtB-appen. Full
+oversikt finner du på atb.no.»</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.447243628+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_d4763290-e5f5-44b9-bd75-eecab6bfa2a4_normal_167</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-16T14:43:00+02:00</StartTime>
+                        <EndTime>2025-06-30T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Trondheim – Brekstad: «Sommerruter fra 23. juni for hurtigbåt, ferge, regionbuss
+(blå buss) og bestillingstransport. Se oppdaterte rutetider i AtB-appen. Full
+oversikt finner du på atb.no.»</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_805</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.142074073+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_c1aef30f-9461-42be-a44b-0003ccba7f7a_normal_133</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-13T14:48:00+02:00</StartTime>
+                        <EndTime>2025-07-03T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Trondheim – Brekstad – Kristiansund: «Høytid- og helligdagsruter for mai og juni fra lørdag 17.
+mai. Se AtB-appen eller atb.no/helligdagsruter.»</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_800</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.041986553+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_823b10c8-608b-43a1-a2b3-f2653f4c6932_normal_133</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-05-13T14:49:00+02:00</StartTime>
+                        <EndTime>2025-07-03T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Trondheim – Vanvikan:  «Høytid- og helligdagsruter for mai og juni fra lørdag 17.
+mai. Se AtB-appen eller atb.no/helligdagsruter.»</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+                <PtSituationElement>
+                    <CreationTime>2025-06-30T11:33:27.848919755+02:00</CreationTime>
+                    <ParticipantRef>ATB</ParticipantRef>
+                    <SituationNumber>GCO:SituationNumber:norled_526cabe2-3106-4415-b0ee-7a972cd47502_normal_167</SituationNumber>
+                    <Source>
+                        <SourceType>directReport</SourceType>
+                    </Source>
+                    <Progress>open</Progress>
+                    <ValidityPeriod>
+                        <StartTime>2025-06-16T14:43:00+02:00</StartTime>
+                        <EndTime>2025-06-30T23:59:00+02:00</EndTime>
+                    </ValidityPeriod>
+                    <UndefinedReason></UndefinedReason>
+                    <Severity>noImpact</Severity>
+                    <Audience>public</Audience>
+                    <ReportType>general</ReportType>
+                    <Summary>Ruteinfo: </Summary>
+                    <Description>Trondheim – Vanvikan:  «Sommerruter fra 23. juni for hurtigbåt, ferge, regionbuss
+(blå buss) og bestillingstransport. Se oppdaterte rutetider i AtB-appen. Full
+oversikt finner du på atb.no.»</Description>
+                    <Affects>
+                        <Networks>
+                            <AffectedNetwork>
+                                <AffectedLine>
+                                    <LineRef>ATB:Line:2_810</LineRef>
+                                </AffectedLine>
+                            </AffectedNetwork>
+                        </Networks>
+                    </Affects>
+                </PtSituationElement>
+            </Situations>
+        </SituationExchangeDelivery>
+    </ServiceDelivery>
+</Siri>
