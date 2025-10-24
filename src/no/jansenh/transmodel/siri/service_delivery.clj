@@ -7,6 +7,7 @@
 
 (ns no.jansenh.transmodel.siri.service-delivery
   (:require [no.jansenh.transmodel.parser.utilities :as u]))
+
 ;;
 ;;   SIRI Service Delivery
 ;;   ---------------------

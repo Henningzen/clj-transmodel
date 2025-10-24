@@ -7,12 +7,12 @@
 ;;-----------------------------------------------------------------------------
 
 (ns no.jansenh.transmodel.parser.core
-  (:require [clojure.java.io :as io]
-            [clojure.data.xml :as xml]
+  (:require [clojure.data.xml :as xml]
+            [clojure.java.io :as io]
             [clojure.tools.logging :as log])
-  (:import [java.io FileNotFoundException IOException]
-           [javax.xml.stream XMLStreamException]
-           [java.io FileNotFoundException InputStream]))
+  (:import (java.io FileNotFoundException IOException)
+           (java.io FileNotFoundException)
+           (javax.xml.stream XMLStreamException)))
 ;;
 ;;   Transmodel standards XML basic parser
 ;;   ------------------
@@ -88,8 +88,8 @@
    in a map."
   [parsed-xml]
   (when parsed-xml
-    {:tag (:tag parsed-xml)
-     :attrs (:attrs parsed-xml)
+    {:tag           (:tag parsed-xml)
+     :attrs         (:attrs parsed-xml)
      :content-count (count (:content parsed-xml))}))
 
 nil

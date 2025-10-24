@@ -6,9 +6,9 @@
 ;;-----------------------------------------------------------------------------
 
 (ns no.jansenh.transmodel.parser.process
-  (:require [no.jansenh.transmodel.parser.core :as parser]
+  (:require [clojure.data.zip.xml :as zip-xml]
             [clojure.zip :as zip]
-            [clojure.data.zip.xml :as zip-xml]))
+            [no.jansenh.transmodel.parser.core :as parser]))
 ;;
 ;;   NeETx processor
 ;;   ---------------
@@ -51,9 +51,9 @@
                            :content
                            (apply str))]
 
-      {:version version
+      {:version               version
        :publication-timestamp publication-timestamp
-       :description description})))
+       :description           description})))
 
 
 (defn publication-delivery->zip [xml-data]
@@ -75,9 +75,9 @@
 
 
   (defn test-xml-data [] (let [file-path "resources/testdata/292.xml"
-                                         xml-data (parser/parse-xml-file file-path)]
-                                     (when xml-data
-                                       xml-data)))
+                               xml-data (parser/parse-xml-file file-path)]
+                           (when xml-data
+                             xml-data)))
 
   (defn test-process-publication-delivery [] (let [file-path "resources/testdata/292.xml"
                                                    xml-data (parser/parse-xml-file file-path)]
@@ -92,10 +92,10 @@
                                                 (zip-xml/xml1-> zipper netex:PublicationTimestamp zip-xml/text)))))
 
   (defn test-data-objects-> [] (let [file-path "resources/testdata/292.xml"
-                                       xml-data (parser/parse-xml-file file-path)]
-                                   (when xml-data
-                                     (data-objects->zip xml-data))))
-  
+                                     xml-data (parser/parse-xml-file file-path)]
+                                 (when xml-data
+                                   (data-objects->zip xml-data))))
+
 
   (test-xml-data)
   (test-process-publication-delivery)
@@ -103,4 +103,4 @@
   (test-data-objects->)
 
   ;; --->
-)
+  )
