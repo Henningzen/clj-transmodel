@@ -1,11 +1,25 @@
-
-.idea
+## ----------------------------------------------------------------------------
+## JetBrains IDE usage
 *.iml
+# Ignore all of .idea
+.idea/**/*
+# Keep dictionary file
+!.idea/
+!.idea/dictionaries/
+!.idea/dictionaries/project.xml
+
+## ----------------------------------------------------------------------------
+## VSCode  IDE usage
 .calva/output-window/
 .calva/repl.calva-repl
 .classpath
+
+
+# We keep clj-kondo, but ditch the cache
 .clj-kondo/.cache
 .cpcache
+
+
 .eastwood
 .factorypath
 .hg/
