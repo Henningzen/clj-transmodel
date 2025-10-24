@@ -4,7 +4,7 @@
 
 
 (deftest test-parse-xml-zip-file
-  (testing "We should have some XML when we peek the resourses/testdata/test_data.xml file"
+  (testing "We should have some XML when we peek the resources/testdata/test_data.xml file"
     (let [shared-data-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "shared_data.xml")]
       (is (some? shared-data-xml) "XML should not be nil")
       #_(is (= "1.15:NO-NeTEx-networktimetable:1.5" (:version (:attrs (sut/peek-xml shared-data-xml)))))))
