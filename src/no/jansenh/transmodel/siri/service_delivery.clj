@@ -29,8 +29,8 @@
 (defn- service-delivery-type
   "Determines the type of service delivery present in the content.
    
-   Returns:  the non-nil value as a string, or nil if both are nil.
-   Throws:   an exception if both tags are present.
+   Returns: the non-nil value as a string, or nil if both are nil.
+   Throws: an exception if both tags are present.
   "
   [content]
   (let [sx (u/tag-name content siri:SituationExchangeDelivery)
@@ -42,7 +42,7 @@
       :else nil)))
 
 
-(defn parse-service-delivery 
+(defn parse-service-delivery
   "TBA
 
    Returns: 
@@ -56,5 +56,5 @@
           service-delivery-content (:content service-delivery-elem)]
       {:version               version
        :response-timestamp    (u/tag-content-datetime service-delivery-content siri:ResponseTimestamp)
-       :producer-ref          (u/tag-text service-delivery-content siri:ProducerRef)       
+       :producer-ref          (u/tag-text service-delivery-content siri:ProducerRef)
        :service_delivery-type (service-delivery-type service-delivery-content)})))

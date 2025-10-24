@@ -1,6 +1,6 @@
 (ns no.jansenh.transmodel.parser.core-test
-  (:require [no.jansenh.transmodel.parser.core :as sut]
-            [clojure.test :refer [deftest is testing]]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [no.jansenh.transmodel.parser.core :as sut]))
 
 
 (deftest test-parse-xml-zip-file
@@ -28,7 +28,7 @@
   (let [shared-data-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "shared_data.xml")
         wrong-entry-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "nonexistent.xml")]
     #_(testing "We should have some XML"
-      (is (= true (some? shared-data-xml)) "XML should not be nil"))
+        (is (= true (some? shared-data-xml)) "XML should not be nil"))
     (testing "We should have some attribute, tag and content at the root level"
       (is (not (nil? (some? (:attr (sut/peek-xml shared-data-xml) "attrs should not be nill")))))
       (is (some? (:tag (sut/peek-xml shared-data-xml) "tag should not be nill")))
