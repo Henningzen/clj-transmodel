@@ -5,7 +5,7 @@
 
 (def lib 'jansenh/clj-transmodel)
 
-(def version "0.1.0")
+(def version "0.2.0")
 
 (def class-dir "target/classes")
 
@@ -28,7 +28,7 @@
           [:url "http://www.eclipse.org/legal/epl-2.0"]]]
         [:developers
          [:developer
-          [:name "Jansenh"]]]
+          [:name "Henning Jansen"]]]
         [:scm
          [:url "https://github.com/Henningzen/clj-transmodel"]
          [:connection "scm:git:https://github.com/Henningzen/clj-transmodel.git"]

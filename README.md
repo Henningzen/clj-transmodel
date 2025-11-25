@@ -3,22 +3,28 @@
 Public transport standards NeTEx, SIRI (ET, SX, VM) under CEN/TC 278, Transmodel reference model (EN 12896).
 We are creating a highly opinionated library of parsers for the NeTEx and SIRI standards.
 
-## Usage
+## Installation
+
+Latest develop stable release is 0.2.0
 
 Add this library to your `deps.edn`:
 
-    {jansenh/clj-transmodel {:mvn/version "0.1.0"}}
+```clojure
+{jansenh/clj-transmodel {:mvn/version "0.1.0"}}
+```
 
-Then use it in your Clojure code:
+## Usage
 
-    ```clojure
-	(require '[jansenh.clj-transmodel :as tm])
-    (tm/your-function arg1 arg2)
-	```
+Use it in your Clojure code:
+
+```clojure
+(require '[jansenh.clj-transmodel :as tm])
+(tm/your-function arg1 arg2)
+```
 
 Run the project's tests
 
-    $ clojure -T:build test
+	$ clojure -T:build test
 
 Run the project's CI pipeline and build a JAR (this will fail until you edit the tests to pass):
 
