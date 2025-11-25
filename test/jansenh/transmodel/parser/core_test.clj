@@ -1,6 +1,6 @@
-(ns no.jansenh.transmodel.parser.core-test
+(ns jansenh.transmodel.parser.core-test
   (:require [clojure.test :refer [deftest is testing]]
-            [no.jansenh.transmodel.parser.core :as sut]))
+            [jansenh.transmodel.parser.core :as sut]))
 
 
 (deftest test-parse-xml-zip-file

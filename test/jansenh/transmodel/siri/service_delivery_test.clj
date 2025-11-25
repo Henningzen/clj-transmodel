@@ -1,12 +1,7 @@
-(ns no.jansenh.transmodel.siri.service-delivery-test
+(ns jansenh.transmodel.siri.service-delivery-test
   (:require [clojure.test :refer :all]
-            [no.jansenh.transmodel.parser.core :as p]
-            [no.jansenh.transmodel.siri.service-delivery :as sut])
-  (:import (java.time Instant)))
-;; 
-;; 
-;;
-;;
+            [jansenh.transmodel.parser.core :as p]
+            [jansenh.transmodel.siri.service-delivery :as sut]))
 ;;
 ;; NOTE: this test is tied to Siri version 2.1
 ;;
@@ -17,7 +12,7 @@
 (def siri-version "2.1")
 
 (deftest test-service-delivery-version
-  " We are testing for Siri version 2.1
+  "We are testing for Siri version 2.1
   "
   (let [service-delivery (sut/parse-service-delivery (p/parse-xml-file file))
         siri-version siri-version]
@@ -29,6 +24,6 @@
    The parse-service-delivery creates a proper Java Instant of this string.
   "
   (let [service-delivery (sut/parse-service-delivery (p/parse-xml-file file))]
-    (is (instance? Instant (:response-timestamp service-delivery)))
+    (is (instance? java.time.Instant (:response-timestamp service-delivery)))
     (is (re-matches #"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z"
                     (str (:response-timestamp service-delivery))))))

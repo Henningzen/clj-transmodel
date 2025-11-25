@@ -3,7 +3,7 @@
   (:require [clojure.tools.build.api :as b]
             [deps-deploy.deps-deploy :as dd]))
 
-(def lib 'no.jansenh/clj-transmodel)
+(def lib 'jansenh/clj-transmodel)
 
 (def version "0.1.0")
 
@@ -21,7 +21,7 @@
 
 (defn- pom-template [version]
        [[:description "Transmodel standards XML parsers."]
-        [:url "https://github.com/no.jansenh/clj-transmodel"]
+        [:url "https://github.com/Henningzen/clj-transmodel"]
         [:licenses
          [:license
           [:name "Eclipse Public License 2.0"]
@@ -30,9 +30,9 @@
          [:developer
           [:name "Jansenh"]]]
         [:scm
-         [:url "https://github.com/no.jansenh/clj-transmodel"]
-         [:connection "scm:git:https://github.com/no.jansenh/clj-transmodel.git"]
-         [:developerConnection "scm:git:ssh:git@github.com:no.jansenh/clj-transmodel.git"]
+         [:url "https://github.com/Henningzen/clj-transmodel"]
+         [:connection "scm:git:https://github.com/Henningzen/clj-transmodel.git"]
+         [:developerConnection "scm:git:ssh:git@github.com:Henningzen/clj-transmodel.git"]
          [:tag (str "v" version)]]])
 
 (defn- jar-opts [opts]

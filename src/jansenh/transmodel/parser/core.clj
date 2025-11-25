@@ -1,12 +1,12 @@
 ;;-----------------------------------------------------------------------------
-;; File: src/no/jansenh/transmodel/parser/core.clj
+;; File: src/jansenh/transmodel/parser/core.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
 ;; Copyright: (c) 2025
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
 ;;
 ;;-----------------------------------------------------------------------------
 
-(ns no.jansenh.transmodel.parser.core
+(ns jansenh.transmodel.parser.core
   (:require [clojure.data.xml :as xml]
             [clojure.java.io :as io]
             [clojure.tools.logging :as log])
@@ -15,19 +15,18 @@
            (javax.xml.stream XMLStreamException)))
 ;;
 ;;   Transmodel standards XML basic parser
-;;   ------------------
+;;   ------------------------------------
 ;;
 ;;   The parse-xml method operate on a Stream, either File or Reader.
 ;;
 ;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
 ;;   since:     0.1.0                    2025-08-07
 ;;   version:   0.1.0
-;; ------------------------------------+----------------------------------------
+;;   ---------------------------------------------------------------------------
 ;;
-;;        TODO: test the parse-xml for large files, streams closing.
-;;              Do we need slurp here?
-;;
-;;        TODO: file->input-stream needs testing for close stream bevaviour.     
+;;       + TODO: Test the parse-xml for large files, streams closing.
+;;               Do we need slurp here?
+;;       + TODO: file->input-stream needs testing for close stream bevaviour.
 ;;
 
 (defn- parse-xml

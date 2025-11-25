@@ -1,5 +1,5 @@
 ;;-----------------------------------------------------------------------------
-;; File: src/no/jansenh/transmodel/parser/utilities.clj
+;; File: src/jansenh/transmodel/parser/utilities.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
 ;; Copyright: (c) 2025
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
@@ -7,7 +7,7 @@
 ;;-----------------------------------------------------------------------------
 
 
-(ns no.jansenh.transmodel.parser.utilities
+(ns jansenh.transmodel.parser.utilities
   (:import (java.time Instant LocalDateTime OffsetDateTime ZoneOffset ZonedDateTime)
            (java.time.format DateTimeParseException)))
 

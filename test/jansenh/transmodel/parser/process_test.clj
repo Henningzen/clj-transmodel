@@ -1,8 +1,8 @@
-(ns no.jansenh.transmodel.parser.process-test
+(ns jansenh.transmodel.parser.process-test
   (:require [clojure.data.zip.xml :as zip-xml]
             [clojure.test :refer [deftest is testing]]
-            [no.jansenh.transmodel.parser.core :as parser]
-            [no.jansenh.transmodel.parser.process :as sut]))
+            [jansenh.transmodel.parser.core :as parser]
+            [jansenh.transmodel.parser.process :as sut]))
 
 (def network-timetable-version "1.15:NO-NeTEx-networktimetable:1.5")
 

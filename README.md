@@ -5,12 +5,18 @@ We are creating a highly opinionated library of parsers for the NeTEx and SIRI s
 
 ## Usage
 
-Invoke a library API function from the command-line:
+Add this library to your `deps.edn`:
 
-    $ clojure -X no.jansenh.clj-transmodel/foo :a 1 :b '"two"'
-    {:a 1, :b "two"} "Hello, World!"
+    {jansenh/clj-transmodel {:mvn/version "0.1.0"}}
 
-Run the project's tests (they'll fail until you edit them):
+Then use it in your Clojure code:
+
+    ```clojure
+	(require '[jansenh.clj-transmodel :as tm])
+    (tm/your-function arg1 arg2)
+	```
+
+Run the project's tests
 
     $ clojure -T:build test
 
