@@ -30,7 +30,11 @@
 ;;
 
 
-(defn- ctag
+;;-----------------------------------------------------------------------------
+;; XML Parsing - core primitives
+;;-----------------------------------------------------------------------------
+
+(defn ctag
   [content tag]
   (->> content
        (filter #(= (:tag %) tag))))
@@ -45,7 +49,6 @@
        first
        :content))
 
-
 (defn tag-text
   "Get the content of the first element with the given tag.
 
@@ -54,6 +57,15 @@
   [content tag]
   (first (tag-content-seq content tag)))
 
+(defn attr-text
+  "Get the text content of the first element with the given tag.
+   Returns the text content as a string or nil if the tag is not found.
+  "
+  [content tag]
+  (->> (filter #(= (:tag %) tag) content)
+       first
+       :content
+       first))
 
 (defn tag-element
   "Get the entire element (tag, attrs, content) with the given tag.
@@ -63,7 +75,6 @@
   [content tag]
   (->> (ctag content tag)
        first))
-
 
 (defn tag-name
   "Get just the local tag name of the first matching element.
@@ -107,6 +118,90 @@
   (->> (ctag content tag)
        first
        :attrs))
+
+
+;;-----------------------------------------------------------------------------
+;; XML Navigation - finding and filtering elements
+;;-----------------------------------------------------------------------------
+
+;; (defn find-children
+;;   "Find all direct children with a given tag name in element's content.
+;;    Filters out string content (whitespace)."
+;;   [element tag-name]
+;;   (->> (:content element)
+;;        (filter map?)
+;;        (filter #(= (name (:tag %)) tag-name))))
+
+(defn find-children
+  "Find all direct children with a given tag name in element's content.
+   Filters out string content (whitespace).
+   Works with both namespaced and non-namespaced tags."
+  [element tag]
+  (when (and element (:content element))
+    (->> (:content element)
+         (filter map?)
+         (filter #(= (:tag %) tag)))))
+
+;; (defn find-child
+;;   "Find the first direct child with a given tag name.
+;;    Returns nil if not found."
+;;   [element tag-name]
+;;   (first (find-children element tag-name)))
+
+(defn find-child
+  "Find the first direct child with a given tag.
+   Works with both namespaced and non-namespaced tags."
+  [element tag]
+  (first (find-children element tag)))
+
+(defn find-all-tags
+  "Recursively find ALL elements with a given tag throughout the tree.
+   Searches deeply through all descendants."
+  [element tag]
+  (when element
+    (let [matching (if (= (:tag element) tag) [element] [])
+          children-matches (when (:content element)
+                             (mapcat #(find-all-tags % tag) (:content element)))]
+      (concat matching children-matches))))
+
+;;-----------------------------------------------------------------------------
+;; Attribute extraction helpers
+;;-----------------------------------------------------------------------------
+
+(defn element-id
+  "Get the :id attribute from an element"
+  [element]
+  (get-in element [:attrs :id]))
+
+(defn element-ref
+  "Get the :ref attribute from an element (for references)"
+  [element]
+  (get-in element [:attrs :ref]))
+
+;;-----------------------------------------------------------------------------
+;; Combined extraction - element + content
+;;-----------------------------------------------------------------------------
+
+;; (defn get-text
+;;   "Get text content from an element"
+;;   [element]
+;;   (when element
+;;     (first (:content element))))
+
+(defn get-text
+  "Get text content from an element.
+   Extracts the first string in :content."
+  [element]
+  (when element
+    (first (filter string? (:content element)))))
+
+(defn deep-find-text
+  "Find a nested element and get its text content.
+   Usage: (deep-find-text element 'TimetabledPassingTime' 'DepartureTime')
+   Finds TimetabledPassingTime child, then DepartureTime child within it."
+  [element tag1 tag2]
+  (when-let [child1 (find-child element tag1)]
+    (get-text (find-child child1 tag2))))
 
 
 ;; ----------------------------------------------------------------------------
@@ -187,3 +282,10 @@
      (or (tag-content-datetime content tag)
          (tag-attr-datetime content tag :timestamp)
          (tag-attr-datetime content tag :time)))))
+
+
+
+
+
+
+

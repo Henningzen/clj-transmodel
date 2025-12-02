@@ -6,14 +6,11 @@
 ;;-----------------------------------------------------------------------------
 
 (ns jansenh.transmodel.transmodel)
-;;
+
 ;;   Transmodel, NeETx and SIRI.
 ;;
 ;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
 ;;   since:     0.1.0                    2025-08-07
 ;;   version:   0.1.0
 ;; ------------------------------------+----------------------------------------
-
-
-
 

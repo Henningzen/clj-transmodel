@@ -1,0 +1,47 @@
+#+title:  NeTEx Data Model
+#+author: Henning Jansen
+#+email:  henning.jansen@jansenh.no
+#+date:   2025-01-16
+#+STARTUP: overview
+#+STARTUP: hidestars
+
+** Key Data Model
+
+   The concept of ServiceJourneyInterchange:
+   
+#+begin_src text
+  ServiceJourneyInterchange
+  ├── :from-journey → ServiceJourney.id
+  ├── :to-journey → ServiceJourney.id  
+  ├── :from-point → ScheduledStopPoint.id (turnaround location)
+  ├── :stay-seated → true = same vessel continues
+  └── :guaranteed → true = connection guaranteed
+
+  Roundtrip Chain (StaySeated=true sequence):
+  [Journey1011] → [Journey2014] → [Journey1015] → ...
+       ↓               ↓               ↓
+    outbound       inbound         outbound
+    Fogn→Helgøy   Helgøy→Fogn     Fogn→Helgøy
+
+#+end_src
+
+*** Observation mid-journey
+#+begin_src text
+  Journey 1011: Fogn → Judaberg (outbound)
+      arrives 16:35 at Helgøy
+           │
+           ▼ StaySeated (same vessel, same trip)
+           │
+  Journey 2014: Helgøy → Judaberg → ... (inbound)
+      departs 16:35 from Helgøy
+#+end_src
+
+*** *ServiceJourneyInterchange* models connection between two journeys at one stop:
+#+begin_src text
+  Journey A (1011) arrives at stop 11416420_0
+      │
+      ▼  StaySeated=true (passenger stays on vessel)
+      │  Guaranteed=true (connection is guaranteed)
+      │
+  Journey B (2014) departs from stop 11416420_0
+#+end_src
