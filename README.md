@@ -45,6 +45,17 @@ variables (requires the `ci` task be run first):
 
 Your library will be deployed to no.jansenh/clj-transmodel on clojars.org by default.
 
+
+## Notebook usage
+
+The repository has a Clay notebook from the Noj family of data-science tools. Go read the manual.
+
+1. Fire up the notebook/netex namespace in your REPL
+2. Invoce the notebook start command. You will find it at the bottom of the file in a comment section
+3. Your browser will open a Clay page and instructions will appear.
+
+The notebook assume NeTEx xml files hosted in some data folder on you local system. Contact me for details on how to obtain these datasets. Moving forward, a download feature will appear in the server module.
+
 ## License
 
 Copyright © 2025 Henning Jansen

@@ -1,0 +1,20 @@
+#+title:  Development
+#+author: Henning Jansen
+#+email:  henning.jansen@jansenh.no
+#+date:   2025-01-16
+#+STARTUP: overview
+#+STARTUP: hidestars
+
+* Continued development
+
+** Namespace calendar
+
+   + Migrate XML Navigation Helpers to xml/utilities.
+   + Unit-test parse-xxx functions on SKY, SOF, KOL data
+   + Unit-test tree-walker
+   + Unit-test Calendar Index Builder
+   + Unit-test Date Expansion
+   + Integrate in notebooks/
+   + Usecases for notebook are 'weeks-ahead' 'describe-day-type'
+
+
