@@ -2,40 +2,55 @@
   (:require [clojure.test :refer [deftest is testing]]
             [jansenh.transmodel.parser.core :as sut]))
 
+(def resources-path "resources/testdata")
+(def test-data-zip "test-data.zip")
+(def line-data "resources/testdata/292.xml")
+(def shared-data-xml "shared_data.xml")
 
-(deftest test-parse-xml-zip-file
-  (testing "We should have some XML when we peek the resources/testdata/test_data.xml file"
-    (let [shared-data-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "shared_data.xml")]
-      (is (some? shared-data-xml) "XML should not be nil")
-      #_(is (= "1.15:NO-NeTEx-networktimetable:1.5" (:version (:attrs (sut/peek-xml shared-data-xml)))))))
+(def timetable-version "1.15:NO-NeTEx-networktimetable:1.5")
 
-  (testing "When file is missing or not readable"
-    (let [missing-xml (sut/parse-xml-zip-file "resources/testdata/nonexistent.zip" "shared_data.xml")
-          wrong-entry-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "nonexistent.xml")]
-      (testing "Missing zip file should return nil"
-        (is (nil? missing-xml) "Missing zip file should return nil"))
-      (testing "Missing entry in zip should return nil"
-        (is (nil? wrong-entry-xml) "Missing entry should return nil")))))
+(defn pf
+  "Pathify!"
+  [path file]
+  (str path "/" file))
+
+;; -----------------------------------------------------------------------------
+;; Test the file parser, with zip file and regular XML file.
+;;
+;; Look out for an expected error-message in the REPL and/or logs, as we poke
+;; exceptions in these tests.
+;;
 
 (deftest test-parse-xml-file
-  (testing "We should have some XML when we peek the resourses/testdata/292.xml file"
-    (let [xml-file (sut/parse-xml-file "resources/testdata/292.xml")]
-      (is (some? xml-file) "XML should not be nil")
-      #_(is (= "1.15:NO-NeTEx-networktimetable:1.5" (:version (:attrs (sut/peek-xml shared-data-xml))))))))
+  (let [data (sut/parse-xml-file line-data)]
 
+    (testing "We should have some XMLdata  when we peek the resourses/testdata/292.xml file"
+      (is (some? data) "XML data should not be nil")
+      (is (= timetable-version (:version (:attrs (sut/peek-xml data))))))
 
-(deftest test-zip-file-xml
-  (let [shared-data-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "shared_data.xml")
-        wrong-entry-xml (sut/parse-xml-zip-file "resources/testdata/test-data.zip" "nonexistent.xml")]
-    #_(testing "We should have some XML"
-        (is (= true (some? shared-data-xml)) "XML should not be nil"))
     (testing "We should have some attribute, tag and content at the root level"
-      (is (not (nil? (some? (:attr (sut/peek-xml shared-data-xml) "attrs should not be nill")))))
-      (is (some? (:tag (sut/peek-xml shared-data-xml) "tag should not be nill")))
-      (is (= true (some? (:conten (sut/peek-xml shared-data-xml) "content should not be nill")))))
+      (is (some? (:tag     (sut/peek-xml data))))
+      (is (some? (:attrs   (sut/peek-xml data))))
+      (is (some? (:content (sut/peek-xml data)))))))
+
+
+(deftest test-parse-xml-zip-file
+  (let [data (sut/parse-xml-zip-file (pf resources-path test-data-zip) shared-data-xml)]
+
+    (testing "We should have some XML data"
+      (is (= true (some? data)) "XML data should not be nil"))
+
+    (testing "We should have some attribute, tag and content at the root level"
+      (is (some? (:tag     (sut/peek-xml data))))
+      (is (some? (:attrs   (sut/peek-xml data))))
+      (is (some? (:content (sut/peek-xml data)))))
+
     (testing "When file is missing or not readable"
-      (let [missing-xml (sut/parse-xml-zip-file "resources/testdata/nonexistent.zip" "shared_data.xml")]
+      (let [missing-xml (sut/parse-xml-zip-file (pf resources-path "non-existing.zip") shared-data-xml)
+            wrong-entry-xml (sut/parse-xml-zip-file(pf resources-path test-data-zip)  "nonexistent.xml")]
+
         (testing "Missing zip file should return nil"
           (is (nil? missing-xml) "Missing zip file should return nil"))
+
         (testing "Missing entry in zip should return nil"
           (is (nil? wrong-entry-xml) "Missing entry should return nil"))))))
