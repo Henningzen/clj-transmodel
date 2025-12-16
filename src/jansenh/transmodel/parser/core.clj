@@ -87,8 +87,8 @@
    in a map."
   [parsed-xml]
   (when parsed-xml
-    {:tag           (:tag parsed-xml)
-     :attrs         (:attrs parsed-xml)
-     :content-count (count (:content parsed-xml))}))
+    {:tag     (:tag parsed-xml)
+     :attrs   (:attrs parsed-xml)
+     :content (:content parsed-xml)}))
 
-nil
+
