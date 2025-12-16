@@ -6,9 +6,7 @@
 ;;-----------------------------------------------------------------------------
 
 (ns jansenh.transmodel.parser.process
-  (:require [clojure.data.zip.xml :as zip-xml]
-            [clojure.zip :as zip]
-            [jansenh.transmodel.parser.core :as parser]))
+  (:require [jansenh.transmodel.parser.core :as parser]))
 ;;
 ;;   NeETx processor
 ;;   ---------------
@@ -54,53 +52,3 @@
       {:version               version
        :publication-timestamp publication-timestamp
        :description           description})))
-
-
-(defn publication-delivery->zip [xml-data]
-  (when (= (:tag xml-data) netex:PublicationDelivery)
-    (zip/xml-zip xml-data)))
-
-
-(defn data-objects->zip [xml-data]
-  (when (= (:tag xml-data) netex:PublicationDelivery)
-    (println "Found PublicationDelivery")
-    (let [data-objects (->> (:content xml-data)
-                            (filter #(= (:tag %) netex:dataObjects))
-                            first
-                            :content)]
-      (zip/xml-zip data-objects))))
-
-
-(comment
-
-
-  (defn test-xml-data [] (let [file-path "resources/testdata/292.xml"
-                               xml-data (parser/parse-xml-file file-path)]
-                           (when xml-data
-                             xml-data)))
-
-  (defn test-process-publication-delivery [] (let [file-path "resources/testdata/292.xml"
-                                                   xml-data (parser/parse-xml-file file-path)]
-                                               (when xml-data
-                                                 (let [xml-data (process-publication-delivery xml-data)]
-                                                   xml-data))))
-
-  (defn test-publication-delivery->zip [] (let [file-path "resources/testdata/292.xml"
-                                                xml-data (parser/parse-xml-file file-path)]
-                                            (when xml-data
-                                              (let [zipper (publication-delivery->zip xml-data)]
-                                                (zip-xml/xml1-> zipper netex:PublicationTimestamp zip-xml/text)))))
-
-  (defn test-data-objects-> [] (let [file-path "resources/testdata/292.xml"
-                                     xml-data (parser/parse-xml-file file-path)]
-                                 (when xml-data
-                                   (data-objects->zip xml-data))))
-
-
-  (test-xml-data)
-  (test-process-publication-delivery)
-  (test-publication-delivery->zip)
-  (test-data-objects->)
-
-  ;; --->
-  )
