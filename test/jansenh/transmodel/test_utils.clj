@@ -25,6 +25,11 @@
    Returns: truthy on valid timestamp
   "
   [timestamp]
+   ;; This function will probably be duplicated into src/ at some point. Let's
+   ;; keep that duplication if it happens; I wanted to tie this test for validity
+   ;; inside scope of tests for obvious and non-obvious reasons:
+   ;; - verbosity (if needed)
+   ;; - evolving edge cases
   (if (nil? timestamp)
     nil
     (re-matches #"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}"

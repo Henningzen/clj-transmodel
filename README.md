@@ -46,6 +46,25 @@ variables (requires the `ci` task be run first):
 Your library will be deployed to no.jansenh/clj-transmodel on clojars.org by default.
 
 
+
+## Contribute
+
+### Commit Message Format
+
+Follow Conventional Commits:
+
+	feat: Add new feature
+	fix: Fix bug
+	docs: Update documentation
+	style: Code style changes (formatting, etc.)
+	refactor: Code refactoring
+	test: Add or update tests
+	chore: Build process, dependencies, etc.
+
+## Resources
+
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
 ## Notebook usage
 
 The repository has a Clay notebook from the Noj family of data-science tools. Go read the manual.

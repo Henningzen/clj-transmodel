@@ -1,0 +1,36 @@
+#+title:  Architecture
+#+author: Henning Jansen
+#+email:  henning.jansen@jansenh.no
+#+date:   2025-12-20
+#+STARTUP: overview
+#+STARTUP: hidestars
+
+* Overview
+
+** Project structure
+
+#+begin_src text
+
+  clj-transmodel
+      ├── documents
+      ├── notebook
+      ├── resources
+      │   └── testdata
+      ├── src
+      │   └── jansenh
+      │       └── transmodel
+      │           ├── generator
+      │           ├── netex
+      │           ├── parser
+      │           ├── siri
+      │           └── utilities
+      └──── test
+          └── jansenh
+              └── transmodel
+                  ├── generator
+                  ├── netex
+                  ├── parser
+                  ├── siri
+  		└── utilities      
+
+#+end_src
