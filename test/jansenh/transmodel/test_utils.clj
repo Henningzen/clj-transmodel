@@ -6,7 +6,8 @@
 ;;
 ;;-----------------------------------------------------------------------------
 
-(ns jansenh.transmodel.test-utils)
+(ns jansenh.transmodel.test-utils
+  (:gen-class))
 
 
 ;; NeETx testing utilities
