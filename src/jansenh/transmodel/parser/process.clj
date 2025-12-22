@@ -6,7 +6,7 @@
 ;;-----------------------------------------------------------------------------
 
 (ns jansenh.transmodel.parser.process
-  (:require [jansenh.transmodel.parser.core :as parser]))
+  (:require [jansenh.transmodel.parser.utilities :as c]))
 ;;
 ;;   NeETx processor
 ;;   ---------------
@@ -23,32 +23,23 @@
 ;;
 
 (def netex-kw-ns "xmlns.http%3A%2F%2Fwww.netex.org.uk%2Fnetex")
-
 (def netex:PublicationDelivery (keyword netex-kw-ns "PublicationDelivery"))
 (def netex:PublicationTimestamp (keyword netex-kw-ns "PublicationTimestamp"))
 (def netex:Description (keyword netex-kw-ns "Description"))
-(def netex:dataObjects (keyword netex-kw-ns "dataObjects"))
-(def netex:CompositeFrame (keyword netex-kw-ns "CompositeFrame"))
+(def netex:ParticipantRef (keyword netex-kw-ns "ParticipantRef"))
 
-(defn process-publication-delivery [xml-data]
+(defn process-publication-delivery
+  "Document me"
+  [xml-data]
   (when (= (:tag xml-data) netex:PublicationDelivery)
-    (let [version (->> (:attrs xml-data)
-                       :version)
-
-          content (:content xml-data)
-
-          publication-timestamp (->> content
-                                     (filter #(= (:tag %) netex:PublicationTimestamp))
-                                     first
-                                     :content
-                                     (apply str))
-
-          description (->> content
-                           (filter #(= (:tag %) netex:Description))
-                           first
-                           :content
-                           (apply str))]
-
-      {:version               version
-       :publication-timestamp publication-timestamp
-       :description           description})))
+    {:version               (-> xml-data
+                                (c/attr :version))
+     :publication-timestamp (-> xml-data
+                                (c/find-child netex:PublicationTimestamp)
+                                (c/text-content))
+     :description           (-> xml-data
+                                (c/find-child netex:Description)
+                                (c/text-content))
+     :participant-ref       (-> xml-data
+                                (c/find-child netex:ParticipantRef)
+                                (c/text-content))}))

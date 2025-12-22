@@ -9,16 +9,14 @@
 (ns jansenh.transmodel.parser.calendar
   "Parse NeTEx ServiceCalendar: DayTypes, OperatingPeriods, Assignments.
    Expand to concrete operating dates for timetable generation."
-  (:require [clojure.string :as str])
+  (:require [clojure.string :as str]
+            [jansenh.transmodel.core :as c]
+            [jansenh.transmodel.parser.utilities :as u])
   (:import [java.time LocalDate LocalDateTime DayOfWeek]
            [java.time.format DateTimeFormatter DateTimeParseException]))
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Constants
-;; =============================================================================
-
-(def netex-ns "xmlns.http%3A%2F%2Fwww.netex.org.uk%2Fnetex")
-(defn nkw [local-name] (keyword netex-ns local-name))
 
 (def day-of-week-mapping
   {"Monday"    DayOfWeek/MONDAY
@@ -36,39 +34,8 @@
 
 (def everyday (into weekdays weekend))
 
-;; =============================================================================
-;; XML Navigation Helpers
-;; =============================================================================
-
-(defn find-child
-  "Find first child element with given tag"
-  [element tag]
-  (->> (:content element)
-       (filter #(= (:tag %) tag))
-       first))
-
-(defn find-children
-  "Find all child elements with given tag"
-  [element tag]
-  (->> (:content element)
-       (filter #(= (:tag %) tag))))
-
-(defn text-content
-  "Get text content of element"
-  [element]
-  (->> (:content element)
-       (filter string?)
-       (apply str)
-       str/trim))
-
-(defn attr
-  "Get attribute value"
-  [element attr-name]
-  (get (:attrs element) attr-name))
-
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Date Parsing
-;; =============================================================================
 
 (defn parse-netex-date
   "Parse NeTEx datetime string to LocalDate.
@@ -89,9 +56,8 @@
     (->> (iterate #(.plusDays ^LocalDate % 1) from)
          (take-while #(not (.isAfter ^LocalDate % to))))))
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; DaysOfWeek Parsing
-;; =============================================================================
 
 (defn parse-days-of-week
   "Parse NeTEx DaysOfWeek string to set of DayOfWeek.
@@ -113,21 +79,20 @@
              (keep #(get day-of-week-mapping %))
              set)))))
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Element Parsers
-;; =============================================================================
 
 (defn parse-day-type
   "Parse DayType element"
   [elem]
-  (let [id (attr elem :id)
-        version (attr elem :version)
-        properties (find-child elem (nkw "properties"))
+  (let [id (u/attr elem :id)
+        version (u/attr elem :version)
+        properties (u/find-child elem (c/nkw "properties"))
         property-of-day (when properties 
-                          (find-child properties (nkw "PropertyOfDay")))
+                          (u/find-child properties (c/nkw "PropertyOfDay")))
         days-elem (when property-of-day
-                    (find-child property-of-day (nkw "DaysOfWeek")))
-        days-str (when days-elem (text-content days-elem))]
+                    (u/find-child property-of-day (c/nkw "DaysOfWeek")))
+        days-str (when days-elem (u/text-content days-elem))]
     {:id id
      :version version
      :days-of-week (parse-days-of-week days-str)
@@ -136,32 +101,31 @@
 (defn parse-operating-period
   "Parse OperatingPeriod element"
   [elem]
-  (let [from-elem (find-child elem (nkw "FromDate"))
-        to-elem (find-child elem (nkw "ToDate"))]
-    {:id (attr elem :id)
-     :version (attr elem :version)
-     :from-date (parse-netex-date (text-content from-elem))
-     :to-date (parse-netex-date (text-content to-elem))}))
+  (let [from-elem (u/find-child elem (c/nkw "FromDate"))
+        to-elem (u/find-child elem (c/nkw "ToDate"))]
+    {:id (u/attr elem :id)
+     :version (u/attr elem :version)
+     :from-date (parse-netex-date (u/text-content from-elem))
+     :to-date (parse-netex-date (u/text-content to-elem))}))
 
 (defn parse-day-type-assignment
   "Parse DayTypeAssignment element"
   [elem]
-  (let [op-ref-elem (find-child elem (nkw "OperatingPeriodRef"))
-        dt-ref-elem (find-child elem (nkw "DayTypeRef"))
-        date-elem (find-child elem (nkw "Date"))
-        available-elem (find-child elem (nkw "isAvailable"))]
-    {:id (attr elem :id)
-     :order (some-> (attr elem :order) parse-long)
-     :operating-period-ref (when op-ref-elem (attr op-ref-elem :ref))
-     :day-type-ref (when dt-ref-elem (attr dt-ref-elem :ref))
-     :date (when date-elem (parse-netex-date (text-content date-elem)))
+  (let [op-ref-elem (u/find-child elem (c/nkw "OperatingPeriodRef"))
+        dt-ref-elem (u/find-child elem (c/nkw "DayTypeRef"))
+        date-elem (u/find-child elem (c/nkw "Date"))
+        available-elem (u/find-child elem (c/nkw "isAvailable"))]
+    {:id (u/attr elem :id)
+     :order (some-> (u/attr elem :order) parse-long)
+     :operating-period-ref (when op-ref-elem (u/attr op-ref-elem :ref))
+     :day-type-ref (when dt-ref-elem (u/attr dt-ref-elem :ref))
+     :date (when date-elem (parse-netex-date (u/text-content date-elem)))
      :is-available (if available-elem
-                     (not= "false" (text-content available-elem))
+                     (not= "false" (u/text-content available-elem))
                      true)}))
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Tree Walking - Find All Calendar Elements
-;; =============================================================================
 
 (defn collect-calendar-elements
   "Walk XML tree and collect all calendar-related elements."
@@ -171,9 +135,9 @@
         assignments (atom [])
         
         ;; All possible tag variations
-        day-type-tags #{(nkw "DayType") :DayType}
-        op-period-tags #{(nkw "OperatingPeriod") :OperatingPeriod}
-        assignment-tags #{(nkw "DayTypeAssignment") :DayTypeAssignment}
+        day-type-tags #{(c/nkw "DayType") :DayType}
+        op-period-tags #{(c/nkw "OperatingPeriod") :OperatingPeriod}
+        assignment-tags #{(c/nkw "DayTypeAssignment") :DayTypeAssignment}
         
         walk (fn walk [elem]
                (when (map? elem)
@@ -201,9 +165,8 @@
      :assignments @assignments}))
 
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Calendar Index Builder
-;; =============================================================================
 
 (defn build-calendar-index
   "Build complete calendar index from parsed shared_data.xml.
@@ -248,9 +211,8 @@
              :period-count (count op-periods-raw)
              :assignment-count (count assignments-raw)}}))
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Date Expansion - Core Business Logic
-;; =============================================================================
 
 (defn expand-day-type
   "Expand a DayType to concrete dates within a query period.
@@ -308,9 +270,8 @@
     (expand-day-type day-type from-date to-date)
     []))
 
-;; =============================================================================
+;; -----------------------------------------------------------------------------
 ;; Convenience Functions
-;; =============================================================================
 
 (defn weeks-ahead
   "Get date range for N weeks from today"
