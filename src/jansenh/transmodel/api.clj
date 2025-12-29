@@ -5,8 +5,6 @@
             [jansenh.transmodel.generator.timetable :as tt]
             [jansenh.transmodel.netex.registry :as reg]
             [jansenh.transmodel.netex.line :as line]
-            #_[jansenh.transmodel.netex.explore :as exp]
-            #_[jansenh.transmodel.netex.extract :as ext]
             [jansenh.transmodel.netex.interchanges :as interchanges]
             [clojure.pprint :as pp])
   (:import [java.time LocalDate]))

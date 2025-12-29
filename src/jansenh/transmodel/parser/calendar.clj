@@ -10,7 +10,6 @@
   "Parse NeTEx ServiceCalendar: DayTypes, OperatingPeriods, Assignments.
    Expand to concrete operating dates for timetable generation."
   (:require [clojure.string :as str]
-            [jansenh.transmodel.core :as c]
             [jansenh.transmodel.parser.utilities :as u])
   (:import [java.time LocalDate LocalDateTime DayOfWeek]
            [java.time.format DateTimeFormatter DateTimeParseException]))
@@ -87,11 +86,11 @@
   [elem]
   (let [id (u/attr elem :id)
         version (u/attr elem :version)
-        properties (u/find-child elem (c/nkw "properties"))
+        properties (u/find-child elem (u/nkw "properties"))
         property-of-day (when properties 
-                          (u/find-child properties (c/nkw "PropertyOfDay")))
+                          (u/find-child properties (u/nkw "PropertyOfDay")))
         days-elem (when property-of-day
-                    (u/find-child property-of-day (c/nkw "DaysOfWeek")))
+                    (u/find-child property-of-day (u/nkw "DaysOfWeek")))
         days-str (when days-elem (u/text-content days-elem))]
     {:id id
      :version version
@@ -101,8 +100,8 @@
 (defn parse-operating-period
   "Parse OperatingPeriod element"
   [elem]
-  (let [from-elem (u/find-child elem (c/nkw "FromDate"))
-        to-elem (u/find-child elem (c/nkw "ToDate"))]
+  (let [from-elem (u/find-child elem (u/nkw "FromDate"))
+        to-elem (u/find-child elem (u/nkw "ToDate"))]
     {:id (u/attr elem :id)
      :version (u/attr elem :version)
      :from-date (parse-netex-date (u/text-content from-elem))
@@ -111,10 +110,10 @@
 (defn parse-day-type-assignment
   "Parse DayTypeAssignment element"
   [elem]
-  (let [op-ref-elem (u/find-child elem (c/nkw "OperatingPeriodRef"))
-        dt-ref-elem (u/find-child elem (c/nkw "DayTypeRef"))
-        date-elem (u/find-child elem (c/nkw "Date"))
-        available-elem (u/find-child elem (c/nkw "isAvailable"))]
+  (let [op-ref-elem (u/find-child elem (u/nkw "OperatingPeriodRef"))
+        dt-ref-elem (u/find-child elem (u/nkw "DayTypeRef"))
+        date-elem (u/find-child elem (u/nkw "Date"))
+        available-elem (u/find-child elem (u/nkw "isAvailable"))]
     {:id (u/attr elem :id)
      :order (some-> (u/attr elem :order) parse-long)
      :operating-period-ref (when op-ref-elem (u/attr op-ref-elem :ref))
@@ -135,9 +134,9 @@
         assignments (atom [])
         
         ;; All possible tag variations
-        day-type-tags #{(c/nkw "DayType") :DayType}
-        op-period-tags #{(c/nkw "OperatingPeriod") :OperatingPeriod}
-        assignment-tags #{(c/nkw "DayTypeAssignment") :DayTypeAssignment}
+        day-type-tags #{(u/nkw "DayType") :DayType}
+        op-period-tags #{(u/nkw "OperatingPeriod") :OperatingPeriod}
+        assignment-tags #{(u/nkw "DayTypeAssignment") :DayTypeAssignment}
         
         walk (fn walk [elem]
                (when (map? elem)
