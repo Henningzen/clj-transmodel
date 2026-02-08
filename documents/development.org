@@ -7,15 +7,14 @@
 
 * Continued development
 
-** Namespace calendar
-*** DONE Migrate XML Navigation Helpers to parser/utilities
-*** TODO Migrate Date parsers to parser/utilities
-*** TODO Refactor parser/process.clj to netex/process.clj
-*** TODO Unit-test parse-xxx functions on SKY, SOF, KOL data
-*** TODO Unit-test tree-walker
-*** TODO Unit-test Calendar Index Builder
-*** TODO Unit-test Date Expansion
-*** TODO Integrate in notebooks/
-*** TODO Usecases for notebook are 'weeks-ahead' 'describe-day-type'
+** DONE Migrate XML Navigation Helpers to parser/utilities
+** DONE Refactor parser/process.clj to netex/process.clj
+** TODO Unit-test parse-xxx functions on SKY, SOF, KOL data
+** TODO Unit-test calendar.clj tree-walker
+** TODO Unit-test calendar.clj Index Builder
+** TODO Unit-test calendar.clj Date Expansion
+** DEFR Migrate netex/calendar.clj Date Time parsers to parser/utilities
+** TODO Integrate in notebooks/
+** TODO Usecases for notebook are 'weeks-ahead' 'describe-day-type'
 
 
