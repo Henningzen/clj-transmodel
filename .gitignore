@@ -19,7 +19,8 @@
 .clj-kondo/.cache
 .cpcache
 
-
+# Resources and test-files
+resources/testdata/*.xml
 .eastwood
 .factorypath
 .hg/
