@@ -1,7 +1,7 @@
 (ns jansenh.transmodel.parser.process-test
   (:require [clojure.test :refer [deftest is testing]]
             [jansenh.transmodel.parser.core :as parser]
-            [jansenh.transmodel.parser.process :as sut]
+            [jansenh.transmodel.netex.process :as sut]
             [jansenh.transmodel.test-utils :as u]))
 
 (def network-timetable-version "1.15:NO-NeTEx-networktimetable:1.5")

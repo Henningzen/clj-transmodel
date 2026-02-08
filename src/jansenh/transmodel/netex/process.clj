@@ -1,11 +1,11 @@
 ;;-----------------------------------------------------------------------------
-;; File: src/jansenh/transmodel/parser/process.clj
+;; File: src/jansenh/transmodel/netex/process.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
-;; Copyright: (c) 2025
+;; Copyright: (c) 2025 - 26
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
 ;;-----------------------------------------------------------------------------
 
-(ns jansenh.transmodel.parser.process
+(ns jansenh.transmodel.netex.process
   (:require [jansenh.transmodel.parser.utilities :as c]))
 ;;
 ;;   NeETx processor

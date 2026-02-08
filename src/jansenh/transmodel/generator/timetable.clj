@@ -1,6 +1,14 @@
+;;-----------------------------------------------------------------------------
+;; File: src/jansenh/transmodel/generator/timetable.clj
+;; Author: Henning Jansen - henning.jansen@jansenh.no
+;; Copyright: (c) 2026
+;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
+;;
+;;-----------------------------------------------------------------------------
+
 (ns jansenh.transmodel.generator.timetable
   "Generate flat timetable from NeTEx data for SQL export"
-  (:require [jansenh.transmodel.parser.calendar :as cal]
+  (:require [jansenh.transmodel.netex.calendar :as cal]
             [clojure.string :as str])
   (:import [java.time LocalDate LocalTime LocalDateTime DayOfWeek]
            [java.time.format DateTimeFormatter]))

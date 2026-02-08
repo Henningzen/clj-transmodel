@@ -1,18 +1,18 @@
 ;;-----------------------------------------------------------------------------
-;; File: src/jansenh/transmodel/parser/calendar.clj
+;; File: src/jansenh/transmodel/netex/calendar.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
-;; Copyright: (c) 2025
+;; Copyright: (c) 2025 - 2026
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
 ;;
 ;;-----------------------------------------------------------------------------
 
-(ns jansenh.transmodel.parser.calendar
+(ns jansenh.transmodel.netex.calendar
   "Parse NeTEx ServiceCalendar: DayTypes, OperatingPeriods, Assignments.
    Expand to concrete operating dates for timetable generation."
   (:require [clojure.string :as str]
             [jansenh.transmodel.parser.utilities :as u])
-  (:import [java.time LocalDate LocalDateTime DayOfWeek]
-           [java.time.format DateTimeFormatter DateTimeParseException]))
+  (:import [java.time LocalDate DayOfWeek]
+           [java.time.format DateTimeParseException]))
 
 ;; -----------------------------------------------------------------------------
 ;; Constants

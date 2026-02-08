@@ -1,21 +1,20 @@
 (ns jansenh.transmodel.api
   "API wrapper over jansenh/transmodel"
   (:require [jansenh.transmodel.parser.core :as parser]
-            [jansenh.transmodel.parser.calendar :as cal]
+            [jansenh.transmodel.netex.calendar :as cal]
             [jansenh.transmodel.generator.timetable :as tt]
             [jansenh.transmodel.netex.registry :as reg]
             [jansenh.transmodel.netex.line :as line]
             [jansenh.transmodel.netex.interchanges :as interchanges]
-            [clojure.pprint :as pp])
-  (:import [java.time LocalDate]))
+            [clojure.pprint :as pp]))
 
 ;; ===========================================================================
 ;;
 ;; --- Define & load files
 ;;
 ;; ===========================================================================
-(def shared-data-file "/home/jansenh/data/netex/raw/KOL/_KOL_shared_data.xml")
-(def line-data-file "/home/jansenh/data/netex/raw/KOL/KOL_KOL-Line-8_5900_518_518.xml")
+(def shared-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/_KOL_shared_data.xml")
+(def line-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
 
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
