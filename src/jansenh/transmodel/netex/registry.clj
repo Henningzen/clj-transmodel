@@ -26,7 +26,6 @@
 (defn stop-point [id] (get-in @reg [:stop-points id]))
 (defn service-journey [id] (get-in @reg [:service-journeys id]))
 (defn interchange [id] (get-in @reg [:interchanges id]))
-
 (defn day-type-assignments [] (get @reg :assignments))
 (defn all-interchanges [] (vals (get @reg :interchanges {})))
 (defn all-service-journeys [] (vals (get @reg :service-journeys {})))

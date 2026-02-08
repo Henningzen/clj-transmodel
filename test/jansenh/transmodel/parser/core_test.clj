@@ -4,12 +4,12 @@
 
 (def resources-path "resources/testdata")
 (def test-data-zip "test-data.zip")
-(def line-data "resources/testdata/292.xml")
 (def shared-data-xml "shared_data.xml")
+(def line-data "292.xml")
 
 (def timetable-version "1.15:NO-NeTEx-networktimetable:1.5")
 
-(defn pf
+(defn- pf
   "Pathify!"
   [path file]
   (str path "/" file))
@@ -22,7 +22,7 @@
 ;;
 
 (deftest test-parse-xml-file
-  (let [data (sut/parse-xml-file line-data)]
+  (let [data (sut/parse-xml-file (str resources-path "/" line-data))]
 
     (testing "We should have some XMLdata  when we peek the resourses/testdata/292.xml file"
       (is (some? data) "XML data should not be nil")
