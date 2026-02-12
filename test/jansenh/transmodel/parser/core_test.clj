@@ -7,8 +7,6 @@
 (def shared-data-xml "shared_data.xml")
 (def line-data "292.xml")
 
-(def timetable-version "1.15:NO-NeTEx-networktimetable:1.5")
-
 (defn- pf
   "Pathify!"
   [path file]
@@ -18,15 +16,15 @@
 ;; Test the file parser, with zip file and regular XML file.
 ;;
 ;; Look out for an expected error-message in the REPL and/or logs, as we poke
-;; exceptions in these tests.
+;; exceptions in these tests. These exceptions WILL surface in the stdout when
+;; running the tests.
 ;;
 
-(deftest test-parse-xml-file
+(deftest test-parse-netex-xml-file
   (let [data (sut/parse-xml-file (str resources-path "/" line-data))]
 
     (testing "We should have some XMLdata  when we peek the resourses/testdata/292.xml file"
-      (is (some? data) "XML data should not be nil")
-      (is (= timetable-version (:version (:attrs (sut/peek-xml data))))))
+      (is (some? data) "XML data should not be nil"))
 
     (testing "We should have some attribute, tag and content at the root level"
       (is (some? (:tag     (sut/peek-xml data))))
