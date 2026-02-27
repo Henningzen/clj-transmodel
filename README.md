@@ -1,16 +1,17 @@
 # no.jansenh/clj-transmodel
 
-Public transport standards NeTEx, SIRI (ET, SX, VM) under CEN/TC 278, Transmodel reference model (EN 12896).
-We are creating a highly opinionated library of parsers for the NeTEx and SIRI standards.
+Public transport standards NeTEx, SIRI (ET, SX, VM) under CEN/TC 278, Transmodel reference model (EN 12896).  
+
+The visionary statement is a opinionated, yet generalized library of parsers for the NeTEx and SIRI standards.
 
 ## Installation
 
-Latest develop stable release is 0.2.0
+Latest develop stable release is 0.2.1
 
 Add this library to your `deps.edn`:
 
 ```clojure
-{jansenh/clj-transmodel {:mvn/version "0.1.0"}}
+{jansenh/clj-transmodel {:mvn/version "0.2.1"}}
 ```
 
 ## Usage

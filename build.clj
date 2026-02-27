@@ -5,7 +5,7 @@
 
 (def lib 'jansenh/clj-transmodel)
 
-(def version "0.2.0")
+(def version "0.2.1")
 
 (def class-dir "target/classes")
 
@@ -20,7 +20,7 @@
       opts)
 
 (defn- pom-template [version]
-       [[:description "Transmodel standards XML parsers."]
+       [[:description "Transmodel, NeTEx and SIRI standards XML parsers."]
         [:url "https://github.com/Henningzen/clj-transmodel"]
         [:licenses
          [:license
