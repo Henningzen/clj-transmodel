@@ -2,7 +2,7 @@
  
  :deps {org.clojure/clojure {:mvn/version "1.12.4"}
         org.clojure/tools.deps {:mvn/version "0.29.1593"}
-        org.clojure/data.xml {:mvn/version "0.2.0-alpha9"}
+        org.clojure/data.xml {:mvn/version "0.2.0-alpha10"}
         org.clojure/tools.logging {:mvn/version "1.3.1"}
         org.scicloj/noj {:mvn/version "2-beta19.1"}
         ch.qos.logback/logback-classic {:mvn/version "1.5.32"}}
