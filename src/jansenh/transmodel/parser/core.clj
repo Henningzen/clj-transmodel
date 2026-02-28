@@ -11,7 +11,6 @@
             [clojure.java.io :as io]
             [clojure.tools.logging :as log])
   (:import (java.io FileNotFoundException IOException)
-           (java.io FileNotFoundException)
            (javax.xml.stream XMLStreamException)))
 ;;
 ;;   Transmodel standards XML basic parser
@@ -21,7 +20,7 @@
 ;;
 ;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
 ;;   since:     0.1.0                    2025-08-07
-;;   version:   0.1.0
+;;   version:   0.2.1
 ;;   ---------------------------------------------------------------------------
 ;;
 ;;       + TODO: Test the parse-xml for large files, streams closing.
@@ -71,18 +70,18 @@
       (when-let [entry (.getEntry zip file-name)]
         (with-open [input-stream (.getInputStream zip entry)]
           (parse-xml input-stream))))
-    (catch java.io.FileNotFoundException e
+    (catch java.io.FileNotFoundException _
       (log/warnf "ZIP file not found at path: %s" zip-path)
       nil)
-    (catch java.nio.file.NoSuchFileException e
+    (catch java.nio.file.NoSuchFileException _
       (log/warnf "XML file not found: %s" file-name)
       nil)
-    (catch java.util.zip.ZipException e
+    (catch java.util.zip.ZipException _
       (log/warnf "ZIP file exception: %s" zip-path)
       nil)))
 
 (defn peek-xml
-  "Peek the top content of a XML file. Function takes a clojure data structure 
+  "Peek the top content of a XML file. Function takes a clojure data structure
    representing the XML string from clojure.data.xml and returns an overview
    in a map."
   [parsed-xml]
@@ -90,5 +89,3 @@
     {:tag     (:tag parsed-xml)
      :attrs   (:attrs parsed-xml)
      :content (:content parsed-xml)}))
-
-
