@@ -5,8 +5,63 @@
 #+STARTUP: overview
 #+STARTUP: hidestars
 
-** Key Data Model
+* NeTEx Data Model
 
+** SharedData
+PublicationDelivery
+├── 
+├── 
+└── dataObjects
+    └── CompositeFrame
+        ├── validityConditions
+        ├── codeSpaces
+        ├── FrameDefaults
+        └── frames
+            ├── ResourceFrame
+            ├── organisations
+            │     Operator
+            │     Authority
+            │     ...
+	    │
+            ├── ServiceFrame
+            │   ├── Network
+            │   ├── additionalNetworks
+	    │   ├── routePoints
+	    │   ├── destinationDisplays
+	    │   ├── scheduledStopPoints
+	    │   ├── serviceLinks
+	    │   ├── stopAssignements
+	    │   └── notices
+   	    │
+            └── ServiceCalendarFrame
+	        ├── dayTypes
+	        ├── operatingPeriods
+	        └── dayTypeAssignemens
+	    
+** Line
+PublicationDelivery
+├── : 
+├── : 
+└── : dataObjects
+    └── :CompositeFrame
+        ├── : validityConditions
+        ├── : codeSpaces
+        ├── : FrameDefaults
+	│    └── : defaultLocale
+        │
+        └── : frames
+            ├── : ServiceFrame
+            │   ├── : routes
+            │   ├── : lines
+            │   ├── : journeyPatterns
+            │   └── : noticeAssignements
+	    │
+            └── : TimetableFrame
+	        ├── : vehicleJourneys
+                └── : journeyInterchanges
+
+		
+** ServiceJourneyInterchange
    The concept of ServiceJourneyInterchange:
    
 #+begin_src text

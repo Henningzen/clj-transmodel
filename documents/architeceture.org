@@ -34,3 +34,37 @@
   		└── utilities      
 
 #+end_src
+
+** Refactor March 2026
+                    ┌─────────────┐
+                    │  parser/    │
+                    │  core.clj   │  parse-xml-file, parse-xml-zip-file
+                    └──────┬──────┘
+                           │ raw clojure.data.xml elements
+                           ▼
+                    ┌─────────────┐
+                    │  parser/    │
+                    │  xml.clj    │  find-child, find-children, child-text, 
+                    └──────┬──────┘  entity-id, entity-ref — ONE copy
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │  netex/     │
+                    │  extract.clj│  extract-service-journey, extract-journey-pattern,
+                    └──────┬──────┘  extract-interchange, etc. — ALL extraction here
+                           │
+                           ▼
+                    ┌──────────────┐
+                    │  netex/      │
+                    │  registry.clj│  atoms, load!, lookup functions
+                    └──────┬───────┘  (calls extract.clj, stores results)
+                           │
+                    ┌──────┴──────────────────┐
+                    ▼                         ▼
+             ┌─────────────┐          ┌──────────────┐
+             │  generator/ │          │  netex/      │
+             │  timetable  │          │  interchanges│
+             └─────────────┘          └──────────────┘
+             (reads from registry)    (reads from registry)
+
+	     
