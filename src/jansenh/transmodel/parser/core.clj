@@ -19,13 +19,13 @@
 ;;   The parse-xml method operate on a Stream, either File or Reader.
 ;;
 ;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
-;;   since:     0.1.0                    2025-08-07
-;;   version:   0.2.1
+;;   since:     0.1.0   2025-08-07
+;;   version:   0.2.1   2026-03-01
 ;;   ---------------------------------------------------------------------------
 ;;
-;;       + TODO: Test the parse-xml for large files, streams closing.
-;;               Do we need slurp here?
-;;       + TODO: file->input-stream needs testing for close stream bevaviour.
+;;   + TODO: Test the parse-xml for large files, streams closing.
+;;           Do we need slurp here?
+;;   + TODO: file->input-stream needs testing for close stream bevaviour.
 ;;
 
 (defn- parse-xml
