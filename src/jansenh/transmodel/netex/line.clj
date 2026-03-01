@@ -1,8 +1,33 @@
+;;-----------------------------------------------------------------------------
+;; File: src/jansenh/transmodel/netex/line.clj
+;; Author: Henning Jansen - henning.jansen@jansenh.no
+;; Copyright: (c) 2025 - 2026
+;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
+;;
+;;-----------------------------------------------------------------------------
+
 (ns jansenh.transmodel.netex.line
   "Parse Line files: ServiceJourneys, Interchanges, Roundtrips"
   (:require [jansenh.transmodel.parser.core :as parser]
             [jansenh.transmodel.netex.registry :as reg]
             [clojure.string :as str]))
+
+;;
+;;   Transmodel NeTEx Lines parser
+;;   -----------------------------
+;;
+;;   Parse Line files:
+;;   - ServiceJourneys
+;;   - Interchanges
+;;   - Roundtrips
+;;
+;;   NOTE: This namespace has not yet been refactored to the 0.2.1 updated
+;;         strategy with a shared registry, extract namespaces.
+;;
+;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
+;;   since:     0.2.0   2025-08-15
+;;   version:   0.2.0
+;; -----------------------------------------------------------------------------
 
 ;; ---------------------------------------------------------------------------
 ;; XML helpers (duplicated for self-containment)
@@ -134,12 +159,12 @@
   (when-let [pub-del (parser/parse-xml-file file-path)]
     (let [cf (-> (child pub-del "dataObjects") (children "CompositeFrame") first)
           tf (-> (child cf "frames") (children "TimetableFrame") first)
-          
+
           journeys (extract-service-journeys tf)
           journeys-idx (reduce (fn [m j] (assoc m (:id j) j)) {} journeys)
           interchanges (extract-interchanges tf)
           chains (build-roundtrip-chains interchanges)]
-      
+
       {:journeys      journeys-idx
        :interchanges  interchanges
        :chains        chains
