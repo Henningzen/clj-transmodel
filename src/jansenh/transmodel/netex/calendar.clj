@@ -10,13 +10,25 @@
   "Parse NeTEx ServiceCalendar: DayTypes, OperatingPeriods, Assignments.
    Expand to concrete operating dates for timetable generation."
   (:require [clojure.string :as str]
-            [jansenh.transmodel.parser.utilities :as u])
+            [jansenh.transmodel.parser.xml :as x])
   (:import [java.time LocalDate DayOfWeek]
            [java.time.format DateTimeParseException]))
 
+;;
+;;   NeTEx ServiceCalendar: DayTypes, OperatingPeriods, Assignments.
+;;   ---------------------------------------------------------------
+;;
+;;   Expand to concrete operating dates for timetable generation. This
+;;   namespace produces application specific generated Calendar indexes for
+;;   generating timetables.
+;;
+;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
+;;   since:     0.2.0   2025-08-15
+;;   version:   0.2.1   2026-03-01
 ;; -----------------------------------------------------------------------------
-;; Constants
 
+
+;; Constants - calendar types tied to NeTEx
 (def day-of-week-mapping
   {"Monday"    DayOfWeek/MONDAY
    "Tuesday"   DayOfWeek/TUESDAY
@@ -38,15 +50,18 @@
 
 (defn parse-netex-date
   "Parse NeTEx datetime string to LocalDate.
-   Handles: 2025-11-21T00:00:00 or 2025-11-21"
+   Handles: 2025-11-21T00:00:00 or 2025-11-21
+   Also passes through LocalDate instances unchanged."
   [date-str]
-  (when (and date-str (not (str/blank? date-str)))
+  (cond
+    (instance? LocalDate date-str) date-str
+    (and (string? date-str) (not (str/blank? date-str)))
     (try
       (let [trimmed (str/trim date-str)
-            ;; Take just the date part before T
             date-part (first (str/split trimmed #"T"))]
         (LocalDate/parse date-part))
-      (catch DateTimeParseException _ nil))))
+      (catch DateTimeParseException _ nil))
+    :else nil))
 
 (defn date-range
   "Generate sequence of LocalDates from start to end (inclusive)"
@@ -59,13 +74,7 @@
 ;; DaysOfWeek Parsing
 
 (defn parse-days-of-week
-  "Parse NeTEx DaysOfWeek string to set of DayOfWeek.
-   
-   Examples:
-     'Monday Tuesday Wednesday' -> #{MONDAY TUESDAY WEDNESDAY}
-     'Weekdays' -> #{MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY}
-     'Weekend' -> #{SATURDAY SUNDAY}
-     'Everyday' -> all days"
+  "Parse NeTEx DaysOfWeek string to set of DayOfWeek."
   [days-str]
   (when (and days-str (not (str/blank? days-str)))
     (let [trimmed (str/trim days-str)]
@@ -73,197 +82,171 @@
         "Weekdays" weekdays
         "Weekend" weekend
         "Everyday" everyday
-        ;; Parse individual days
         (->> (str/split trimmed #"\s+")
              (keep #(get day-of-week-mapping %))
              set)))))
 
 ;; -----------------------------------------------------------------------------
-;; Element Parsers
+;; XML Element Parsers (for raw XML path)
 
-(defn parse-day-type
-  "Parse DayType element"
+(defn- parse-day-type-xml
+  "Parse DayType from raw XML element"
   [elem]
-  (let [id (u/attr elem :id)
-        version (u/attr elem :version)
-        properties (u/find-child elem (u/nkw "properties"))
-        property-of-day (when properties 
-                          (u/find-child properties (u/nkw "PropertyOfDay")))
-        days-elem (when property-of-day
-                    (u/find-child property-of-day (u/nkw "DaysOfWeek")))
-        days-str (when days-elem (u/text-content days-elem))]
-    {:id id
-     :version version
+  (let [properties (x/find-child elem "properties")
+        property-of-day (when properties (x/find-child properties "PropertyOfDay"))
+        days-str (when property-of-day (x/child-text property-of-day "DaysOfWeek"))]
+    {:id (x/entity-id elem)
+     :version (x/entity-version elem)
      :days-of-week (parse-days-of-week days-str)
      :days-of-week-raw days-str}))
 
-(defn parse-operating-period
-  "Parse OperatingPeriod element"
+(defn- parse-operating-period-xml
+  "Parse OperatingPeriod from raw XML element"
   [elem]
-  (let [from-elem (u/find-child elem (u/nkw "FromDate"))
-        to-elem (u/find-child elem (u/nkw "ToDate"))]
-    {:id (u/attr elem :id)
-     :version (u/attr elem :version)
-     :from-date (parse-netex-date (u/text-content from-elem))
-     :to-date (parse-netex-date (u/text-content to-elem))}))
+  {:id (x/entity-id elem)
+   :version (x/entity-version elem)
+   :from-date (parse-netex-date (x/child-text elem "FromDate"))
+   :to-date (parse-netex-date (x/child-text elem "ToDate"))})
 
-(defn parse-day-type-assignment
-  "Parse DayTypeAssignment element"
+(defn- parse-day-type-assignment-xml
+  "Parse DayTypeAssignment from raw XML element"
   [elem]
-  (let [op-ref-elem (u/find-child elem (u/nkw "OperatingPeriodRef"))
-        dt-ref-elem (u/find-child elem (u/nkw "DayTypeRef"))
-        date-elem (u/find-child elem (u/nkw "Date"))
-        available-elem (u/find-child elem (u/nkw "isAvailable"))]
-    {:id (u/attr elem :id)
-     :order (some-> (u/attr elem :order) parse-long)
-     :operating-period-ref (when op-ref-elem (u/attr op-ref-elem :ref))
-     :day-type-ref (when dt-ref-elem (u/attr dt-ref-elem :ref))
-     :date (when date-elem (parse-netex-date (u/text-content date-elem)))
-     :is-available (if available-elem
-                     (not= "false" (u/text-content available-elem))
+  (let [available-text (x/child-text elem "isAvailable")]
+    {:id (x/entity-id elem)
+     :order (some-> (get-in elem [:attrs :order]) parse-long)
+     :operating-period-ref (some-> (x/find-child elem "OperatingPeriodRef") x/entity-ref)
+     :day-type-ref (some-> (x/find-child elem "DayTypeRef") x/entity-ref)
+     :date (parse-netex-date (x/child-text elem "Date"))
+     :is-available (if available-text
+                     (not= "false" available-text)
                      true)}))
-
-;; -----------------------------------------------------------------------------
-;; Tree Walking - Find All Calendar Elements
-
-(defn collect-calendar-elements
-  "Walk XML tree and collect all calendar-related elements."
-  [xml-root]
-  (let [day-types (atom [])
-        operating-periods (atom [])
-        assignments (atom [])
-        
-        ;; All possible tag variations
-        day-type-tags #{(u/nkw "DayType") :DayType}
-        op-period-tags #{(u/nkw "OperatingPeriod") :OperatingPeriod}
-        assignment-tags #{(u/nkw "DayTypeAssignment") :DayTypeAssignment}
-        
-        walk (fn walk [elem]
-               (when (map? elem)
-                 (let [tag (:tag elem)]
-                   (cond
-                     (or (day-type-tags tag)
-                         (= "DayType" (some-> tag name)))
-                     (swap! day-types conj elem)
-                     
-                     (or (op-period-tags tag)
-                         (= "OperatingPeriod" (some-> tag name)))
-                     (swap! operating-periods conj elem)
-                     
-                     (or (assignment-tags tag)
-                         (= "DayTypeAssignment" (some-> tag name)))
-                     (swap! assignments conj elem)))
-                 
-                 (doseq [child (:content elem)]
-                   (walk child))))]
-    
-    (walk xml-root)
-    
-    {:day-types @day-types
-     :operating-periods @operating-periods
-     :assignments @assignments}))
-
 
 ;; -----------------------------------------------------------------------------
 ;; Calendar Index Builder
 
-(defn build-calendar-index
-  "Build complete calendar index from parsed shared_data.xml.
-   
-   Returns:
-   {:day-types {id -> {:id, :days-of-week, :operating-periods [{:from :to}...]}}
-    :operating-periods {id -> {:from-date :to-date}}}"
-  [shared-data-xml]
-  (let [elements (collect-calendar-elements shared-data-xml)
-        
-        ;; Parse all elements
-        day-types-raw (map parse-day-type (:day-types elements))
-        op-periods-raw (map parse-operating-period (:operating-periods elements))
-        assignments-raw (map parse-day-type-assignment (:assignments elements))
-        
-        ;; Index operating periods by ID
-        op-periods-index (reduce #(assoc %1 (:id %2) %2) {} op-periods-raw)
-        
-        ;; Index day types by ID  
-        day-types-index (reduce #(assoc %1 (:id %2) 
+(defn- collect-from-xml
+  "Walk raw XML tree and collect all calendar elements"
+  [xml-root]
+  {:day-types (mapv parse-day-type-xml
+                    (x/find-all-deep xml-root "DayType"))
+   :operating-periods (mapv parse-operating-period-xml
+                            (x/find-all-deep xml-root "OperatingPeriod"))
+   :assignments (mapv parse-day-type-assignment-xml
+                      (x/find-all-deep xml-root "DayTypeAssignment"))})
+
+(defn- collect-from-registry
+  "Convert pre-extracted registry data to calendar format.
+   Registry maps use :ID, :from-date (string), :to-date (string), etc."
+  [registry-data]
+  (let [day-types (:day-types registry-data)
+        operating-periods (:operating-periods registry-data)
+        assignments (:assignments registry-data)]
+    {:day-types
+     (->> (vals day-types)
+          (mapv (fn [dt]
+                  #_{:id (:ID dt)
+                   :days-of-week nil
+                   :days-of-week-raw nil}
+                  ;; Parse it:
+                  {:id (:ID dt)
+                   :days-of-week (parse-days-of-week (:days-of-week-raw dt))
+                   :days-of-week-raw (:days-of-week-raw dt)})))
+
+     :operating-periods
+     (->> (vals operating-periods)
+          (mapv (fn [op]
+                  {:id (:ID op)
+                   :from-date (parse-netex-date (:from-date op))
+                   :to-date (parse-netex-date (:to-date op))})))
+
+     :assignments
+     (->> assignments
+          (mapv (fn [a]
+                  {:day-type-ref (:day-type-ref a)
+                   :operating-period-ref (:operating-period-ref a)
+                   :date nil
+                   :is-available true})))}))
+
+(defn- is-registry-data?
+  "Detect whether input is registry data (flat map) vs raw XML (has :tag)"
+  [data]
+  (and (map? data)
+       (contains? data :assignments)
+       (not (contains? data :tag))))
+
+(defn- link-calendar
+  "Common logic: link parsed day-types, operating-periods, assignments into index"
+  [{:keys [day-types operating-periods assignments]}]
+  (let [op-periods-index (reduce #(assoc %1 (:id %2) %2) {} operating-periods)
+
+        day-types-index (reduce #(assoc %1 (:id %2)
                                         (assoc %2 :operating-periods []))
-                                {} day-types-raw)
-        
-        ;; Link assignments: add operating periods to day types
+                                {} day-types)
+
         day-types-with-periods
         (reduce
          (fn [dt-index assignment]
            (let [{:keys [day-type-ref operating-period-ref is-available]} assignment
                  period (get op-periods-index operating-period-ref)]
-             (if (and day-type-ref period is-available)
+             (if (and day-type-ref period (not (false? is-available)))
                (update-in dt-index [day-type-ref :operating-periods]
                           (fnil conj [])
                           {:from (:from-date period)
                            :to (:to-date period)})
                dt-index)))
          day-types-index
-         assignments-raw)]
-    
+         assignments)]
+
     {:day-types day-types-with-periods
      :operating-periods op-periods-index
-     :stats {:day-type-count (count day-types-raw)
-             :period-count (count op-periods-raw)
-             :assignment-count (count assignments-raw)}}))
+     :stats {:day-type-count (count day-types)
+             :period-count (count operating-periods)
+             :assignment-count (count assignments)}}))
+
+(defn build-calendar-index
+  "Build complete calendar index.
+
+   Accepts either:
+   - Raw parsed XML (clojure.data.xml structure from shared_data.xml)
+   - Registry data map from (reg/get-all)
+
+   Returns:
+   {:day-types {id -> {:id, :days-of-week, :operating-periods [{:from :to}...]}}
+    :operating-periods {id -> {:from-date :to-date}}
+    :stats {...}}"
+  [data]
+  (let [parsed (if (is-registry-data? data)
+                 (collect-from-registry data)
+                 (collect-from-xml data))]
+    (link-calendar parsed)))
 
 ;; -----------------------------------------------------------------------------
 ;; Date Expansion - Core Business Logic
 
 (defn expand-day-type
-  "Expand a DayType to concrete dates within a query period.
-   
-   Parameters:
-   - day-type: parsed day type map with :days-of-week and :operating-periods
-   - query-from: start of query range (LocalDate)
-   - query-to: end of query range (LocalDate)
-   
-   Logic:
-   1. If day-type has operating-periods, use those as bounds
-   2. If day-type has days-of-week pattern, filter to matching days
-   3. If no days-of-week, include all days in the period
-   
-   Returns: sorted vector of LocalDate"
+  "Expand a DayType to concrete dates within a query period."
   [day-type ^LocalDate query-from ^LocalDate query-to]
   (let [{:keys [days-of-week operating-periods]} day-type
-        
-        ;; Determine effective date ranges
+
         ranges (if (seq operating-periods)
-                 ;; Use operating periods, intersected with query range
                  (for [{:keys [from to]} operating-periods
                        :when (and from to)]
                    {:from (if (.isBefore from query-from) query-from from)
                     :to (if (.isAfter to query-to) query-to to)})
-                 ;; No operating periods = no dates (or should we use query range?)
                  [])]
-    
+
     (->> ranges
-         ;; Generate all dates in each range
-         (mapcat (fn [{:keys [from to]}]
-                   (date-range from to)))
-         ;; Filter by days-of-week if specified
+         (mapcat (fn [{:keys [from to]}] (date-range from to)))
          (filter (fn [^LocalDate date]
                    (if (seq days-of-week)
                      (contains? days-of-week (.getDayOfWeek date))
-                     true)))  ;; No pattern = every day
-         ;; Remove duplicates and sort
+                     true)))
          set
          (sort-by identity)
          vec)))
 
 (defn get-operating-dates
-  "High-level function: get all dates a DayType operates.
-   
-   Parameters:
-   - calendar-index: result of build-calendar-index
-   - day-type-id: e.g., 'KOL:DayType:1050'
-   - from-date: start of period
-   - to-date: end of period
-   
-   Returns: vector of LocalDate, or empty vector if DayType not found"
+  "Get all dates a DayType operates within a period."
   [calendar-index day-type-id ^LocalDate from-date ^LocalDate to-date]
   (if-let [day-type (get-in calendar-index [:day-types day-type-id])]
     (expand-day-type day-type from-date to-date)
@@ -272,15 +255,11 @@
 ;; -----------------------------------------------------------------------------
 ;; Convenience Functions
 
-(defn weeks-ahead
-  "Get date range for N weeks from today"
-  [n]
+(defn weeks-ahead [n]
   (let [today (LocalDate/now)]
-    {:from today
-     :to (.plusWeeks today n)}))
+    {:from today :to (.plusWeeks today n)}))
 
 (defn describe-day-type
-  "Human-readable description of a DayType"
   [calendar-index day-type-id]
   (when-let [dt (get-in calendar-index [:day-types day-type-id])]
     (let [days (:days-of-week dt)

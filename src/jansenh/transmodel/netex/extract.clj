@@ -1,211 +1,262 @@
+;;-----------------------------------------------------------------------------
+;; File: src/jansenh/transmodel/netex/extract.clj
+;; Author: Henning Jansen - henning.jansen@jansenh.no
+;; Copyright: (c) 2025 - 2026
+;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
+;;
+;;-----------------------------------------------------------------------------
+
 (ns jansenh.transmodel.netex.extract
-  (:require [jansenh.transmodel.parser.utilities :as u]))
+  "NeTEx entity extraction"
+  (:require [jansenh.transmodel.parser.xml :as x]))
 
-(def ^:private netex-ns :xmlns.http%3A%2F%2Fwww.netex.org.uk%2Fnetex)
-
-(defn- ns-tag
-  "Create a namespaced keyword from local tag name.
-  "
-  [local-name]
-  (keyword (str (name netex-ns) "/" local-name)))
-
-;; ============================================================================
-;; ServiceJourneys
-;; ============================================================================
-
-(defn extract-passing-times
-  "Extract arrival/departure times from a ServiceJourney's content"
-  [sj-element]
-  (let [passing-times-elem (u/find-child sj-element (ns-tag "passingTimes"))
-        passing-time-elements (when passing-times-elem
-                                (u/find-children passing-times-elem (ns-tag "TimetabledPassingTime")))]
-    (->> passing-time-elements
-         (map-indexed (fn [idx pt]
-                        (let [stop-ref-elem (u/find-child pt (ns-tag "StopPointInJourneyPatternRef"))
-                              arrival (u/get-text (u/find-child pt (ns-tag "ArrivalTime")))
-                              departure (u/get-text (u/find-child pt (ns-tag "DepartureTime")))]
-                          {:order (inc idx)
-                           :id (u/element-id pt)
-                           :stop-ref (u/element-ref stop-ref-elem)
-                           :arrival-time arrival
-                           :departure-time departure})))
-         (into []))))
-
-(defn extract-service-journey
-  "Extract a single ServiceJourney element into a map"
-  [sj-element]
-  (when sj-element
-    {:ID (u/element-id sj-element)
-     :version (get-in sj-element [:attrs :version])
-     :name (u/get-text (u/find-child sj-element (ns-tag "Name")))
-     :private-code (u/get-text (u/find-child sj-element (ns-tag "PrivateCode")))
-     :line-ref (u/element-ref (u/find-child sj-element (ns-tag "LineRef")))
-     :journey-pattern-ref (u/element-ref (u/find-child sj-element (ns-tag "JourneyPatternRef")))
-     :operator-ref (u/element-ref (u/find-child sj-element (ns-tag "OperatorRef")))
-     :day-types (mapv u/element-ref 
-                      (u/find-children (u/find-child sj-element (ns-tag "dayTypes")) (ns-tag "DayTypeRef")))
-     :passing-times (extract-passing-times sj-element)}))
-
-(defn all-service-journeys
-  "Extract all ServiceJourney elements from publication delivery, indexed by ID"
-  [pub-del]
-  (let [sj-elements (u/find-all-tags pub-del (ns-tag "ServiceJourney"))]
-    (->> sj-elements
-         (map extract-service-journey)
-         (map (juxt :ID identity))
-         (into {}))))
+;;
+;;   NeTEx entity extraction
+;;   -----------------------
+;;
+;;    Single source for all element → map conversions.
+;;    We use the parser.xml.clj namespace on a clojure.xml dataset and extract
+;;    a subset of NeTEx entities
+;;
+;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
+;;   since:     0.2.0   2025-08-15
+;;   version:   0.2.1   2026-03-01
+;; -----------------------------------------------------------------------------
 
 ;; ============================================================================
-;; ServiceJourneyInterchanges
+;; OPERATORS
 ;; ============================================================================
 
-(defn extract-interchange
-  "Extract a single ServiceJourneyInterchange element into a map"
-  [ic-element]
-  (when ic-element
-    {:ID (u/element-id ic-element)
-     :version (get-in ic-element [:attrs :version])
-     :stay-seated (= "true" (u/get-text (u/find-child ic-element (ns-tag "StaySeated"))))
-     :guaranteed (= "true" (u/get-text (u/find-child ic-element (ns-tag "Guaranteed"))))
-     :from-point-ref (u/element-ref (u/find-child ic-element (ns-tag "FromPointRef")))
-     :to-point-ref (u/element-ref (u/find-child ic-element (ns-tag "ToPointRef")))
-     :from-journey (u/element-ref (u/find-child ic-element (ns-tag "FromJourneyRef")))
-     :to-journey (u/element-ref (u/find-child ic-element (ns-tag "ToJourneyRef")))}))
+(defn extract-operator [elem]
+  (when elem
+    {:ID (x/entity-id elem)
+     :name (x/child-text elem "Name")
+     :short-name (x/child-text elem "ShortName")}))
 
-(defn all-interchanges
-  "Extract all ServiceJourneyInterchange elements, indexed by ID"
-  [pub-del]
-  (let [ic-elements (u/find-all-tags pub-del (ns-tag "ServiceJourneyInterchange"))]
-    (->> ic-elements
-         (map extract-interchange)
-         (map (juxt :ID identity))
-         (into {}))))
+(defn all-operators [pub-del]
+  (->> (x/find-all-deep pub-del "Operator")
+       (map extract-operator)
+       (map (juxt :ID identity))
+       (into {})))
 
 ;; ============================================================================
-;; Operators
+;; DAY TYPES
 ;; ============================================================================
 
-;; (defn extract-operator
-;;   "Extract a single Operator element"
-;;   [op-element]
-;;   (when op-element
-;;     {:ID (u/element-id op-element)
-;;      :name (u/get-text (u/find-child op-element (ns-tag "Name")))
-;;      :short-name (u/get-text (u/find-child op-element (ns-tag "ShortName")))}))
-(defn extract-operator
-  "Extract a single Operator element"
-  [op-element]
-  (when op-element
-    {:ID (u/element-id op-element)
-     :name (u/tag-text (:content op-element) (ns-tag "Name"))
-     :short-name (u/tag-text (:content op-element) (ns-tag "ShortName"))}))
+(defn extract-day-type [elem]
+  (when elem
+    (let [properties (x/find-child elem "properties")
+          property-of-day (when properties
+                            (x/find-child properties "PropertyOfDay"))]
+      {:ID (x/entity-id elem)
+       :name (x/child-text elem "Name")
+       :properties {:days-of-week (when property-of-day
+                                    (x/child-text property-of-day "DaysOfWeek"))}})))
 
-(defn all-operators
-  "Extract all Operator elements, indexed by ID"
-  [pub-del]
-  (let [op-elements (u/find-all-tags pub-del (ns-tag "Operator"))]
-    (->> op-elements
-         (map extract-operator)
-         (map (juxt :ID identity))
-         (into {}))))
+
+(defn all-day-types [pub-del]
+  (->> (x/find-all-deep pub-del "DayType")
+       (map extract-day-type)
+       (map (juxt :ID identity))
+       (into {})))
 
 ;; ============================================================================
-;; DayTypes
+;; OPERATING PERIODS
 ;; ============================================================================
 
-;; (defn extract-day-type
-;;   "Extract a single DayType element"
-;;   [dt-element]
-;;   (when dt-element
-;;     {:ID (u/element-id dt-element)
-;;      :name (u/get-text (u/find-child dt-element (ns-tag "Name")))}))
+(defn extract-operating-period [elem]
+  (when elem
+    {:ID (x/entity-id elem)
+     :from-date (x/child-text elem "FromDate")
+     :to-date (x/child-text elem "ToDate")}))
 
-(defn extract-day-type
-  "Extract a single DayType element"
-  [dt-element]
-  (when dt-element
-    {:ID (u/element-id dt-element)
-     :name (u/tag-text (:content dt-element) (ns-tag "Name"))}))
-
-(defn all-day-types
-  "Extract all DayType elements, indexed by ID"
-  [pub-del]
-  (let [dt-elements (u/find-all-tags pub-del (ns-tag "DayType"))]
-    (->> dt-elements
-         (map extract-day-type)
-         (map (juxt :ID identity))
-         (into {}))))
+(defn all-operating-periods [pub-del]
+  (->> (x/find-all-deep pub-del "OperatingPeriod")
+       (map extract-operating-period)
+       (map (juxt :ID identity))
+       (into {})))
 
 ;; ============================================================================
-;; OperatigPeriods
+;; DAY TYPE ASSIGNMENTS
 ;; ============================================================================
 
-;; (defn extract-operating-period
-;;   "Extract a single OperatingPeriod element"
-;;   [op-element]
-;;   (when op-element
-;;     {:ID (u/element-id op-element)
-;;      :from-date (u/get-text (u/find-child op-element (ns-tag "FromDate")))
-;;      :to-date (u/get-text (u/find-child op-element (ns-tag "ToDate")))}))
-(defn extract-operating-period
-  "Extract a single OperatingPeriod element"
-  [op-element]
-  (when op-element
-    {:ID (u/element-id op-element)
-     :from-date (u/tag-text (:content op-element) (ns-tag "FromDate"))
-     :to-date (u/tag-text (:content op-element) (ns-tag "ToDate"))}))
+(defn extract-day-type-assignment [elem]
+  (when elem
+    (let [dt-ref (x/find-child elem "DayTypeRef")
+          op-ref (x/find-child elem "OperatingPeriodRef")]
+      {:day-type-ref (when dt-ref (x/entity-ref dt-ref))
+       :operating-period-ref (when op-ref (x/entity-ref op-ref))})))
 
-(defn all-operating-periods
-  "Extract all OperatingPeriod elements, indexed by ID"
-  [pub-del]
-  (let [op-elements (u/find-all-tags pub-del (ns-tag "OperatingPeriod"))]
-    (->> op-elements
-         (map extract-operating-period)
-         (map (juxt :ID identity))
-         (into {}))))
+(defn all-day-type-assignments [pub-del]
+  (->> (x/find-all-deep pub-del "DayTypeAssignment")
+       (mapv extract-day-type-assignment)))
 
 ;; ============================================================================
-;; DayTypeAssignements
+;; SCHEDULED STOP POINTS
 ;; ============================================================================
 
-(defn extract-day-type-assignment
-  "Extract a single DayTypeAssignment element"
-  [dta-element]
-  (when dta-element
-    {:day-type-ref (u/element-ref (u/find-child dta-element (ns-tag "DayTypeRef")))
-     :operating-period-ref (u/element-ref (u/find-child dta-element (ns-tag "OperatingPeriodRef")))}))
+(defn extract-stop-point [elem]
+  (when elem
+    {:ID (x/entity-id elem)
+     :name (x/child-text elem "Name")
+     :short-name (x/child-text elem "ShortName")}))
 
-(defn all-day-type-assignments
-  "Extract all DayTypeAssignment elements as a vector"
-  [pub-del]
-  (let [dta-elements (u/find-all-tags pub-del (ns-tag "DayTypeAssignment"))]
-    (mapv extract-day-type-assignment dta-elements)))
+(defn all-scheduled-stop-points [pub-del]
+  (->> (x/find-all-deep pub-del "ScheduledStopPoint")
+       (map extract-stop-point)
+       (map (juxt :ID identity))
+       (into {})))
 
 ;; ============================================================================
-;; ScheduledStopPoints
+;; LINES
 ;; ============================================================================
 
-;; (defn extract-stop-point
-;;   "Extract a single ScheduledStopPoint element"
-;;   [sp-element]
-;;   (when sp-element
-;;     {:ID (u/element-id sp-element)
-;;      :name (u/get-text (u/find-child sp-element (ns-tag "Name")))
-;;      :short-name (u/get-text (u/find-child sp-element (ns-tag "ShortName")))}))
+(defn extract-line [elem]
+  (when elem
+    (let [submode-container (x/find-child elem "TransportSubmode")]
+      {:ID (x/entity-id elem)
+       :version (x/entity-version elem)
+       :name (x/child-text elem "Name")
+       :transport-mode (x/child-text elem "TransportMode")
+       :transport-submode (when submode-container
+                            ;; Get text of first child whatever the submode tag is
+                            (some-> (:content submode-container)
+                                    first
+                                    :content
+                                    first))
+       :public-code (x/child-text elem "PublicCode")
+       :private-code (x/child-text elem "PrivateCode")
+       :operator-ref (some-> (x/find-child elem "OperatorRef") x/entity-ref)})))
 
-(defn extract-stop-point
-  "Extract a single ScheduledStopPoint element"
-  [sp-element]
-  (when sp-element
-    {:ID (u/element-id sp-element)
-     :name (u/tag-text (:content sp-element) (ns-tag "Name"))
-     :short-name (u/tag-text (:content sp-element) (ns-tag "ShortName"))}))
+(defn all-lines [pub-del]
+  (->> (x/find-all-deep pub-del "Line")
+       (map extract-line)
+       (map (juxt :ID identity))
+       (into {})))
 
-(defn all-scheduled-stop-points
-  "Extract all ScheduledStopPoint elements, indexed by ID"
-  [pub-del]
-  (let [sp-elements (u/find-all-tags pub-del (ns-tag "ScheduledStopPoint"))]
-    (->> sp-elements
-         (map extract-stop-point)
-         (map (juxt :ID identity))
-         (into {}))))
+;; ============================================================================
+;; JOURNEY PATTERNS
+;; ============================================================================
+
+(defn- extract-booking-arrangements [elem]
+  (when-let [ba (x/find-child elem "BookingArrangements")]
+    (let [contact (x/find-child ba "BookingContact")]
+      {:contact-person (when contact (x/child-text contact "ContactPerson"))
+       :phone (when contact (x/child-text contact "Phone"))
+       :further-details (when contact (x/child-text contact "FurtherDetails"))
+       :booking-methods (x/child-text ba "BookingMethods")
+       :minimum-booking-period (x/child-text ba "MinimumBookingPeriod")})))
+
+(defn- extract-stop-in-journey-pattern [elem]
+  (when elem
+    (let [ssp-ref (x/find-child elem "ScheduledStopPointRef")
+          dd-ref (x/find-child elem "DestinationDisplayRef")
+          for-boarding-text (x/child-text elem "ForBoarding")
+          for-alighting-text (x/child-text elem "ForAlighting")]
+      {:ID (x/entity-id elem)
+       :order (x/entity-order elem)
+       :scheduled-stop-ref (when ssp-ref (x/entity-ref ssp-ref))
+       :for-boarding (if (nil? for-boarding-text) true (= "true" for-boarding-text))
+       :for-alighting (if (nil? for-alighting-text) true (= "true" for-alighting-text))
+       :destination-display-ref (when dd-ref (x/entity-ref dd-ref))
+       :booking-arrangements (extract-booking-arrangements elem)})))
+
+(defn extract-journey-pattern [elem]
+  (when elem
+    (let [route-ref (x/find-child elem "RouteRef")
+          stops-container (x/find-child elem "pointsInSequence")
+          stops (->> (x/find-children stops-container "StopPointInJourneyPattern")
+                     (map extract-stop-in-journey-pattern)
+                     (sort-by :order)
+                     vec)]
+      {:ID (x/entity-id elem)
+       :version (x/entity-version elem)
+       :name (x/child-text elem "Name")
+       :route-ref (when route-ref (x/entity-ref route-ref))
+       :stops stops})))
+
+(defn all-journey-patterns [pub-del]
+  (->> (x/find-all-deep pub-del "JourneyPattern")
+       (map extract-journey-pattern)
+       (map (juxt :ID identity))
+       (into {})))
+
+;; ============================================================================
+;; SERVICE JOURNEYS
+;; ============================================================================
+
+(defn- extract-passing-time [elem]
+  (when elem
+    (let [stop-ref (x/find-child elem "StopPointInJourneyPatternRef")]
+      {:ID (x/entity-id elem)
+       :stop-point-ref (when stop-ref (x/entity-ref stop-ref))
+       :departure-time (x/child-text elem "DepartureTime")
+       :arrival-time (x/child-text elem "ArrivalTime")
+       :departure-day-offset (some-> (x/child-text elem "DepartureDayOffset") parse-long)
+       :arrival-day-offset (some-> (x/child-text elem "ArrivalDayOffset") parse-long)})))
+
+(defn- extract-flexible-service-properties [elem]
+  (when elem
+    (let [contact (x/find-child elem "BookingContact")]
+      {:ID (x/entity-id elem)
+       :contact-person (when contact (x/child-text contact "ContactPerson"))
+       :phone (when contact (x/child-text contact "Phone"))
+       :further-details (when contact (x/child-text contact "FurtherDetails"))
+       :booking-methods (x/child-text elem "BookingMethods")
+       :book-when (x/child-text elem "BookWhen")
+       :latest-booking-time (x/child-text elem "LatestBookingTime")})))
+
+(defn extract-service-journey [elem]
+  (when elem
+    (let [day-types-container (x/find-child elem "dayTypes")
+          passing-times-container (x/find-child elem "passingTimes")
+          jp-ref (x/find-child elem "JourneyPatternRef")
+          op-ref (x/find-child elem "OperatorRef")
+          ln-ref (x/find-child elem "LineRef")
+          flex-props (x/find-child elem "FlexibleServiceProperties")
+
+          passing-times (->> (x/find-children passing-times-container
+                                              "TimetabledPassingTime")
+                             (map extract-passing-time)
+                             vec)]
+      {:ID (x/entity-id elem)
+       :version (x/entity-version elem)
+       :name (x/child-text elem "Name")
+       :private-code (x/child-text elem "PrivateCode")
+       :day-type-refs (->> (x/find-children day-types-container "DayTypeRef")
+                           (map x/entity-ref)
+                           (remove nil?)
+                           set)
+       :journey-pattern-ref (when jp-ref (x/entity-ref jp-ref))
+       :operator-ref (when op-ref (x/entity-ref op-ref))
+       :line-ref (when ln-ref (x/entity-ref ln-ref))
+       :passing-times passing-times
+       :flexible-service (when flex-props
+                           (extract-flexible-service-properties flex-props))})))
+
+(defn all-service-journeys [pub-del]
+  (->> (x/find-all-deep pub-del "ServiceJourney")
+       (map extract-service-journey)
+       (map (juxt :ID identity))
+       (into {})))
+
+;; ============================================================================
+;; SERVICE JOURNEY INTERCHANGES
+;; ============================================================================
+
+(defn extract-interchange [elem]
+  (when elem
+    {:ID (x/entity-id elem)
+     :version (x/entity-version elem)
+     :stay-seated (= "true" (x/child-text elem "StaySeated"))
+     :guaranteed (= "true" (x/child-text elem "Guaranteed"))
+     :from-point-ref (some-> (x/find-child elem "FromPointRef") x/entity-ref)
+     :to-point-ref (some-> (x/find-child elem "ToPointRef") x/entity-ref)
+     :from-journey (some-> (x/find-child elem "FromJourneyRef") x/entity-ref)
+     :to-journey (some-> (x/find-child elem "ToJourneyRef") x/entity-ref)}))
+
+(defn all-interchanges [pub-del]
+  (->> (x/find-all-deep pub-del "ServiceJourneyInterchange")
+       (map extract-interchange)
+       (map (juxt :ID identity))
+       (into {})))
