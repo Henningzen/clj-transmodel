@@ -17,8 +17,8 @@
 ;;   TODO: Find appropriate name for process.clj
 ;;
 ;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
-;;   since:     0.1.0                    2025-08-07
-;;   version:   0.1.0
+;;   since:     0.1.0    2025-08-07
+;;   version:   0.2.1    2026-03-01
 ;; -----------------------------------------------------------------------------
 ;;
 

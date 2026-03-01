@@ -5,7 +5,7 @@
 
 (def lib 'jansenh/clj-transmodel)
 
-(def version "0.2.1-SNAPSHOT")
+(def version "0.2.1")
 
 (def class-dir "target/classes")
 
