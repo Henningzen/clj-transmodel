@@ -29,14 +29,14 @@
 
 (defn extract-operator [elem]
   (when elem
-    {:ID (x/entity-id elem)
+    {:id (x/entity-id elem)
      :name (x/child-text elem "Name")
      :short-name (x/child-text elem "ShortName")}))
 
 (defn all-operators [pub-del]
   (->> (x/find-all-deep pub-del "Operator")
        (map extract-operator)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -48,7 +48,7 @@
     (let [properties (x/find-child elem "properties")
           property-of-day (when properties
                             (x/find-child properties "PropertyOfDay"))]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :name (x/child-text elem "Name")
        :properties {:days-of-week (when property-of-day
                                     (x/child-text property-of-day "DaysOfWeek"))}})))
@@ -57,7 +57,7 @@
 (defn all-day-types [pub-del]
   (->> (x/find-all-deep pub-del "DayType")
        (map extract-day-type)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -66,14 +66,14 @@
 
 (defn extract-operating-period [elem]
   (when elem
-    {:ID (x/entity-id elem)
+    {:id (x/entity-id elem)
      :from-date (x/child-text elem "FromDate")
      :to-date (x/child-text elem "ToDate")}))
 
 (defn all-operating-periods [pub-del]
   (->> (x/find-all-deep pub-del "OperatingPeriod")
        (map extract-operating-period)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -97,14 +97,14 @@
 
 (defn extract-stop-point [elem]
   (when elem
-    {:ID (x/entity-id elem)
+    {:id (x/entity-id elem)
      :name (x/child-text elem "Name")
      :short-name (x/child-text elem "ShortName")}))
 
 (defn all-scheduled-stop-points [pub-del]
   (->> (x/find-all-deep pub-del "ScheduledStopPoint")
        (map extract-stop-point)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -114,7 +114,7 @@
 (defn extract-line [elem]
   (when elem
     (let [submode-container (x/find-child elem "TransportSubmode")]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :version (x/entity-version elem)
        :name (x/child-text elem "Name")
        :transport-mode (x/child-text elem "TransportMode")
@@ -131,7 +131,7 @@
 (defn all-lines [pub-del]
   (->> (x/find-all-deep pub-del "Line")
        (map extract-line)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -153,7 +153,7 @@
           dd-ref (x/find-child elem "DestinationDisplayRef")
           for-boarding-text (x/child-text elem "ForBoarding")
           for-alighting-text (x/child-text elem "ForAlighting")]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :order (x/entity-order elem)
        :scheduled-stop-ref (when ssp-ref (x/entity-ref ssp-ref))
        :for-boarding (if (nil? for-boarding-text) true (= "true" for-boarding-text))
@@ -169,7 +169,7 @@
                      (map extract-stop-in-journey-pattern)
                      (sort-by :order)
                      vec)]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :version (x/entity-version elem)
        :name (x/child-text elem "Name")
        :route-ref (when route-ref (x/entity-ref route-ref))
@@ -178,7 +178,7 @@
 (defn all-journey-patterns [pub-del]
   (->> (x/find-all-deep pub-del "JourneyPattern")
        (map extract-journey-pattern)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -188,7 +188,7 @@
 (defn- extract-passing-time [elem]
   (when elem
     (let [stop-ref (x/find-child elem "StopPointInJourneyPatternRef")]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :stop-point-ref (when stop-ref (x/entity-ref stop-ref))
        :departure-time (x/child-text elem "DepartureTime")
        :arrival-time (x/child-text elem "ArrivalTime")
@@ -198,7 +198,7 @@
 (defn- extract-flexible-service-properties [elem]
   (when elem
     (let [contact (x/find-child elem "BookingContact")]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :contact-person (when contact (x/child-text contact "ContactPerson"))
        :phone (when contact (x/child-text contact "Phone"))
        :further-details (when contact (x/child-text contact "FurtherDetails"))
@@ -219,7 +219,7 @@
                                               "TimetabledPassingTime")
                              (map extract-passing-time)
                              vec)]
-      {:ID (x/entity-id elem)
+      {:id (x/entity-id elem)
        :version (x/entity-version elem)
        :name (x/child-text elem "Name")
        :private-code (x/child-text elem "PrivateCode")
@@ -237,7 +237,7 @@
 (defn all-service-journeys [pub-del]
   (->> (x/find-all-deep pub-del "ServiceJourney")
        (map extract-service-journey)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))
 
 ;; ============================================================================
@@ -246,7 +246,7 @@
 
 (defn extract-interchange [elem]
   (when elem
-    {:ID (x/entity-id elem)
+    {:id (x/entity-id elem)
      :version (x/entity-version elem)
      :stay-seated (= "true" (x/child-text elem "StaySeated"))
      :guaranteed (= "true" (x/child-text elem "Guaranteed"))
@@ -258,5 +258,5 @@
 (defn all-interchanges [pub-del]
   (->> (x/find-all-deep pub-del "ServiceJourneyInterchange")
        (map extract-interchange)
-       (map (juxt :ID identity))
+       (map (juxt :id identity))
        (into {})))

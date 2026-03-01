@@ -90,7 +90,7 @@
   (or (get @reg :spijp-index)
       (let [idx (->> (all-journey-patterns)
                      (mapcat :stops)
-                     (reduce (fn [m stop] (assoc m (:ID stop) stop)) {}))]
+                     (reduce (fn [m stop] (assoc m (:id stop) stop)) {}))]
         (swap! reg assoc :spijp-index idx)
         idx)))
 

@@ -32,12 +32,12 @@
 
     (if-not (and from-sj to-sj from-stop to-stop)
       (println (format "❌ Incomplete interchange %s - missing data"
-                      (:ID interchange)))
+                      (:id interchange)))
       (do
         ;; Outbound journey info
         (println (format "\n📍 FROM: %s (%s)"
                          (:name from-sj)
-                         (:ID from-sj)))
+                         (:id from-sj)))
         (println (format "   arrives %s at %s"
                          (:arrival-time from-last-time)
                          (:name from-stop)))
@@ -57,7 +57,7 @@
         ;; Inbound journey info
         (println (format "📍 TO: %s (%s)"
                          (:name to-sj)
-                         (:ID to-sj)))
+                         (:id to-sj)))
         (println (format "   departs %s from %s"
                          (:departure-time to-first-time)
                          (:name to-stop)))))))
@@ -72,7 +72,7 @@
             inbound (filter #(= (:to-journey %) journey-id) all-ic)]
 
         (println (format "\n📅 INTERCHANGES FOR: %s" (:name journey)))
-        (println (format "   ID: %s" journey-id))
+        (println (format "   id: %s" journey-id))
 
         (if (empty? outbound)
           (println "\n   🔴 No outbound connections")

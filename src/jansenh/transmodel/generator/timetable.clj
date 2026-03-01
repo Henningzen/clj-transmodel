@@ -1,4 +1,4 @@
-;;-----------------------------------------------------------------------------
+;-----------------------------------------------------------------------------
 ;; File: src/jansenh/transmodel/generator/timetable.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
 ;; Copyright: (c) 2025 - 2026
@@ -6,10 +6,7 @@
 ;;-----------------------------------------------------------------------------
 
 (ns jansenh.transmodel.generator.timetable
-  "Generate flat and detailed timetables from NeTEx.
-
-   Supports data held in registry or raw xml datastructure
-   "
+  "Generate flat and detailed timetables from NeTEx"
   (:require [jansenh.transmodel.netex.calendar :as cal]
             [jansenh.transmodel.netex.registry :as reg]
             [clojure.string :as str])
@@ -19,7 +16,9 @@
 ;;
 ;;   Timetable generator
 ;;   -------------------
-
+;;
+;;   Supports data held in registry or raw xml datastructure
+;;
 ;;   Uses the expanded calendar and the registry data for timetable generation.
 ;;   This namespace produces application specific generated Timetable.
 ;;
@@ -82,7 +81,7 @@
      :arrival-date (if (pos? arr-offset) (.plusDays date arr-offset) date)
      :departure-datetime (when (:first-departure sj)
                            (LocalDateTime/of date (:first-departure sj)))
-     :journey-id (:ID sj)
+     :journey-id (:id sj)
      :private-code (:private-code sj)
      :journey-name (:name sj)
      :line-ref (:line-ref sj)
@@ -117,7 +116,7 @@
              :destination-display-ref (:destination-display-ref pt)
              ;; Parent context
              :trip-date date
-             :journey-id (:ID sj)
+             :journey-id (:id sj)
              :private-code (:private-code sj)})))
        vec))
 
@@ -165,7 +164,7 @@
   (let [service-journeys (->> (reg/all-service-journeys)
                               (map enrich-service-journey))
 
-        sj-by-id (reduce (fn [m sj] (assoc m (:ID sj) sj)) {} service-journeys)
+        sj-by-id (reduce (fn [m sj] (assoc m (:id sj) sj)) {} service-journeys)
 
         day-type-dates-cache
         (reduce

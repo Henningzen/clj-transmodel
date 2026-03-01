@@ -148,14 +148,14 @@
                    :days-of-week nil
                    :days-of-week-raw nil}
                   ;; Parse it:
-                  {:id (:ID dt)
+                  {:id (:id dt)
                    :days-of-week (parse-days-of-week (:days-of-week-raw dt))
                    :days-of-week-raw (:days-of-week-raw dt)})))
 
      :operating-periods
      (->> (vals operating-periods)
           (mapv (fn [op]
-                  {:id (:ID op)
+                  {:id (:id op)
                    :from-date (parse-netex-date (:from-date op))
                    :to-date (parse-netex-date (:to-date op))})))
 
