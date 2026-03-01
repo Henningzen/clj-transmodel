@@ -25,7 +25,7 @@
 ;;
 ;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
 ;;   since:     0.2.0   2025-08-15
-;;   version:   0.2.1   2026-03-01
+;;   version:   0.2.2   2026-03-01
 ;; -----------------------------------------------------------------------------
 
 (defonce ^:private reg (atom {}))

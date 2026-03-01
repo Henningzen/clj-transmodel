@@ -24,7 +24,7 @@
 ;;   - date-time on element
 ;;   - 
 ;; authors: Henning Jansen - henning.jansen@norled.no
-;; version: 0.2.0 2026-03-01
+;; version: 0.2.2 2026-03-01
 ;; since:   0.1.0 2025-08-07
 ;; -----------------------------------------------------------------------------
 
