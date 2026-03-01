@@ -6,14 +6,20 @@
             [jansenh.transmodel.netex.registry :as reg]
             [jansenh.transmodel.netex.line :as line]
             [jansenh.transmodel.netex.interchanges :as interchanges]
-            [clojure.pprint :as pp]))
+            [clojure.pprint :as pp]
+            [clojure.string :as str])
+  (:import [java.time LocalDate DayOfWeek]
+           [java.time.format DateTimeParseException]
+           [java.time DayOfWeek]))
 
 ;; ===========================================================================
 ;;
 ;; --- Define & load files
 ;;
 ;; ===========================================================================
+
 (def shared-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/_KOL_shared_data.xml")
+
 (def line-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
 
 (def shared-data (parser/parse-xml-file shared-data-file))
@@ -22,17 +28,26 @@
 (reg/reset-registry!)
 (reg/load-file! shared-data-file)
 (reg/load-line-file! line-data-file)
+(reg/stats)
 
-(println
- "\n--------------------------------------------------------------------------------\n\n"
- (reg/stats)
- "\n\n--------------------------------------------------------------------------------\n")
 
 ;; Set date ranges
 (def date-range (cal/weeks-ahead 6))
 (def from-date (:from date-range))
 (def to-date (:to date-range))
 
+(let [cal-idx (cal/build-calendar-index (reg/get-all))]
+  (tt/print-daily-detailed cal-idx "2026-03-01"))
+
+
+;; ===========================================================================
+;;
+;; --- Understanding Lines
+;;
+;; ===========================================================================
+
+(reg/all-lines)
+;;(reg/operator)
 
 ;; ===========================================================================
 ;;
@@ -41,17 +56,77 @@
 ;; ===========================================================================
 
 (def calendar-index (cal/build-calendar-index shared-data))
-#_(:stats calendar-index)
+(:stats calendar-index)
+
+
+;; ===========================================================================
+;;
+;; --- Day-types, navigating and understanding
+;;
+;; ===========================================================================
+
+(defn describe-day-type
+  "Describe a DayType using registry data.
+   
+   Returns a map with:
+   - :id - the day type ID
+   - :name - human name
+   - :periods - vector of period date ranges as strings
+   - :period-count - number of operating periods"
+  [day-type-id]
+  (when-let [dt (reg/day-type day-type-id)]
+    (let [periods (reg/day-type-periods day-type-id)]
+      {:id day-type-id
+       :name (:name dt)
+       :periods (mapv (fn [p]
+                        (str (:from-date p) " to " (:to-date p)))
+                      periods)
+       :period-count (count periods)})))
+
+(defn describe-day-type-with-pattern
+  "Extended description including day-of-week pattern from calendar index"
+  [calendar-index day-type-id]
+  (when-let [base (describe-day-type day-type-id)]
+    (if-let [cal-dt (get-in calendar-index [:day-types day-type-id])]
+      (let [days (:days-of-week cal-dt)]
+        (assoc base
+               :day-pattern
+               (cond
+                 (empty? days) "Not yet resolved"
+                 :else (str/join ", " (map #(.name ^DayOfWeek %) (sort days))))))
+      base)))
+
 
 ;; Inspect a specific day type
 ;; (The calendar-index in shared_data.xml has DayTypes, a fundamental
 ;;  concept to most of our routes.)
-#_ (cal/describe-day-type calendar-index "KOL:DayType:1050")
+
+(comment
+  (cal/describe-day-type calendar-index "KOL:DayType:1050")
+  (describe-day-type "KOL:DayType:1050")
+  (describe-day-type-with-pattern calendar-index "KOL:DayType:1050")
+  ;; --->
+  )
+
+;; ===========================================================================
+;;
+;; TODO : Document this insight from AI:
+;;        Both produce the same calendar index structure
+;;
+;; ===========================================================================
+
+;; From raw XML (backward compat):
+(cal/build-calendar-index shared-data)
+
+;; From registry:
+(cal/build-calendar-index (reg/get-all))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   
 ;; ===========================================================================
 ;;
-;; -- Generate all Journeys
+;; -- Generate all Journeys  --- Line context
 ;;
 ;; ===========================================================================
 ;;
@@ -68,23 +143,45 @@
 ;;     that range.
 ;;
 
-;; Get service journeys from line file
-(def journeys (tt/collect-service-journeys line-data))
+;; Get service journeys from line file OBSOLETE
+;; (The line.clj namespace has this function intact, bypassing the
+;;  registry way of dealing with extraction)
+#_(def journeys (tt/collect-service-journeys line-data))
 
+;; Get service journeys from registry:
+(def journeys (reg/all-service-journeys))
 #_ (count journeys)
 
-#_ (let [{:keys [from to]} (cal/weeks-ahead 6)
-         timetable (tt/generate-timetable calendar-index journeys from to)]
-     (tt/print-timetable timetable :limit 20))
 
-;; Build timetable
-(def timetable (tt/generate-timetable calendar-index journeys from-date to-date))
+(defn print-timetable-today
+  "Pretty-print timetable. No args = today, or pass a date string."
+  ([]
+   (print-timetable-today (.toString (LocalDate/now))))
+  ([date]
+   (let [cal-idx (cal/build-calendar-index (reg/get-all))]
+     (tt/print-daily-detailed cal-idx date))))
+
+(defn print-timetable-range
+  "Pretty-print detailed timetable for a date range."
+  [from-str to-str]
+  (let [cal-idx (cal/build-calendar-index (reg/get-all))
+        from (LocalDate/parse from-str)
+        to (LocalDate/parse to-str)
+        detailed (tt/generate-detailed-timetable cal-idx from to)]
+    (tt/print-detailed-timetable detailed :limit 50)))
+
+
+(print-timetable-today)
+(print-timetable-today "2026-02-26")
+(print-timetable-range "2026-03-02" "2026-03-08")
+
 
 ;; ===========================================================================
 ;;
 ;; Display human-readable timetable
 ;;
 ;; ===========================================================================
+
 (comment
   
   (tt/print-timetable timetable :limit 20)
@@ -126,6 +223,7 @@
 
   ;; Standalone journeys (not in any chain)
   (count (line/standalone-journeys data))
+
   ;; --->
   )
 
