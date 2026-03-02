@@ -47,10 +47,13 @@
 ;; Lookups — shared data
 ;; ============================================================================
 
-(defn operator        [id] (get-in @reg [:operators id]))
-(defn day-type        [id] (get-in @reg [:day-types id]))
+(defn operator         [id] (get-in @reg [:operators id]))
+(defn day-type         [id] (get-in @reg [:day-types id]))
 (defn operating-period [id] (get-in @reg [:operating-periods id]))
-(defn stop-point      [id] (get-in @reg [:stop-points id]))
+(defn stop-point       [id] (get-in @reg [:stop-points id]))
+
+(defn all-operators    [] (vals (get @reg :operators {})))
+
 
 (defn stop-name
   "Resolve a ScheduledStopPoint ID to its human-readable name"
