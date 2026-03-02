@@ -9,7 +9,6 @@
             [clojure.pprint :as pp]
             [clojure.string :as str])
   (:import [java.time LocalDate DayOfWeek]
-           [java.time.format DateTimeParseException]
            [java.time DayOfWeek]))
 
 ;; ===========================================================================
@@ -18,18 +17,25 @@
 ;;
 ;; ===========================================================================
 
-(def shared-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/_KOL_shared_data.xml")
 
-(def line-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
 
+(def shared-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/_KOL_shared_data.xml")
+#_(def line-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/KOL_KOL-Line-8_5900_518_518.xml")
+(def line-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 
-(reg/reset-registry!)
-(reg/load-file! shared-data-file)
-(reg/load-line-file! line-data-file)
-(reg/stats)
+(comment
 
+  ;; https://data.entur.no/public/datasets/timetable_files
+
+  (reg/reset-registry!)
+  (reg/load-file! shared-data-file)
+  (reg/load-line-file! line-data-file)
+  (reg/stats)
+
+  ;; --->
+  )
 
 ;; Set date ranges
 (def date-range (cal/weeks-ahead 6))
@@ -47,6 +53,9 @@
 ;; ===========================================================================
 
 (reg/all-lines)
+(reg/all-operators)
+(reg/all-service-journeys)
+
 ;;(reg/operator)
 
 ;; ===========================================================================
