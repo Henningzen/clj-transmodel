@@ -1,11 +1,11 @@
 ;-----------------------------------------------------------------------------
-;; File: src/jansenh/transmodel/generator/timetable.clj
-;; Author: Henning Jansen - henning.jansen@jansenh.no
+;; File: src/jansenh/transmodel/netex/timetable.clj
+;; Author: Henning Jansen (henning.jansen@jansenh.no)
 ;; Copyright: (c) 2025 - 2026
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
 ;;-----------------------------------------------------------------------------
 
-(ns jansenh.transmodel.generator.timetable
+(ns jansenh.transmodel.netex.timetable
   "Generate flat and detailed timetables from NeTEx"
   (:require [jansenh.transmodel.netex.calendar :as cal]
             [jansenh.transmodel.netex.registry :as reg]
@@ -16,33 +16,23 @@
 ;;
 ;;   Timetable generator
 ;;   -------------------
-;;
-;;   Supports data held in registry or raw xml datastructure
+;;   Supports data held in registry or raw xml datastructure with NeTEx
+;;   elements.
 ;;
 ;;   Uses the expanded calendar and the registry data for timetable generation.
 ;;   This namespace produces application specific generated Timetable.
 ;;
-;;   authors:   Henning Jansen - henning.jansen@jansenh.no;
-;;   since:     0.1.0   2025-08-11
-;;   version:   0.2.1   2026-03-01
-;;   ---------------------------------------------------------------------------
-;;
+;;   version: 0.2.1
+;;   since: 0.1.0
 
-;; =============================================================================
-;; Time parsing (strings from extract → LocalTime)
-;; =============================================================================
 
 (defn- parse-time [time-str]
   (when (and time-str (not (str/blank? time-str)))
     (try (LocalTime/parse (str/trim time-str))
          (catch Exception _ nil))))
 
-;; =============================================================================
-;; Trip Generation
-;; =============================================================================
-
 (defn- enrich-passing-time
-  "Add parsed LocalTime and resolved stop info to a passing-time map"
+  "Add parsed LocalTime and resolved stop info to a passing-time map."
   [pt]
   (let [spijp-id (:stop-point-ref pt)
         stop-info (get (reg/spijp-index) spijp-id)]
@@ -68,7 +58,7 @@
                              (:departure-local-time last-pt))
            :stop-count (count enriched-pts))))
 
-(defn generate-trip-instance
+(defn- generate-trip-instance
   "Generate a single trip row for a specific date"
   [^LocalDate date sj]
   (let [first-pt (first (:passing-times sj))
@@ -94,7 +84,7 @@
      :stop-count (:stop-count sj)
      :day-type-refs (:day-type-refs sj)}))
 
-(defn generate-trip-stops
+(defn- generate-trip-stops
   "Generate stop-level detail for a trip instance"
   [^LocalDate date sj]
   (->> (:passing-times sj)
@@ -122,7 +112,9 @@
 
 ;; =============================================================================
 ;; Timetable Generation (pure functions, registry-backed)
+;;
 ;; =============================================================================
+
 
 (defn generate-timetable
   "Generate complete timetable for a date range.
@@ -156,6 +148,7 @@
          (sort-by (juxt :trip-date :departure-time))
          vec)))
 
+
 (defn generate-detailed-timetable
   "Generate timetable with all stops expanded.
 
@@ -187,13 +180,16 @@
          (sort-by (comp (juxt :trip-date :departure-time) :trip))
          vec)))
 
+
 ;; =============================================================================
 ;; Output Formatting
+;;
 ;; =============================================================================
 
-(def date-fmt (DateTimeFormatter/ofPattern "yyyy-MM-dd"))
-(def time-fmt (DateTimeFormatter/ofPattern "HH:mm"))
-(def day-names {DayOfWeek/MONDAY "Mon" DayOfWeek/TUESDAY "Tue"
+
+(def ^:private date-fmt (DateTimeFormatter/ofPattern "yyyy-MM-dd"))
+(def ^:private time-fmt (DateTimeFormatter/ofPattern "HH:mm"))
+(def ^:private day-names {DayOfWeek/MONDAY "Mon" DayOfWeek/TUESDAY "Tue"
                 DayOfWeek/WEDNESDAY "Wed" DayOfWeek/THURSDAY "Thu"
                 DayOfWeek/FRIDAY "Fri" DayOfWeek/SATURDAY "Sat"
                 DayOfWeek/SUNDAY "Sun"})
@@ -273,9 +269,12 @@
       (println (format "\n... and %d more trips"
                        (- (count detailed-timetable) limit))))))
 
+
 ;; =============================================================================
 ;; Convenience
+;;
 ;; =============================================================================
+
 
 (defn timetable-for-date
   [calendar-index date]
@@ -301,9 +300,12 @@
     (println (format "Trips: %d" (count detailed)))
     (print-detailed-timetable detailed :limit 100)))
 
+
 ;; =============================================================================
 ;; SQL Generation
+;;
 ;; =============================================================================
+
 
 (def create-table-ddl
   "CREATE TABLE IF NOT EXISTS scheduled_trips (
