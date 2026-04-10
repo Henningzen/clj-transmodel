@@ -1,6 +1,7 @@
 (ns notebooks.netex
   (:require [jansenh.transmodel.parser.core :as parser]
             [jansenh.transmodel.netex.calendar :as cal]
+            [jansenh.transmodel.parser.utilities :as utils]
             [scicloj.clay.v2.api :as clay]
             [scicloj.clay.v2.main]
             [scicloj.kindly.v4.kind :as kind]
@@ -27,61 +28,34 @@
 ;;  described in the README file under the root of this project.
 
 
-(def shared-data-file "/home/jansenh/data/netex/raw/KOL/_KOL_shared_data.xml")
+(def shared-data-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml")
 (def line-data-file
-  "/home/jansenh/data/netex/raw/KOL/KOL_KOL-Line-8_5986_1025_Fogn---Judaberg---Helgoy.xml")
+  "/home/jansenh/data/netex/KOL/KOL_KOL-Line-8_5986_1025_Fogn---Judaberg---Helgoy.xml")
 
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 
+(def date-range (cal/weeks-ahead 1))
 
-;; Set date ranges
-(def date-range (cal/weeks-ahead 6))
-(def from-date (:from date-range))
-(def to-date (:to date-range))
-
-;; Build calendar index
 
 (def calendar-index (cal/build-calendar-index shared-data))
 (def calendar-stats (:stats calendar-index))
 
-date-range
-calendar-stats
+(keys calendar-index)
+(count (:operating-periods calendar-index))
+(count (:day-types calendar-index))
 
-;; Check stats calendar-index
+(-> date-range
+    (update :from utils/local-date->str)
+    (update :to   utils/local-date->str)
+    (tc/dataset        {:dataset-name "Date range"})
+    (tc/rename-columns {:from "From" :to "To"}))
 
+(-> calendar-stats
+    (tc/dataset        {:dataset-name "Calendar statistics"})
+    (tc/rename-columns {:day-type-count "day-type count" :period-count "period count" :assignement-count "assignement count"}))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+;; -----------------------------------------------------------------------------
 
 (comment
   "Clay specifics

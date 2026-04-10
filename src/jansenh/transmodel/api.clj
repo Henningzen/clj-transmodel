@@ -17,9 +17,9 @@
 ;;
 ;; ===========================================================================
 
-(def SPACER80 "--------------------------------------------------------------------------------")
-(def shared-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/_KOL_shared_data.xml")
-(def line-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
+(def shared-data-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml")
+#_(def line-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/KOL_KOL-Line-8_5900_518_518.xml")
+(def line-data-file "/home/jansenh/data/netex/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 
@@ -41,7 +41,7 @@
 (def to-date (:to date-range))
 
 (let [cal-idx (cal/build-calendar-index (reg/get-all))]
-  (tt/print-daily-detailed cal-idx "2026-03-01"))
+  (tt/print-daily-detailed cal-idx "2026-02-01"))
 
 
 ;; ===========================================================================
@@ -179,8 +179,8 @@
 
 
 (print-timetable-today)
-(print-timetable-today "2026-02-26")
-(print-timetable-range "2026-03-02" "2026-03-08")
+(print-timetable-today "2026-03-26")
+(print-timetable-range "2026-04-01" "2026-04-30")
 
 
 ;; ===========================================================================
@@ -272,7 +272,6 @@
 (do 
   (let [sj (reg/service-journey "KOL:ServiceJourney:5900_250619122707475_1002")]
     (clojure.pprint/pprint (:passing-times sj)))
-  (SPACER80)
 
   (let [sj (reg/service-journey "KOL:ServiceJourney:5900_250619122707482_2002")]
     (clojure.pprint/pprint (:passing-times sj))))
@@ -289,6 +288,3 @@
   ;;
   ;; ------------------------------------------------------------------> comment
   ;;
-  
-
-

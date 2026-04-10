@@ -1,0 +1,1 @@
+{:lint-as {emmy.viewer/with-let clojure.core/let}}

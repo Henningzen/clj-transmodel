@@ -15,6 +15,6 @@
 ** TODO Unit-test calendar.clj Date Expansion
 ** DEFR Migrate netex/calendar.clj Date Time parsers to parser/utilities
 ** TODO Integrate in notebooks/
-** TODO Usecases for notebook are 'weeks-ahead' 'describe-day-type'
+** TODO Use cases for notebook are 'weeks-ahead' 'describe-day-type'
 
 

@@ -36,6 +36,7 @@
 #+end_src
 
 ** Refactor March 2026
+#+begin_src text
                     ┌─────────────┐
                     │  parser/    │
                     │  core.clj   │  parse-xml-file, parse-xml-zip-file
@@ -66,5 +67,5 @@
              │  timetable  │          │  interchanges│
              └─────────────┘          └──────────────┘
              (reads from registry)    (reads from registry)
-
+#+end_src
 	     

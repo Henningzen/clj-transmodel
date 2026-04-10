@@ -6,7 +6,7 @@
 ;;
 ;;-----------------------------------------------------------------------------
 
-(ns jansenh.transmodel.utilities.validitors)
+(ns jansenh.transmodel.utilities.validators)
 
 ;; Transmodel validator functions
 ;;
@@ -18,7 +18,7 @@
 (defn valid-date-time?
   "Check if timestamp is valid ISO-8601 local date time.
 
-   This is what we must anticipate for validity within the NeTEx and SIRI
+   This is what we must expect for validity within the NeTEx and SIRI
    standards echo-system. Go see the tests!
 
    Returns: truthy on valid timestamp
@@ -33,6 +33,3 @@
     nil
     (re-matches #"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}"
                 timestamp)))
-
-
-

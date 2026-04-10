@@ -9,7 +9,7 @@
 (ns jansenh.transmodel.parser.utilities
   (:require [clojure.string :as str])
   (:import (java.time Instant LocalDateTime OffsetDateTime ZoneOffset ZonedDateTime)
-           (java.time.format DateTimeParseException)))
+           (java.time.format DateTimeParseException DateTimeFormatter)))
 
 ;; NeETx parser utilities
 ;;
@@ -276,6 +276,12 @@
          (tag-attr-datetime content tag :time)))))
 
 
+
+(defn local-date->str
+  "TBA"
+  [^java.time.LocalDate local-date]
+  (.format local-date DateTimeFormatter/ISO_LOCAL_DATE))
+
 (comment
  
   (require '[jansenh.transmodel.parser.core :as parser])
@@ -309,6 +315,13 @@
       (:content xml-data)))
 
 
-
-  ;; ---> 
-  )
+  (def date-range
+  {:from (java.time.LocalDate/parse "2026-04-03")
+   :to (java.time.LocalDate/parse "2026-05-15")})
+  
+  (-> date-range
+      (update :from local-date->str)
+      (update :to local-date->str))
+  
+  
+  ,)
