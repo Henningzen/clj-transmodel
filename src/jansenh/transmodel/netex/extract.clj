@@ -51,6 +51,7 @@
       {:id (x/entity-id elem)
        :name (x/child-text elem "Name")
        :properties {:days-of-week (when property-of-day
+
                                     (x/child-text property-of-day "DaysOfWeek"))}})))
 
 

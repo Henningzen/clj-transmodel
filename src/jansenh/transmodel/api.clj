@@ -17,11 +17,9 @@
 ;;
 ;; ===========================================================================
 
-
-
-(def shared-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/_KOL_shared_data.xml")
-#_(def line-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/KOL_KOL-Line-8_5900_518_518.xml")
-(def line-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
+(def SPACER80 "--------------------------------------------------------------------------------")
+(def shared-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/_KOL_shared_data.xml")
+(def line-data-file "/home/jansenh/data/rb_norway-aggregated-netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 
@@ -274,9 +272,8 @@
 (do 
   (let [sj (reg/service-journey "KOL:ServiceJourney:5900_250619122707475_1002")]
     (clojure.pprint/pprint (:passing-times sj)))
-  
-  (println "--------------------------------------------------------------------------------")
-  
+  (SPACER80)
+
   (let [sj (reg/service-journey "KOL:ServiceJourney:5900_250619122707482_2002")]
     (clojure.pprint/pprint (:passing-times sj))))
 
