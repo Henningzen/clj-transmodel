@@ -18,8 +18,8 @@
 ;; ===========================================================================
 
 (def shared-data-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml")
-#_(def line-data-file "/home/jansenh/data/netex_rb_norway-aggregated-netex-20260302/KOL_KOL-Line-8_5900_518_518.xml")
-(def line-data-file "/home/jansenh/data/netex/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
+(def line-data-file   "/home/jansenh/data/netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
+(def line-data-file2  "/home/jansenh/data/netex/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 
@@ -30,6 +30,7 @@
   (reg/reset-registry!)
   (reg/load-file! shared-data-file)
   (reg/load-line-file! line-data-file)
+  (reg/load-line-file! line-data-file2)
   (reg/stats)
 
   ;; --->
@@ -41,7 +42,16 @@
 (def to-date (:to date-range))
 
 (let [cal-idx (cal/build-calendar-index (reg/get-all))]
-  (tt/print-daily-detailed cal-idx "2026-02-01"))
+  (tt/print-daily-detailed cal-idx "2026-04-01"))
+
+;; ===========================================================================
+;;
+;; --- Understanding Shared Data
+;;
+;; ===========================================================================
+
+(def all-stop-names (reg/all-stop-names))
+(def all-stop-points (reg/all-stop-points))
 
 
 ;; ===========================================================================
@@ -50,11 +60,11 @@
 ;;
 ;; ===========================================================================
 
-(reg/all-lines)
-(reg/all-operators)
+
+(def lines (reg/all-lines))
+(def operators (reg/all-operators))
 (reg/all-service-journeys)
 
-;;(reg/operator)
 
 ;; ===========================================================================
 ;;
@@ -234,6 +244,12 @@
   ;; --->
   )
 
+;; -----------------------------------------------------------------------------
+;; Stop-points from share data
+;;
+;; -----------------------------------------------------------------------------
+
+(count (reg/all-stop-names))
 
 ;; -----------------------------------------------------------------------------
 ;;

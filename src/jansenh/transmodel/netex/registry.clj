@@ -66,6 +66,11 @@
   (->> (:stop-points @reg)
        (reduce-kv (fn [m id sp] (assoc m id (:name sp))) {})))
 
+(defn all-stop-points
+  ""
+  []
+  (:stop-points @reg))
+
 (defn day-type-assignments [] (get @reg :assignments))
 
 ;; ============================================================================

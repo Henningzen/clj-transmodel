@@ -27,53 +27,73 @@
 ;; -----------------------------------------------------------------------------
 ;;
 
+(defn remove-nil-vals
+  "It is what it is - remove nil's from maps"
+  [m]
+  (into {} (remove (comp nil? val)) m))
+
+
 (def shared-data (parser/parse-xml-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml"))
 
 (def calendar-index (cal/build-calendar-index shared-data))
 
-(def lines api/lines)
 
+;; #### **Prepared date-range**
 (-> (cal/weeks-ahead 1)
     (update :from utils/local-date->str)
     (update :to   utils/local-date->str)
-    (tc/dataset        {:dataset-name "Date range"})
+    (tc/dataset {:dataset-name "Date range"})
     (tc/rename-columns {:from "From" :to "To"}))
 
-;; -----------------------------------------------------------------------------
 
+;; #### **Calendar index in shared dataset**
 (-> (:stats calendar-index)
-    (tc/dataset        {:dataset-name      "Calendar statistics"})
+    (tc/dataset {:dataset-name "Calendar statistics"})
+    (tc/replace-missing :all :value "---")
     (tc/rename-columns {:day-type-count    "day-type count"
                         :period-count      "period count"
                         :assignement-count "assignement count"}))
 
-;; -----------------------------------------------------------------------------
 
-(-> (first lines)
-    (as-> m (into {} (remove (comp nil? val)) m)) ;; TODO!
-    (tc/dataset        {:dataset-name   "Line data"})
-    (tc/rename-columns {:id             "Id"
-                        :version        "Version"
-                        :name           "Name"
-                        :public-code    "Public code"
-                        :private-code   "Private code"
-                        :operator-ref   "Operator ref"
-                        :transport-mode "Transport mode"}))
+;; #### **Operators, Public Transporation Agents**
+(->  api/operators
+     (tc/dataset {:dataset-name "PTA operators"})
+     (tc/replace-missing :all :value "---")
+     (tc/rename-columns {:id          "Id"
+                         :name        "Name"
+                         :short-name  "Short name"}))
 
 
+;; #### **Stop-points total in shared dataset:**
+;; 
+(count api/all-stop-points)
 
 
+;; #### **Stop-points peak 10**
+
+(-> (->> api/all-stop-points
+         vals
+         (take 10))
+    (tc/dataset {:dataset-name "StopPoints"})
+    (tc/replace-missing :all :value "---")
+    (tc/rename-columns {:id "Id"
+                        :name "Name"
+                        :short-name "Short name"}))
 
 
-
-
-
-
-
-
-
-
-
+;; #### **Lines**
+(->  api/lines
+     (tc/dataset {:dataset-name "Lines"})
+     (tc/replace-missing :all :value "---")
+     (tc/dataset {:dataset-name "Line data"})
+     (tc/rename-columns {:id                 "Id"
+                         :version            "Version"
+                         :name               "Name"
+                         :public-code        "Public code"
+                         :private-code       "Private code"
+                         :operator-ref       "Operator ref"
+                         :transport-mode     "Transport mode"
+                         :transport-submode  "Transport submode"}))
 
 
 (comment

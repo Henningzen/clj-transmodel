@@ -255,7 +255,9 @@
 ;; -----------------------------------------------------------------------------
 ;; Convenience Functions
 
-(defn weeks-ahead [n]
+(defn weeks-ahead
+  "TODO Document me."
+  [n]
   (let [today (LocalDate/now)]
     {:from today :to (.plusWeeks today n)}))
 
