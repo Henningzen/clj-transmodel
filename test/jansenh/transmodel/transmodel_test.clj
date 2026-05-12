@@ -1,6 +1,6 @@
 (ns jansenh.transmodel.transmodel-test
-  (:require [clojure.test :refer :all]
-            [jansenh.transmodel.transmodel :refer :all]))
+  (:require [clojure.test :refer [deftest testing is]]
+            [jansenh.transmodel.transmodel :refer []]))
 
 (deftest a-test
   (testing "FIXME, I fail."

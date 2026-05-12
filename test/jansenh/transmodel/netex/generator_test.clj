@@ -1,6 +1,5 @@
 (ns jansenh.transmodel.netex.generator-test
   (:require [clojure.test :refer [deftest is testing]]
-            [jansenh.transmodel.netex.timetable :as sut]
             [jansenh.transmodel.parser.core :as parser]))
 
 (def resources-path "resources/testdata")

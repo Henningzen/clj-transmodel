@@ -39,13 +39,9 @@ Install it locally (requires the `ci` task be run first):
 
     $ clojure -T:build install
 
-Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment
-variables (requires the `ci` task be run first):
+Deploy it to local .m2
 
     $ clojure -T:build deploy
-
-Your library will be deployed to no.jansenh/clj-transmodel on clojars.org by default.
-
 
 
 ## Contribute
