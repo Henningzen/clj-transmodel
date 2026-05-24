@@ -28,14 +28,15 @@
                       :SOF "https://storage.googleapis.com/marduk-production/outbound/netex/rb_sof-aggregated-netex.zip"
                       :TRO "https://storage.googleapis.com/marduk-production/outbound/netex/rb_tro-aggregated-netex.zip"})
 
+
 (defn download-netex-zip
   "Downloads a Netex zip file based on the provided PTA argument and saves it
   to the resources folder.
   PTA should be one of the keys in the netex-zip-files map."
-  [pta]
+  [pta path]
   (if-let [url (get netex-zip-files pta)]
     (try
-      (let [filename (str "resources/" (last (str/split url #"/")))
+      (let [filename (str path "/" (last (str/split url #"/")))
             file (io/file filename)]
         (with-open [in (io/input-stream url)
                     out (io/output-stream file)]
@@ -61,6 +62,8 @@
   (download-netex-zip :NOR)
   (download-netex-zip :OST)
   (download-netex-zip :INVALID)  ; Should show invalid PTA message
+
+  (download-netex-zip :SOF "/home/jansenh/data/netex/raw")
 
   ;; --->
   )

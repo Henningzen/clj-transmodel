@@ -20,7 +20,8 @@
     :license {:name "Eclipse Public License"
               :url "https://opensource.org/license/epl-2-0"}}
   (:require
-   [jansenh.transmodel.api :as api]
+   [jansenh.transmodel.core :as core]
+   [jansenh.transmodel.utilities.data-retriever :refer [download-netex-zip]]
    [clojure.repl :refer :all]
    [clojure.pprint :refer [pprint]]
    [clojure.tools.namespace.repl :refer [refresh refresh-all]]))
@@ -28,13 +29,11 @@
 ;; Optional: Auto-refresh on file changes
 ;; (add-hook! :repl/after-load refresh)
 
+(def data-store "/home/jansenh/data/netex")
+
+
 (comment
-  ;;; REPL functions
-  ;;  --------------
+ (download-netex-zip :SOF (str data-store "/raw/"))
 
-  (refresh-all)
-  
-  ,)
-
-(defn dev []
-  (println "Dev environment loaded. Use (refresh) to reload code."))
+ ;; --->
+ )
