@@ -12,26 +12,33 @@
 #+begin_src text
 
   clj-transmodel
+      │
+      ├── dev
+      │   ├── usr.clj
+      │   └── scratch.clj
+      │
       ├── documents
       ├── notebook
+      │
       ├── resources
       │   └── testdata
+      │
       ├── src
       │   └── jansenh
       │       └── transmodel
-      │           ├── generator
       │           ├── netex
       │           ├── parser
       │           ├── siri
       │           └── utilities
+      │
       └──── test
-          └── jansenh
-              └── transmodel
-                  ├── generator
-                  ├── netex
-                  ├── parser
-                  ├── siri
-  		└── utilities      
+              └── jansenh
+                  └── transmodel
+                      ├── generator
+                      ├── netex
+                      ├── parser
+                      ├── siri
+  		    └── utilities
 
 #+end_src
 
@@ -45,7 +52,7 @@
                            ▼
                     ┌─────────────┐
                     │  parser/    │
-                    │  xml.clj    │  find-child, find-children, child-text, 
+                    │  xml.clj    │  find-child, find-children, child-text,
                     └──────┬──────┘  entity-id, entity-ref — ONE copy
                            │
                            ▼
@@ -68,4 +75,3 @@
              └─────────────┘          └──────────────┘
              (reads from registry)    (reads from registry)
 #+end_src
-	     
