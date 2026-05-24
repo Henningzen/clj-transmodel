@@ -14,10 +14,14 @@
 ;;-----------------------------------------------------------------------------
 
 (ns jansenh.transmodel.api
-  "API wrapper over jansenh/transmodel"
+    ^{:doc  "API wrapper over jansenh/transmodel"
+    :author "Henning Jansen"
+    :added  "0.2.3"
+    :license {:name "Eclipse Public License"
+              :url "https://opensource.org/license/epl-2-0"}}
   (:require [jansenh.transmodel.parser.core :as parser]
             [jansenh.transmodel.netex.calendar :as cal]
-            [jansenh.transmodel.generator.timetable :as tt]
+            [jansenh.transmodel.netex.timetable :as tt]
             [jansenh.transmodel.netex.registry :as reg]
             [jansenh.transmodel.netex.line :as line]
             [jansenh.transmodel.netex.interchanges :as interchanges]
