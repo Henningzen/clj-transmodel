@@ -10,7 +10,8 @@
   "Parse Line files: ServiceJourneys, Interchanges, Roundtrips"
   (:require [jansenh.transmodel.parser.core :as parser]
             [jansenh.transmodel.netex.registry :as reg]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [clojure.set :refer [difference]]))
 
 ;;
 ;;   Transmodel NeTEx Lines parser
@@ -108,7 +109,7 @@
   (let [stay-seated (filter :stay-seated interchanges)
         froms (set (map :from-journey stay-seated))
         tos (set (map :to-journey stay-seated))]
-    (clojure.set/difference froms tos)))
+    (difference froms tos)))
 
 (defn- follow-chain
   "Follow chain from start journey"

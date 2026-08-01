@@ -1,13 +1,25 @@
-;;-----------------------------------------------------------------------------
-;; File: src/jansenh/transmodel/parser/xml.clj
-;; Author: Henning Jansen - henning.jansen@jansenh.no
-;; Copyright: (c) 2026
-;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
+;;; jansenh/transmodel/parser/xml.clj --- XML navigation utility functions
 ;;
-;;-----------------------------------------------------------------------------
+;;   Copyright (c) Henning Jansen2025 - 2026
+;;   The use and distribution terms for this software are covered by the
+;;   Eclipse Public License 2.0 (https://opensource.org/license/epl-2-0)
+;;   which can be found in the file LICENSE at the root of this distribution.s
+;;   By using this software in any fashion, you are agreeing to be bound by
+;;   the terms of this license. You must not remove this notice, or any other,
+;;   from this software.
+;;
+;; Author:  Henning Jansen - henning.jansen@jansenh.no
+;; Date:    August 4, 2024
+;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0
+;;
+;; SPDX-License-Identifier: EPL-2.0
 
 (ns jansenh.transmodel.parser.xml
-  "XML navigation utility functions for parsed clojure.data.xml structures."
+  ^{:doc  "XML navigation utility functions for parsed clojure.data.xml structures."
+    :author "Henning Jansen"
+    :added  "0.1.0"
+    :license {:name "Eclipse Public License"
+              :url "https://opensource.org/license/epl-2-0"}}
   (:require [clojure.string :as str]))
 
 ;;
@@ -37,8 +49,14 @@
 ;;   version:   0.2.2   2026-03-01
 ;;   ---------------------------------------------------------------------------
 
+(defn root-tag
+  "Returns the local name of the root element's tag, stripping namespace.
+   Returns nil if element is not a map or has no tag."
+  [elem]
+  (some-> elem :tag name))
+
 (defn find-children
-  "Find all direct child elements matching a local tag name"
+  "Returns all direct child elements matching a local tag name"
   [elem local-name]
   (when elem
     (->> (:content elem)
@@ -46,12 +64,12 @@
          (filter #(= (some-> (:tag %) name) local-name)))))
 
 (defn find-child
-  "Find first direct child element matching a local tag name"
+  "Returns first direct child element matching a local tag name"
   [elem local-name]
   (first (find-children elem local-name)))
 
 (defn child-text
-  "Get text content of first child element matching tag name"
+  "Returns text content of first child element matching tag name"
   [elem local-name]
   (some-> (find-child elem local-name)
           :content

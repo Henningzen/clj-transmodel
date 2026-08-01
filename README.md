@@ -1,8 +1,8 @@
 # no.jansenh/clj-transmodel
 
-Public transport standards NeTEx, SIRI (ET, SX, VM) under CEN/TC 278, Transmodel reference model (EN 12896).  
+Public transport standards NeTEx, SIRI (ET, SX, VM) under CEN/TC 278, Transmodel reference model (EN 12896).
 
-The visionary statement is a opinionated, yet generalized library of parsers for the NeTEx and SIRI standards.
+The visionary statement is to create an opinionated, still generalized library of parsers and tooling for data in the NeTEx and SIRI standards.
 
 ## Installation
 
@@ -92,4 +92,4 @@ For any questions or feedback, please contact:
 
 Henning Jansen
 henning.jansen@jansenh.no
-GitHub: henningzen
+GitHub: Henningzen

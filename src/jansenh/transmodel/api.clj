@@ -1,20 +1,21 @@
-;;; src/jansenh/transmodel/api.clj ---  API wrapper over jansenh/transmodel 
-
-;   Copyright (c) Henning Jansen2025 - 2026
-;   The use and distribution terms for this software are covered by the
-;   Eclipse Public License 2.0 (https://opensource.org/license/epl-2-0)
-;   which can be found in the file LICENSE at the root of this distribution.
-;   By using this software in any fashion, you are agreeing to be bound by
-;   the terms of this license. You must not remove this notice, or any other,
-;   from this software.
-;
+;;; jansenh/transmodel/api.clj ---  API wrapper over jansenh/transmodel
+;;
+;;   Copyright (c) Henning Jansen2025 - 2026
+;;   The use and distribution terms for this software are covered by the
+;;   Eclipse Public License 2.0 (https://opensource.org/license/epl-2-0)
+;;   which can be found in the file LICENSE at the root of this distribution.s
+;;   By using this software in any fashion, you are agreeing to be bound by
+;;   the terms of this license. You must not remove this notice, or any other,
+;;   from this software.
+;;
 ;; Author:  Henning Jansen - henning.jansen@jansenh.no
 ;; Date:    September 2025
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0
-;;-----------------------------------------------------------------------------
+;;
+;; SPDX-License-Identifier: EPL-2.0
 
 (ns jansenh.transmodel.api
-    ^{:doc  "API wrapper over jansenh/transmodel"
+  ^{:doc  "API wrapper over jansenh/transmodel"
     :author "Henning Jansen"
     :added  "0.2.3"
     :license {:name "Eclipse Public License"
@@ -36,9 +37,9 @@
 ;;
 ;; ===========================================================================
 
-(def shared-data-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml")
-(def line-data-file   "/home/jansenh/data/netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
-(def line-data-file2  "/home/jansenh/data/netex/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
+(def shared-data-file "/home/jansenh/data/netex/raw/KOL/_KOL_shared_data.xml")
+(def line-data-file   "/home/jansenh/data/netex/raw/KOL/KOL_KOL-Line-8_5900_518_518.xml")
+(def line-data-file2  "/home/jansenh/data/netex/raw/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 

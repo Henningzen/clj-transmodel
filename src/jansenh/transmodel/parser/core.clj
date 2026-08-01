@@ -1,12 +1,25 @@
-;;-----------------------------------------------------------------------------
-;; File: src/jansenh/transmodel/parser/core.clj
-;; Author: Henning Jansen - henning.jansen@jansenh.no
-;; Copyright: (c) 2025 - 2026
-;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
+;;; jansenh/transmodel/parser/core.clj --- Transmodel standards XML basic parser.
 ;;
-;;-----------------------------------------------------------------------------
+;;   Copyright (c) Henning Jansen2025 - 2026
+;;   The use and distribution terms for this software are covered by the
+;;   Eclipse Public License 2.0 (https://opensource.org/license/epl-2-0)
+;;   which can be found in the file LICENSE at the root of this distribution.s
+;;   By using this software in any fashion, you are agreeing to be bound by
+;;   the terms of this license. You must not remove this notice, or any other,
+;;   from this software.
+;;
+;; Author:  Henning Jansen - henning.jansen@jansenh.no
+;; Date:    August 4, 2024
+;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0
+;;
+;; SPDX-License-Identifier: EPL-2.0
 
 (ns jansenh.transmodel.parser.core
+  ^{:doc  "Transmodel standards XML basic parser."
+    :author "Henning Jansen"
+    :added  "0.1.0"
+    :license {:name "Eclipse Public License"
+              :url "https://opensource.org/license/epl-2-0"}}
   (:require [clojure.data.xml :as xml]
             [clojure.java.io :as io]
             [clojure.tools.logging :as log])

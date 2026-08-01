@@ -1,12 +1,12 @@
 ;;-----------------------------------------------------------------------------
 ;; File: src/jansenh/transmodel/siri/service_delivery.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
-;; Copyright: (c) 2025
+;; Copyright: (c) 2025, 2026
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
 ;;-----------------------------------------------------------------------------
 
 (ns jansenh.transmodel.siri.service-delivery
-  (:require [jansenh.transmodel.parser.utilities :as u]))
+  (:require [jansenh.transmodel.siri.utilities :as u]))
 
 ;;
 ;;   SIRI Service Delivery
@@ -25,7 +25,6 @@
 (def siri:ProducerRef (keyword siri-kw-ns "ProducerRef"))
 (def siri:EstimatedTimetableDelivery (keyword siri-kw-ns "EstimatedTimetableDelivery"))
 (def siri:SituationExchangeDelivery (keyword siri-kw-ns "SituationExchangeDelivery"))
-
 
 (defn- service-delivery-type
   "Determines the type of service delivery present in the content.

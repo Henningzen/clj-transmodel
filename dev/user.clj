@@ -22,6 +22,7 @@
   (:require
    [jansenh.transmodel.core :as core]
    [jansenh.transmodel.utilities.data-retriever :refer [download-netex-zip]]
+   [jansenh.transmodel.api :as a]
    [clojure.repl :refer :all]
    [clojure.pprint :refer [pprint]]
    [clojure.tools.namespace.repl :refer [refresh refresh-all]]))
@@ -33,7 +34,13 @@
 
 
 (comment
- (download-netex-zip :SOF (str data-store "/raw/"))
+  (download-netex-zip :SOF (str data-store "/raw/"))
 
- ;; --->
- )
+  ;; (refresh-all)
+  ;;
+  ;; --->
+  )
+
+(defn dev []
+  (println "Dev environment loaded. Use (refresh) to reload code."))
+

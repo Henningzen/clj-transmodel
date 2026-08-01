@@ -1,8 +1,9 @@
-(ns netex
+(ns notebooks.netex
   (:require [jansenh.transmodel.parser.core :as parser]
             [jansenh.transmodel.netex.calendar :as cal]
             [jansenh.transmodel.parser.utilities :as utils]
             [jansenh.transmodel.api :as api]
+            [user :as user]
             [scicloj.clay.v2.api :as clay]
             [tablecloth.api :as tc]))
 
@@ -32,11 +33,13 @@
   [m]
   (into {} (remove (comp nil? val)) m))
 
-
 (def shared-data (parser/parse-xml-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml"))
 
 (def calendar-index (cal/build-calendar-index shared-data))
 
+
+(user/dev) ;; TODO: Implement data loading facilities in either dev/user or a
+           ;;       notebooks/ namespace
 
 ;; #### **Prepared date-range**
 (-> (cal/weeks-ahead 1)

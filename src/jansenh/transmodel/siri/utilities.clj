@@ -1,17 +1,17 @@
 ;;-----------------------------------------------------------------------------
-;; File: src/jansenh/transmodel/parser/utilities.clj
+;; File: src/jansenh/transmodel/siri/utilities.clj
 ;; Author: Henning Jansen - henning.jansen@jansenh.no
-;; Copyright: (c) 2025 - 2026
+;; Copyright: (c) 2026
 ;; License: Eclipse Public License 2.0 - http://www.eclipse.org/legal/epl-2.0.
 ;;
 ;;-----------------------------------------------------------------------------
 
-(ns jansenh.transmodel.parser.utilities
+(ns jansenh.transmodel.siri.utilities
   (:require [clojure.string :as str])
   (:import (java.time Instant LocalDateTime OffsetDateTime ZoneOffset ZonedDateTime)
            (java.time.format DateTimeParseException DateTimeFormatter)))
 
-;; NeETx parser utilities
+;; SIRI parser utilities
 ;;
 ;; The namespace handle XML acrobatics:
 ;;   - attributes on a tag
@@ -24,6 +24,7 @@
 ;;   - date-time on element
 ;;   - 
 ;; authors: Henning Jansen - henning.jansen@norled.no
+;; version: 0.2.3 2026-73-31
 ;; version: 0.2.2 2026-03-01
 ;; since:   0.1.0 2025-08-07
 ;; -----------------------------------------------------------------------------

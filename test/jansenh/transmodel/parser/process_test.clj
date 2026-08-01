@@ -18,3 +18,7 @@
           (is (string? (:description publication-delivery)))
           (is (string? (:participant-ref publication-delivery))))))))
 
+
+(comment
+  (sut/process-publication-delivery (parser/parse-xml-file "resources/testdata/292.xml"))
+  )
