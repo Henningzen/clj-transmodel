@@ -1,7 +1,7 @@
 (ns notebooks.netex
   (:require [jansenh.transmodel.parser.core :as parser]
             [jansenh.transmodel.netex.calendar :as cal]
-            [jansenh.transmodel.parser.utilities :as utils]
+            [jansenh.transmodel.siri.utilities :as utils]
             [jansenh.transmodel.api :as api]
             [user :as user]
             [scicloj.clay.v2.api :as clay]

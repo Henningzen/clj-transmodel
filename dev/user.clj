@@ -34,7 +34,7 @@
 
 
 (comment
-  (download-netex-zip :SOF (str data-store "/raw/"))
+  (download-netex-zip :SOF (str data-store "/raw"))
 
   ;; (refresh-all)
   ;;

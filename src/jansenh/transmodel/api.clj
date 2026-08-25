@@ -37,9 +37,9 @@
 ;;
 ;; ===========================================================================
 
-(def shared-data-file "/home/jansenh/data/netex/raw/KOL/_KOL_shared_data.xml")
-(def line-data-file   "/home/jansenh/data/netex/raw/KOL/KOL_KOL-Line-8_5900_518_518.xml")
-(def line-data-file2  "/home/jansenh/data/netex/raw/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
+(def shared-data-file "/home/jansenh/data/netex/KOL/_KOL_shared_data.xml")
+(def line-data-file   "/home/jansenh/data/netex/KOL/KOL_KOL-Line-8_5900_518_518.xml")
+(def line-data-file2  "/home/jansenh/data/netex/KOL/KOL_KOL-Line-26_5958_1054_Hjelmeland---Nesvik---Skipavik.xml")
 (def shared-data (parser/parse-xml-file shared-data-file))
 (def line-data (parser/parse-xml-file line-data-file))
 
